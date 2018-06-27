@@ -85,17 +85,19 @@
 
 
 
-<meta name="description" content="当你发现自己的才华撑不起野心时，就请安静下来学习吧">
+<meta name="description" content="每次部署的步骤，可按以下三步来进行。$ hexo clean$ hexo generate$ hexo deploy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo写文命令">
 <meta property="og:url" content="http://yoursite.com/2018/06/27/hexo写文命令/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="当你发现自己的才华撑不起野心时，就请安静下来学习吧">
+<meta property="og:description" content="每次部署的步骤，可按以下三步来进行。$ hexo clean$ hexo generate$ hexo deploy">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-27T09:23:56.003Z">
+<meta property="og:image" content="http://yoursite.com/images/hexo写文命令/1.png">
+<meta property="og:updated_time" content="2018-06-27T13:47:48.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo写文命令">
-<meta name="twitter:description" content="当你发现自己的才华撑不起野心时，就请安静下来学习吧">
+<meta name="twitter:description" content="每次部署的步骤，可按以下三步来进行。$ hexo clean$ hexo generate$ hexo deploy">
+<meta name="twitter:image" content="http://yoursite.com/images/hexo写文命令/1.png">
 
 
 
@@ -300,6 +302,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -327,7 +351,40 @@
       
 
       
-        
+        <p>每次部署的步骤，可按以下三步来进行。<br>$ hexo clean<br>$ hexo generate<br>$ hexo deploy<br><a id="more"></a></p>
+<hr>
+<ol>
+<li>new 新建文章的指令</li>
+</ol>
+<p>$ hexo new [layout] &lt;title><br>如果title包含空格的话，请使用引号括起来。<br>layout为可选项，默认使用_config.yml中的default_layout。<br><img src="/images/hexo写文命令/1.png" alt="hexo写文命令"></p>
+<hr>
+<ol start="2">
+<li>generate 生成静态页面至public目录</li>
+</ol>
+<p>$ hexo generate<br>可选参数：<br>-d ,–deploy 文件生成后立即部署网站<br>-w , –watch 监视文件变动<br>该指令可以简写为hexo g</p>
+<hr>
+<ol start="3">
+<li>deploy发布到网站，将.deploy_git目录部署到GitHub</li>
+</ol>
+<p>$ hexo deploy<br>这里就是发布到_config.yml中deploy中设置的网址上。<br>参数<br>-g , –generate 部署前生成静态文件<br>该命令可以简写hexo d</p>
+<hr>
+<ol start="4">
+<li>publish发表草稿</li>
+</ol>
+<p>$ hexo publish [layout] <filename></filename></p>
+<hr>
+<ol start="5">
+<li>server启动服务器</li>
+</ol>
+<p>$ hexo server<br>默认情况下，访问网址为：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
+<p>选项    描述<br>-p, –port    重设端口<br>-s, –static    只使用静态文件<br>-l, –log    启动日记记录，使用覆盖记录格式</p>
+<hr>
+<ol start="6">
+<li>clean</li>
+</ol>
+<p>$ hexo clean<br>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<p><strong>日常啰嗦</strong>：我这猪脑子就应该吧这些东西都记一遍，这才能把他变成自己的，俗话说得好：好记性不如烂手指头。</p>
+
       
     </div>
     
@@ -532,7 +589,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.1k字</span>
+  <span class="post-count">博客全站共2.5k字</span>
 </div>
         
 

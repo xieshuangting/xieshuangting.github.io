@@ -6,7 +6,7 @@
       <title>hexo目录结构</title>
       <link href="/2018/06/27/hexo%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
       <url>/2018/06/27/hexo%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</url>
-      <content type="html"><![CDATA[<ol><li>主目录结构<br><img src="/images/hexo目录结构/1.png" alt="hexo目录结构"></li></ol><p><font color="#ec6149">public：</font>生成的网站文件，发布的站点文件。</p><p><font color="#ec6149">scaffolds：</font>scaffolds是“脚手架、骨架”的意思，当你新建一篇文章(hexo new ‘title’)的时候，hexo是根据这个目录下的文件进行构建的。</p><p><font color="#ec6149">source：</font>这个目录很重要，新建的文章都是在保存在这个目录下的。</p><p><font color="#ec6149">themes：</font>网站主题目录，hexo有非常好的主题拓展，支持的主题也很丰富。该目录下，每一个子目录就是一个主题。</p><p><font color="#ec6149">_config.yml：</font>全局配置文件，网站的很多信息都在这里配置，诸如网站名称，副标题，描述，作者，语言，主题，部署等等参数。</p><p><font color="#ec6149">package.json：</font>hexo框架的参数和所依赖插件。</p><hr><ol start="2"><li>source目录结构<br><img src="/images/hexo目录结构/2.png" alt="hexo目录结构"></li></ol><p><font color="#ec6149">_posts：</font>需要新建的博文都放在 _posts目录下。 _posts目录下是一个个 markdown 文件。md文件会被编译成html文件，放到public文件夹下。<br><img src="/images/hexo目录结构/3.png" alt="hexo目录结构"></p><p><font color="#ec6149">tag：</font>标签文件夹。</p><p><font color="#ec6149">category：</font>分类文件夹。</p><p><strong>日常啰嗦</strong>：本文是在网上多家比较复制粘贴过来的。</p>]]></content>
+      <content type="html"><![CDATA[<ol><li>主目录结构<br><img src="/images/hexo目录结构/1.png" alt="hexo目录结构"><a id="more"></a></li></ol><p><font color="#ec6149">public：</font>生成的网站文件，发布的站点文件。</p><p><font color="#ec6149">scaffolds：</font>scaffolds是“脚手架、骨架”的意思，当你新建一篇文章(hexo new ‘title’)的时候，hexo是根据这个目录下的文件进行构建的。</p><p><font color="#ec6149">source：</font>这个目录很重要，新建的文章都是在保存在这个目录下的。</p><p><font color="#ec6149">themes：</font>网站主题目录，hexo有非常好的主题拓展，支持的主题也很丰富。该目录下，每一个子目录就是一个主题。</p><p><font color="#ec6149">_config.yml：</font>全局配置文件，网站的很多信息都在这里配置，诸如网站名称，副标题，描述，作者，语言，主题，部署等等参数。</p><p><font color="#ec6149">package.json：</font>hexo框架的参数和所依赖插件。</p><hr><ol start="2"><li>source目录结构<br><img src="/images/hexo目录结构/2.png" alt="hexo目录结构"></li></ol><p><font color="#ec6149">_posts：</font>需要新建的博文都放在 _posts目录下。 _posts目录下是一个个 markdown 文件。md文件会被编译成html文件，放到public文件夹下。<br><img src="/images/hexo目录结构/3.png" alt="hexo目录结构"></p><p><font color="#ec6149">tag：</font>标签文件夹。</p><p><font color="#ec6149">category：</font>分类文件夹。</p><p><strong>日常啰嗦</strong>：本文是在网上多家比较复制粘贴过来的。</p>]]></content>
       
       <categories>
           
@@ -21,7 +21,13 @@
       <title>hexo写文命令</title>
       <link href="/2018/06/27/hexo%E5%86%99%E6%96%87%E5%91%BD%E4%BB%A4/"/>
       <url>/2018/06/27/hexo%E5%86%99%E6%96%87%E5%91%BD%E4%BB%A4/</url>
-      <content type="html"><![CDATA[]]></content>
+      <content type="html"><![CDATA[<p>每次部署的步骤，可按以下三步来进行。<br>$ hexo clean<br>$ hexo generate<br>$ hexo deploy<br><a id="more"></a></p><hr><ol><li>new 新建文章的指令</li></ol><p>$ hexo new [layout] &lt;title><br>如果title包含空格的话，请使用引号括起来。<br>layout为可选项，默认使用_config.yml中的default_layout。<br><img src="/images/hexo写文命令/1.png" alt="hexo写文命令"></p><hr><ol start="2"><li>generate 生成静态页面至public目录</li></ol><p>$ hexo generate<br>可选参数：<br>-d ,–deploy 文件生成后立即部署网站<br>-w , –watch 监视文件变动<br>该指令可以简写为hexo g</p><hr><ol start="3"><li>deploy发布到网站，将.deploy_git目录部署到GitHub</li></ol><p>$ hexo deploy<br>这里就是发布到_config.yml中deploy中设置的网址上。<br>参数<br>-g , –generate 部署前生成静态文件<br>该命令可以简写hexo d</p><hr><ol start="4"><li>publish发表草稿</li></ol><p>$ hexo publish [layout] <filename></filename></p><hr><ol start="5"><li>server启动服务器</li></ol><p>$ hexo server<br>默认情况下，访问网址为：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p><p>选项    描述<br>-p, –port    重设端口<br>-s, –static    只使用静态文件<br>-l, –log    启动日记记录，使用覆盖记录格式</p><hr><ol start="6"><li>clean</li></ol><p>$ hexo clean<br>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p><p><strong>日常啰嗦</strong>：我这猪脑子就应该吧这些东西都记一遍，这才能把他变成自己的，俗话说得好：好记性不如烂手指头。</p>]]></content>
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
       
       
     </entry>
