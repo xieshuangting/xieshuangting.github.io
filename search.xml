@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title>hexo删除文章</title>
+      <link href="/2018/06/27/hexo%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0/"/>
+      <url>/2018/06/27/hexo%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0/</url>
+      <content type="html"><![CDATA[<p>先删除本地文件，然后通过生成（hexo g）和部署（hexo d）命令进而将远程仓库中的文件也一并删除。<br>具体来说，以最开始默认形成的helloworld.md这篇文章为例。<br>首先进入到source / _post 文件夹中，找到helloworld.md文件，在本地直接执行删除。然后依次执行hexo g，hexo d，再去主页查看你就会发现你的博客上面已经空空如也了，这就是如何删除文章的方法。</p><p><strong>日常啰嗦</strong>：是不是很简单，get√</p>]]></content>
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>hexo目录结构</title>
       <link href="/2018/06/27/hexo%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
       <url>/2018/06/27/hexo%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</url>
