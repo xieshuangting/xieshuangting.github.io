@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title>hexo写文必备常识</title>
+      <link href="/2018/06/27/hexo%E5%86%99%E6%96%87%E5%BF%85%E5%A4%87%E5%B8%B8%E8%AF%86/"/>
+      <url>/2018/06/27/hexo%E5%86%99%E6%96%87%E5%BF%85%E5%A4%87%E5%B8%B8%E8%AF%86/</url>
+      <content type="html"><![CDATA[<ol><li>修改文章的字体和颜色</li></ol><p><font color="red">我是红色哟</font><br><img src="/images/hexo写文必备常识/1.jpg" alt="hexo写文必备常识"></p><a id="more"></a><hr><ol start="2"><li>在首页上出现‘阅读全文’按钮</li></ol><p><img src="/images/hexo写文必备常识/2.png" alt="hexo写文必备常识"></p><hr><ol start="3"><li>在文章内引入图片</li></ol><p>在source目录下新建一个存放图片的文件夹images（自定义）<br>将图片存放在images里面，引用时图片路径为/images/XXX.jpg</p><p>我是将每一篇文章的图片都区分开，存放在不同的目录下，所以图片引用路径为<br><img src="/images/hexo写文必备常识/3.jpg" alt="hexo写文必备常识"></p><p><strong>日常啰嗦</strong>：每次写文都有点底气不足，野心很大，奈何技术上跟不上，或者是上次学了用了的命令这次又忘光，上网百度又费时间。所以现在就准备把一些常用的写文必备命令写下来，我看你这样还忘不忘，就算忘了我也不怕，现在我有宝典在手哈哈。</p>]]></content>
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>hexo开博小坑</title>
       <link href="/2018/06/27/hexo%E5%BC%80%E5%8D%9A%E5%B0%8F%E5%9D%91/"/>
       <url>/2018/06/27/hexo%E5%BC%80%E5%8D%9A%E5%B0%8F%E5%9D%91/</url>
