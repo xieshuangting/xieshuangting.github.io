@@ -3,10 +3,94 @@
   
     
     <entry>
+      <title>package.json文件介绍</title>
+      <link href="/2018/06/28/package-json%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/"/>
+      <url>/2018/06/28/package-json%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/</url>
+      <content type="html"><![CDATA[<p>dependencies是项目依赖,<br>devDependencies是开发时项目依赖.</p>]]></content>
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>gulp流程</title>
+      <link href="/2018/06/27/gulp%E6%B5%81%E7%A8%8B/"/>
+      <url>/2018/06/27/gulp%E6%B5%81%E7%A8%8B/</url>
+      <content type="html"><![CDATA[]]></content>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>webpack</title>
+      <link href="/2018/06/27/webpack/"/>
+      <url>/2018/06/27/webpack/</url>
+      <content type="html"><![CDATA[<p>Webpack是一个前端资源加载/打包工具。它将根据<font color="red">模块的依赖关系</font>进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源。<br><a id="more"></a><br>它主要的用途是通过<font color="red">CommonJS</font>的语法把所有浏览器端需要发布的静态资源做相应的准备，比如<font color="red">资源的合并和打包</font>。<br>Webpack 可以将多种静态资源 js、css、less 转换成一个静态文件，减少了页面的请求。会给每个模块分配一个唯一的 id 并通过这个 id 索引和访问模块。 </p><p>WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。 </p><p><font color="red">WebPack和Grunt以及Gulp相比有什么特性 </font><br>其实Webpack和另外两个并没有太多的可比性<br>Gulp/Grunt是一种能够优化前端的开发流程的工具<br>而WebPack是一种模块化的解决方案，不过Webpack的优点使得Webpack在很多场景下可以替代Gulp/Grunt类的工具。 </p><p>Grunt和Gulp的工作方式是：在一个配置文件中，指明对某些文件进行类似编译，组合，压缩等任务的具体步骤，工具之后可以自动替你完成这些任务。</p><hr><p><strong>日常啰嗦</strong>：学了很多打包工具的皮毛，然后又很理直气壮地全部忘光了，导致一个都不熟。整理一下，希望有个大致的印象对各个工具的功能。<br>这是在vue项目里面使用的打包工具，执行vue run build就会生成dist文件</p>]]></content>
+      
+      <categories>
+          
+          <category> 打包工具 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>vue-cli 搭建项目</title>
+      <link href="/2018/06/27/vue-cli%20%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE/"/>
+      <url>/2018/06/27/vue-cli%20%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE/</url>
+      <content type="html"><![CDATA[<font color="#42b983">1. 创建一个基于 webpack 模板的新项目</font><br>$ vue init webpack 目录名<br><img src="/images/vue-cli 搭建项目/2.png" alt="vue-cli 搭建项目"><a id="more"></a><br>配置的模板，一般使用standards，高阶选手使用最后一个，什么都没有，需要自己配置。<br>eslint是一个代码语法规范检查的工具，不同意就不会把检查语法规范的功能加进webpack编译的流程里。<br>unit tests单元测试，一般不加，因为不会。<br><br>——–<br><font color="#42b983">2. 安装依赖(进入项目文件夹)</font><br>$ npm install<br><br>—-<br><font color="#42b983">3. 开始运行项目（开发模式）</font><br>$ npm run dev<br>默认运行端口8080<br><br>—–<br><font color="#42b983">4. 打包代码</font><br>$ npm run build<br>该命令可以打包你的代码的，不会报任何异常或错误，但是你会看到你的命令行打包完成有这样一句提示：<br><img src="/images/vue-cli 搭建项目/5.png" alt="vue-cli 搭建项目"><br>用浏览器打开了你刚build生成的dist目录下的index.html文件！<br>然而，你惊奇地发现网页一片空白，丝毫没有一点点痕迹。<br>打开了控制台，看到console下一片404的各种找不到资源。<br><img src="/images/vue-cli 搭建项目/6.png" alt="vue-cli 搭建项目"><br>为什么会这样呢？还得从第一幅图的build后的提示说起，提示的中文翻译是（提示：构建文件务必放在一个HTTP服务器。直接打开index.html文件将不工作）<br>所以你看到控制台里的一堆404！<br><font color="red">解决方案</font><br>仔细看一下路径，绝对路径，c盘下哪有static文件夹，那就要将打包的路径改为<font color="red">相对路径</font>。这个根据build命令一路跟踪，到项目目录下的config文件夹里的index.js文件中的build对象，将<font color="red">assetsPublicPath</font>中的“/”，改为“<font color="red">./</font>”即可，就在前面加个点就可以了，并在build\build.js将这两句的提示信息删掉或注释掉，再打包直接用浏览器直接运行就好了。<br><img src="/images/vue-cli 搭建项目/7.png" alt="vue-cli 搭建项目"><br><font color="red">*注：项目上线时，只需要将 dist 文件夹放到服务器就行了。</font><hr><p><strong>日常啰嗦</strong>：后面一部分vue run build转载自小小猫钓小小鱼<a href="https://www.cnblogs.com/h2zZhou/p/7614599.html。觉得他写的挺好的，把我的疑惑解决了一部分，开来写文还是有很大好处的，理清了我的思路。不过我还是有一个很大的疑惑，为什么我" target="_blank" rel="noopener">https://www.cnblogs.com/h2zZhou/p/7614599.html。觉得他写的挺好的，把我的疑惑解决了一部分，开来写文还是有很大好处的，理清了我的思路。不过我还是有一个很大的疑惑，为什么我</a><font color="red">在服务器设置访问路径为根目录（例如xx.xx.xx.xx/）vue项目就可以运行，设置访问路径为二级目录就访问不了（例如xx.xx.xx.xx/goodsmall），已经更改了assetsPublicPath路径</font>。希望我以后可以来填坑。</p>]]></content>
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>vue目录结构</title>
+      <link href="/2018/06/27/vue%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
+      <url>/2018/06/27/vue%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</url>
+      <content type="html"><![CDATA[<ol><li>主目录结构<br><img src="/images/vue目录结构/1.png" alt="vue目录结构"></li></ol><p><font color="red">build:</font>    项目构建(webpack)相关代码<br><img src="/images/vue目录结构/3.png" alt="vue目录结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">build.js:</font>生产环境构建脚本<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">utils.js:</font>构建相关工具方法<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">webpack.base.conf.js:</font>wabpack基础配置<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">webpack.dev.conf.js:</font>wabpack开发环境配置<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">webpack.prod.conf.js:</font>wabpack生产环境配置</p><p><font color="red">config:</font> 配置目录，包括端口号等.可以使用默认的。<br><img src="/images/vue目录结构/4.png" alt="vue目录结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">dev.env.js:</font>开发环境变量<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">index.js:</font>项目配置文件<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">prod.env.js:</font>生产环境变量</p><p><font color="red">node_modules:</font> npm 加载的项目依赖模块</p><p><font color="red">src:</font> 这里是我们要开发的目录，基本上要做的事情都在这个目录里。里面包含了几个目录及文件：<br><img src="/images/vue目录结构/2.png" alt="vue目录结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">assets:</font>资源目录，放置一些图片，如logo等。这里的资源会被wabpack构建<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">components:</font> 公共组件目录。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">routes:</font>前端路由。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">App.vue:</font> 根组件，项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">main.js:</font> 入口js文件。</p><p><font color="red">static:</font> 静态资源目录，如图片、字体等。不会被wabpack构建</p><p><font color="red">.xxxx文件:</font>    这些是一些配置文件，包括语法配置，git配置等。</p><p><font color="red">index.html:</font> 首页入口文件，你可以添加一些 meta 信息或统计代码啥的。</p><p><font color="red">package.json:</font> 项目配置文件</p><p><font color="red">README.md:</font>    项目的说明文档，markdown格式</p><hr><p><strong>日常啰嗦</strong>：这个也是在网上多家比较总结出来。恩从基础打起。</p>]]></content>
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>github删除本地.git</title>
+      <link href="/2018/06/27/github%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0-git/"/>
+      <url>/2018/06/27/github%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0-git/</url>
+      <content type="html"><![CDATA[<font color="red">文件夹和文件一起删除</font><p>$ rd /s /q 文件夹名<br>如：$ rd /s /q .git 这样就将本地文件由git仓库变成普通文件</p><a id="more"></a><hr><p><font color="red"><strong>扩展</strong></font>dos命令删除文件夹和文件</p><ol><li>删除文件夹<br>$ rd 文件夹名。这种删除方法必须要该文件夹是空文件夹，不然删除不了。</li><li>删除文件<br>$ del 文件名。该命令只能删除文件，不能删除文件夹。</li></ol><p><font color="red"><strong>扩展</strong></font><br>del–delete删除文件。<br>rd–remove directionary删除目录。</p><p><font color="red"><strong>扩展</strong></font><br>/s 表示删除该目录下所有遍历的子目录和文件<br>/q 删除目录时不提示确认，直接删除</p><hr><p><strong>日常啰嗦</strong>：用一次百度一次也是够了，这次就一次性把相关的内容都百度出来了，希望可以记得更牢靠。</p>]]></content>
+      
+      <categories>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>hexo删除文章</title>
       <link href="/2018/06/27/hexo%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0/"/>
       <url>/2018/06/27/hexo%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0/</url>
-      <content type="html"><![CDATA[<p>先删除本地文件，然后通过生成（hexo g）和部署（hexo d）命令进而将远程仓库中的文件也一并删除。<br>具体来说，以最开始默认形成的helloworld.md这篇文章为例。<br>首先进入到source / _post 文件夹中，找到helloworld.md文件，在本地直接执行删除。然后依次执行hexo g，hexo d，再去主页查看你就会发现你的博客上面已经空空如也了，这就是如何删除文章的方法。</p><p><strong>日常啰嗦</strong>：是不是很简单，get√</p>]]></content>
+      <content type="html"><![CDATA[<p>先删除本地文件，然后通过生成（hexo g）和部署（hexo d）命令进而将远程仓库中的文件也一并删除。<br><a id="more"></a><br>具体来说，以最开始默认形成的helloworld.md这篇文章为例。<br>首先进入到source / _post 文件夹中，找到helloworld.md文件，在本地直接执行删除。然后依次执行hexo g，hexo d，再去主页查看你就会发现你的博客上面已经空空如也了，这就是如何删除文章的方法。</p><p><strong>日常啰嗦</strong>：是不是很简单，get√</p>]]></content>
       
       <categories>
           
@@ -36,7 +120,7 @@
       <title>hexo写文命令</title>
       <link href="/2018/06/27/hexo%E5%86%99%E6%96%87%E5%91%BD%E4%BB%A4/"/>
       <url>/2018/06/27/hexo%E5%86%99%E6%96%87%E5%91%BD%E4%BB%A4/</url>
-      <content type="html"><![CDATA[<p>每次部署的步骤，可按以下三步来进行。<br>$ hexo clean<br>$ hexo generate<br>$ hexo deploy<br><a id="more"></a></p><hr><ol><li>new 新建文章的指令</li></ol><p>$ hexo new [layout] &lt;title><br>如果title包含空格的话，请使用引号括起来。<br>layout为可选项，默认使用_config.yml中的default_layout。<br><img src="/images/hexo写文命令/1.png" alt="hexo写文命令"></p><hr><ol start="2"><li>generate 生成静态页面至public目录</li></ol><p>$ hexo generate<br>可选参数：<br>-d ,–deploy 文件生成后立即部署网站<br>-w , –watch 监视文件变动<br>该指令可以简写为hexo g</p><hr><ol start="3"><li>deploy发布到网站，将.deploy_git目录部署到GitHub</li></ol><p>$ hexo deploy<br>这里就是发布到_config.yml中deploy中设置的网址上。<br>参数<br>-g , –generate 部署前生成静态文件<br>该命令可以简写hexo d</p><hr><ol start="4"><li>publish发表草稿</li></ol><p>$ hexo publish [layout] <filename></filename></p><hr><ol start="5"><li>server启动服务器</li></ol><p>$ hexo server<br>默认情况下，访问网址为：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p><p>选项    描述<br>-p, –port    重设端口<br>-s, –static    只使用静态文件<br>-l, –log    启动日记记录，使用覆盖记录格式</p><hr><ol start="6"><li>clean</li></ol><p>$ hexo clean<br>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p><p><strong>日常啰嗦</strong>：我这猪脑子就应该吧这些东西都记一遍，这才能把他变成自己的，俗话说得好：好记性不如烂手指头。</p>]]></content>
+      <content type="html"><![CDATA[<p>每次部署的步骤，可按以下三步来进行。<br>$ hexo clean<br>$ hexo generate<br>$ hexo deploy<br><a id="more"></a></p><hr><ol><li>new 新建文章的指令</li></ol><p>$ hexo new [layout] &lt;title><br>如果title包含空格的话，请使用引号括起来。<br>layout为可选项，默认使用_config.yml中的default_layout。<br><img src="/images/hexo写文命令/1.png" alt="hexo写文命令"></p><hr><ol start="2"><li>generate 生成静态页面至public目录</li></ol><p>$ hexo generate<br>可选参数：<br>-d ,–deploy 文件生成后立即部署网站<br>-w , –watch 监视文件变动<br>该指令可以简写为hexo g</p><hr><ol start="3"><li>deploy发布到网站，将.deploy_git目录部署到GitHub</li></ol><p>$ hexo deploy<br>这里就是发布到_config.yml中deploy中设置的网址上。<br>参数<br>-g , –generate 部署前生成静态文件<br>该命令可以简写hexo d</p><hr><ol start="4"><li>publish发表草稿</li></ol><p>$ hexo publish [layout] <filename></filename></p><hr><ol start="5"><li>server启动服务器</li></ol><p>$ hexo server<br>默认情况下，访问网址为：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p><p>选项    描述<br>-p, –port    重设端口<br>-s, –static    只使用静态文件<br>-l, –log    启动日记记录，使用覆盖记录格式</p><hr><ol start="6"><li>clean清除缓存文件 (db.json) 和已生成的静态文件 (public)</li></ol><p>$ hexo clean</p><p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p><p><strong>日常啰嗦</strong>：我这猪脑子就应该吧这些东西都记一遍，这才能把他变成自己的，俗话说得好：好记性不如烂手指头。</p>]]></content>
       
       <categories>
           
@@ -51,7 +135,7 @@
       <title>hexo写文必备常识</title>
       <link href="/2018/06/27/hexo%E5%86%99%E6%96%87%E5%BF%85%E5%A4%87%E5%B8%B8%E8%AF%86/"/>
       <url>/2018/06/27/hexo%E5%86%99%E6%96%87%E5%BF%85%E5%A4%87%E5%B8%B8%E8%AF%86/</url>
-      <content type="html"><![CDATA[<ol><li>修改文章的字体和颜色</li></ol><p><font color="red">我是红色哟</font><br><img src="/images/hexo写文必备常识/1.jpg" alt="hexo写文必备常识"></p><a id="more"></a><hr><ol start="2"><li>在首页上出现‘阅读全文’按钮</li></ol><p><img src="/images/hexo写文必备常识/2.png" alt="hexo写文必备常识"></p><hr><ol start="3"><li>在文章内引入图片</li></ol><p>在source目录下新建一个存放图片的文件夹images（自定义）<br>将图片存放在images里面，引用时图片路径为/images/XXX.jpg</p><p>我是将每一篇文章的图片都区分开，存放在不同的目录下，所以图片引用路径为<br><img src="/images/hexo写文必备常识/3.jpg" alt="hexo写文必备常识"></p><hr><ol start="4"><li>Front-matter的冒号后面应添加一个空白格</li></ol><p>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量<br><img src="/images/hexo写文必备常识/5.png" alt="hexo写文必备常识"></p><p>若是冒号后面没有添加空白格，则会显示如下错误：<br><img src="/images/hexo写文必备常识/4.png" alt="hexo写文必备常识"></p><p><strong>日常啰嗦</strong>：每次写文都有点底气不足，野心很大，奈何技术上跟不上，或者是上次学了用了的命令这次又忘光，上网百度又费时间。所以现在就准备把一些常用的写文必备命令写下来，我看你这样还忘不忘，就算忘了我也不怕，现在我有宝典在手哈哈。</p>]]></content>
+      <content type="html"><![CDATA[<ol><li>修改文章的字体和颜色</li></ol><p><font color="red">我是红色哟</font><br><img src="/images/hexo写文必备常识/1.jpg" alt="hexo写文必备常识"></p><a id="more"></a><hr><ol start="2"><li>在首页上出现‘阅读全文’按钮</li></ol><p><img src="/images/hexo写文必备常识/2.png" alt="hexo写文必备常识"></p><hr><ol start="3"><li>在文章内引入图片</li></ol><p>在source目录下新建一个存放图片的文件夹images（自定义）<br>将图片存放在images里面，引用时图片路径为/images/XXX.jpg</p><p>我是将每一篇文章的图片都区分开，存放在不同的目录下，所以图片引用路径为<br><img src="/images/hexo写文必备常识/3.jpg" alt="hexo写文必备常识"></p><hr><ol start="4"><li>Front-matter的冒号后面应添加一个空白格</li></ol><p>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量<br><img src="/images/hexo写文必备常识/5.png" alt="hexo写文必备常识"></p><p>若是冒号后面没有添加空白格，则会显示如下错误：<br><img src="/images/hexo写文必备常识/4.png" alt="hexo写文必备常识"></p><hr><ol start="5"><li>在文章内添加空格</li></ol><p>a. 在中文输入法下使用全角：shift＋空格键切换至全角模式，之后再按空格键，那么空格键就会生效。<br>b. 添加&#160;或者&nbsp;</p><hr><p><strong>日常啰嗦</strong>：每次写文都有点底气不足，野心很大，奈何技术上跟不上，或者是上次学了用了的命令这次又忘光，上网百度又费时间。所以现在就准备把一些常用的写文必备命令写下来，我看你这样还忘不忘，就算忘了我也不怕，现在我有宝典在手哈哈。</p>]]></content>
       
       <categories>
           
@@ -66,7 +150,7 @@
       <title>hexo开博小坑</title>
       <link href="/2018/06/27/hexo%E5%BC%80%E5%8D%9A%E5%B0%8F%E5%9D%91/"/>
       <url>/2018/06/27/hexo%E5%BC%80%E5%8D%9A%E5%B0%8F%E5%9D%91/</url>
-      <content type="html"><![CDATA[<p>在本地安装完hexo，设置_config.yml之后，将hexo同步到github时，一直报错，报错信息如下：<br><img src="/images/hexo安装小坑/hexo安装小坑1.png" alt="hexo安装小坑"><br><a id="more"></a><br>百度了好久为什么会这样，后来发现是自己眼瞎，百度出来的文章明明写着<br><img src="/images/hexo安装小坑/hexo安装小坑3.jpg" alt="hexo安装小坑"><br>所以配置的_config.yml文件应该是<br><img src="/images/hexo安装小坑/hexo安装小坑2.png" alt="hexo安装小坑"></p><p><font color="red"><strong>扩展</strong>：</font>至于为什么需要在冒号后加空白符呢？这是因为yaml文件的语法的规定<br>每个冒号后面一定要有一个空格（以冒号结尾不需要空格，表示文件路径的模版可以不需要空格），这里指的是键值对，例如：mykey: my_value</p><p><strong>日常啰嗦</strong>：为了顺应潮流，想开博的心思已经不能再耽搁了。本来想在阿里云服务器上搭建博客的，奈何自己不太懂服务器的知识（怪自己上课没认真听讲，不过我觉得学校讲的知识应该也是不足以支撑实践的，不要拆穿我，这是给自己的安慰=.=），捣鼓了几天，还是没捣鼓出来，我这暴脾气一下子就上来了，我一定要征服你。所以又捣鼓了几天，果然理想和现实是有差距的，这差距真特么地烦人，所以我就华丽丽地放弃了哈哈。那这样不行我们就下降标准吧，所以就有了这个hexo+github的博客。</p>]]></content>
+      <content type="html"><![CDATA[<ol><li>在本地安装完hexo，设置_config.yml之后，将hexo同步到github时，一直报错，报错信息如下：<br><img src="/images/hexo安装小坑/hexo安装小坑1.png" alt="hexo安装小坑"><a id="more"></a>百度了好久为什么会这样，后来发现是自己眼瞎，百度出来的文章明明写着<br><img src="/images/hexo安装小坑/hexo安装小坑3.jpg" alt="hexo安装小坑"><br>所以配置的_config.yml文件应该是<br><img src="/images/hexo安装小坑/hexo安装小坑2.png" alt="hexo安装小坑"></li></ol><p><font color="red"><strong>扩展</strong>：</font>至于为什么需要在冒号后加空白符呢？这是因为yaml文件的语法的规定<br>每个冒号后面一定要有一个空格（以冒号结尾不需要空格，表示文件路径的模版可以不需要空格），这里指的是键值对，例如：mykey: my_value</p><hr><p>2.创建仓库时需要注意的地方:仓库名字一定要是 你的账户名字.github.io<br>不知道为什么账号名字不能为大写（所以为了开博，我废弃了之前的XIEshuangTING账号）（以后再来填坑）</p><p><strong>日常啰嗦</strong>：为了顺应潮流，想开博的心思已经不能再耽搁了。本来想在阿里云服务器上搭建博客的，奈何自己不太懂服务器的知识（怪自己上课没认真听讲，不过我觉得学校讲的知识应该也是不足以支撑实践的，不要拆穿我，这是给自己的安慰=.=），捣鼓了几天，还是没捣鼓出来，我这暴脾气一下子就上来了，我一定要征服你。所以又捣鼓了几天，果然理想和现实是有差距的，这差距真特么地烦人，所以我就华丽丽地放弃了哈哈。那这样不行我们就下降标准吧，所以就有了这个hexo+github的博客。</p>]]></content>
       
       <categories>
           

@@ -85,19 +85,22 @@
 
 
 
-<meta name="description" content="每次部署的步骤，可按以下三步来进行。$ hexo clean$ hexo generate$ hexo deploy">
+<meta name="description" content="1. 创建一个基于 webpack 模板的新项目$ vue init webpack 目录名">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo写文命令">
-<meta property="og:url" content="http://yoursite.com/2018/06/27/hexo写文命令/index.html">
+<meta property="og:title" content="vue-cli 搭建项目">
+<meta property="og:url" content="http://yoursite.com/2018/06/27/vue-cli 搭建项目/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="每次部署的步骤，可按以下三步来进行。$ hexo clean$ hexo generate$ hexo deploy">
+<meta property="og:description" content="1. 创建一个基于 webpack 模板的新项目$ vue init webpack 目录名">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/hexo写文命令/1.png">
-<meta property="og:updated_time" content="2018-06-27T14:05:25.613Z">
+<meta property="og:image" content="http://yoursite.com/images/vue-cli%20搭建项目/2.png">
+<meta property="og:image" content="http://yoursite.com/images/vue-cli%20搭建项目/5.png">
+<meta property="og:image" content="http://yoursite.com/images/vue-cli%20搭建项目/6.png">
+<meta property="og:image" content="http://yoursite.com/images/vue-cli%20搭建项目/7.png">
+<meta property="og:updated_time" content="2018-06-28T09:30:52.495Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo写文命令">
-<meta name="twitter:description" content="每次部署的步骤，可按以下三步来进行。$ hexo clean$ hexo generate$ hexo deploy">
-<meta name="twitter:image" content="http://yoursite.com/images/hexo写文命令/1.png">
+<meta name="twitter:title" content="vue-cli 搭建项目">
+<meta name="twitter:description" content="1. 创建一个基于 webpack 模板的新项目$ vue init webpack 目录名">
+<meta name="twitter:image" content="http://yoursite.com/images/vue-cli%20搭建项目/2.png">
 
 
 
@@ -127,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/27/hexo写文命令/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/27/vue-cli 搭建项目/"/>
 
 
 
 
 
-  <title>hexo写文命令 | RECODE TRACE</title>
+  <title>vue-cli 搭建项目 | RECODE TRACE</title>
   
 
 
@@ -262,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/27/hexo写文命令/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/27/vue-cli 搭建项目/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xieshuangting">
@@ -279,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo写文命令</h1>
+          <h1 class="post-title" itemprop="name headline">vue-cli 搭建项目</h1>
         
 
         <div class="post-meta">
@@ -291,7 +294,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-27T17:23:55+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-27T22:51:09+08:00">
                 2018-06-27
               </time>
             
@@ -314,8 +317,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/vue/" itemprop="url" rel="index">
+                    <span itemprop="name">vue</span>
                   </a>
                 </span>
 
@@ -351,40 +354,10 @@
       
 
       
-        <p>每次部署的步骤，可按以下三步来进行。<br>$ hexo clean<br>$ hexo generate<br>$ hexo deploy<br><a id="more"></a></p>
+        <font color="#42b983">1. 创建一个基于 webpack 模板的新项目</font><br>$ vue init webpack 目录名<br><img src="/images/vue-cli 搭建项目/2.png" alt="vue-cli 搭建项目"><a id="more"></a><br>配置的模板，一般使用standards，高阶选手使用最后一个，什么都没有，需要自己配置。<br>eslint是一个代码语法规范检查的工具，不同意就不会把检查语法规范的功能加进webpack编译的流程里。<br>unit tests单元测试，一般不加，因为不会。<br><br>——–<br><font color="#42b983">2. 安装依赖(进入项目文件夹)</font><br>$ npm install<br><br>—-<br><font color="#42b983">3. 开始运行项目（开发模式）</font><br>$ npm run dev<br>默认运行端口8080<br><br>—–<br><font color="#42b983">4. 打包代码</font><br>$ npm run build<br>该命令可以打包你的代码的，不会报任何异常或错误，但是你会看到你的命令行打包完成有这样一句提示：<br><img src="/images/vue-cli 搭建项目/5.png" alt="vue-cli 搭建项目"><br>用浏览器打开了你刚build生成的dist目录下的index.html文件！<br>然而，你惊奇地发现网页一片空白，丝毫没有一点点痕迹。<br>打开了控制台，看到console下一片404的各种找不到资源。<br><img src="/images/vue-cli 搭建项目/6.png" alt="vue-cli 搭建项目"><br>为什么会这样呢？还得从第一幅图的build后的提示说起，提示的中文翻译是（提示：构建文件务必放在一个HTTP服务器。直接打开index.html文件将不工作）<br>所以你看到控制台里的一堆404！<br><font color="red">解决方案</font><br>仔细看一下路径，绝对路径，c盘下哪有static文件夹，那就要将打包的路径改为<font color="red">相对路径</font>。这个根据build命令一路跟踪，到项目目录下的config文件夹里的index.js文件中的build对象，将<font color="red">assetsPublicPath</font>中的“/”，改为“<font color="red">./</font>”即可，就在前面加个点就可以了，并在build\build.js将这两句的提示信息删掉或注释掉，再打包直接用浏览器直接运行就好了。<br><img src="/images/vue-cli 搭建项目/7.png" alt="vue-cli 搭建项目"><br><font color="red">*注：项目上线时，只需要将 dist 文件夹放到服务器就行了。</font>
+
 <hr>
-<ol>
-<li>new 新建文章的指令</li>
-</ol>
-<p>$ hexo new [layout] &lt;title><br>如果title包含空格的话，请使用引号括起来。<br>layout为可选项，默认使用_config.yml中的default_layout。<br><img src="/images/hexo写文命令/1.png" alt="hexo写文命令"></p>
-<hr>
-<ol start="2">
-<li>generate 生成静态页面至public目录</li>
-</ol>
-<p>$ hexo generate<br>可选参数：<br>-d ,–deploy 文件生成后立即部署网站<br>-w , –watch 监视文件变动<br>该指令可以简写为hexo g</p>
-<hr>
-<ol start="3">
-<li>deploy发布到网站，将.deploy_git目录部署到GitHub</li>
-</ol>
-<p>$ hexo deploy<br>这里就是发布到_config.yml中deploy中设置的网址上。<br>参数<br>-g , –generate 部署前生成静态文件<br>该命令可以简写hexo d</p>
-<hr>
-<ol start="4">
-<li>publish发表草稿</li>
-</ol>
-<p>$ hexo publish [layout] <filename></filename></p>
-<hr>
-<ol start="5">
-<li>server启动服务器</li>
-</ol>
-<p>$ hexo server<br>默认情况下，访问网址为：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
-<p>选项    描述<br>-p, –port    重设端口<br>-s, –static    只使用静态文件<br>-l, –log    启动日记记录，使用覆盖记录格式</p>
-<hr>
-<ol start="6">
-<li>clean清除缓存文件 (db.json) 和已生成的静态文件 (public)</li>
-</ol>
-<p>$ hexo clean</p>
-<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<p><strong>日常啰嗦</strong>：我这猪脑子就应该吧这些东西都记一遍，这才能把他变成自己的，俗话说得好：好记性不如烂手指头。</p>
+<p><strong>日常啰嗦</strong>：后面一部分vue run build转载自小小猫钓小小鱼<a href="https://www.cnblogs.com/h2zZhou/p/7614599.html。觉得他写的挺好的，把我的疑惑解决了一部分，开来写文还是有很大好处的，理清了我的思路。不过我还是有一个很大的疑惑，为什么我" target="_blank" rel="noopener">https://www.cnblogs.com/h2zZhou/p/7614599.html。觉得他写的挺好的，把我的疑惑解决了一部分，开来写文还是有很大好处的，理清了我的思路。不过我还是有一个很大的疑惑，为什么我</a><font color="red">在服务器设置访问路径为根目录（例如xx.xx.xx.xx/）vue项目就可以运行，设置访问路径为二级目录就访问不了（例如xx.xx.xx.xx/goodsmall），已经更改了assetsPublicPath路径</font>。希望我以后可以来填坑。</p>
 
       
     </div>
@@ -409,8 +382,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/27/hexo写文必备常识/" rel="next" title="hexo写文必备常识">
-                <i class="fa fa-chevron-left"></i> hexo写文必备常识
+              <a href="/2018/06/27/vue目录结构/" rel="next" title="vue目录结构">
+                <i class="fa fa-chevron-left"></i> vue目录结构
               </a>
             
           </div>
@@ -419,8 +392,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/27/hexo目录结构/" rel="prev" title="hexo目录结构">
-                hexo目录结构 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/27/webpack/" rel="prev" title="webpack">
+                webpack <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
