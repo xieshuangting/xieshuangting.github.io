@@ -21,7 +21,7 @@
       <title>reset.css和normalize.css的区别</title>
       <link href="/2018/06/29/reset-css%E5%92%8Cnormalize-css%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
       <url>/2018/06/29/reset-css%E5%92%8Cnormalize-css%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
-      <content type="html"><![CDATA[<p><font color="red">reset.css</font><br>是将所有的浏览器的自带样式重置掉，这样更易于保持各浏览器渲染的一致性<br><img src="/images/reset.css和normalize.css的区别/2.png" alt="reset.css和normalize.css的区别"><a id="more"></a></p><p><font color="red">normalize.css</font><br>根据官网的定义： normalize.css是一个现代的，为HTML5准备的reset.css的替代品。它可以使元素的渲染在多个浏览器下都能保持一致并且符合规范。它所瞄准的，也都是些需要<font color="blue">规范化</font>的样式。<br><img src="/images/reset.css和normalize.css的区别/1.png" alt="reset.css和normalize.css的区别"></p>]]></content>
+      <content type="html"><![CDATA[<p><font color="red">reset.css</font><br>是将所有的浏览器的自带样式重置掉，这样更易于保持各浏览器渲染的一致性<br><img src="/images/reset和normalize的区别/2.png" alt="reset.css和normalize.css的区别"><a id="more"></a></p><p><font color="red">normalize.css</font><br>根据官网的定义： normalize.css是一个现代的，为HTML5准备的reset.css的替代品。它可以使元素的渲染在多个浏览器下都能保持一致并且符合规范。它所瞄准的，也都是些需要<font color="blue">规范化</font>的样式。<br><img src="/images/reset和normalize的区别/1.png" alt="reset.css和normalize.css的区别"></p>]]></content>
       
       <categories>
           
