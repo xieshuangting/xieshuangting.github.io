@@ -85,17 +85,22 @@
 
 
 
-<meta name="description" content="dependencies是项目依赖,devDependencies是开发时项目依赖.">
+<meta name="description" content="1. package.json介绍package.json在Node项目中用于描述项目的一些基本信息，以及依赖的配置，一般每一个Node项目的根目录下都有一个package.json文件。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="package.json文件介绍">
 <meta property="og:url" content="http://yoursite.com/2018/06/28/package-json文件介绍/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="dependencies是项目依赖,devDependencies是开发时项目依赖.">
+<meta property="og:description" content="1. package.json介绍package.json在Node项目中用于描述项目的一些基本信息，以及依赖的配置，一般每一个Node项目的根目录下都有一个package.json文件。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-28T14:34:50.280Z">
+<meta property="og:image" content="http://yoursite.com/images/package.json文件介绍/1.png">
+<meta property="og:image" content="http://yoursite.com/images/package.json文件介绍/2.png">
+<meta property="og:image" content="http://yoursite.com/images/package.json文件介绍/3.png">
+<meta property="og:image" content="http://yoursite.com/images/package.json文件介绍/4.png">
+<meta property="og:updated_time" content="2018-06-29T07:31:04.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="package.json文件介绍">
-<meta name="twitter:description" content="dependencies是项目依赖,devDependencies是开发时项目依赖.">
+<meta name="twitter:description" content="1. package.json介绍package.json在Node项目中用于描述项目的一些基本信息，以及依赖的配置，一般每一个Node项目的根目录下都有一个package.json文件。">
+<meta name="twitter:image" content="http://yoursite.com/images/package.json文件介绍/1.png">
 
 
 
@@ -312,8 +317,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/vue/" itemprop="url" rel="index">
-                    <span itemprop="name">vue</span>
+                  <a href="/categories/node/" itemprop="url" rel="index">
+                    <span itemprop="name">node</span>
                   </a>
                 </span>
 
@@ -349,7 +354,20 @@
       
 
       
-        <p>dependencies是项目依赖,<br>devDependencies是开发时项目依赖.</p>
+        <p><font color="red">1. package.json介绍</font><br>package.json在Node项目中用于描述项目的一些基本信息，以及依赖的配置，一般每一个Node项目的根目录下都有一个package.json文件。<a id="more"></a></p>
+<p><font color="blue">package.json文件的创建</font><br>在项目的根目录中我们可以通过$ npm init来初始化一个package.json文件，其内容是一个Json对象。<br>$ npm install 命令根据这个配置文件，自动下载所需的模块，也就是配置项目所需的运行和开发环境。</p>
+<p><font color="blue">为什么要保存配置信息至package.json？</font><br>因为node插件包相对来说非常庞大，所以不加入版本管理，将配置信息写入package.json并将其加入版本管理，其他开发者对应下载即可（命令提示符执行npm install，则会根据package.json下载所有需要的包，npm install –production只下载dependencies节点的包）。</p>
+<hr>
+<p><font color="red">2. scripts字段</font><br><img src="/images/package.json文件介绍/1.png" alt="package.json文件介绍"><br>scripts指定了运行脚本命令的npm命令行缩写，比如start指定了运行npm run start时，所要执行的命令。<br>以上的设置指定了npm run dev、npm run start、npm run build时，所要执行的命令。</p>
+<hr>
+<p><font color="red">2. dependencies字段，devDependencies字段</font><br><img src="/images/package.json文件介绍/2.png" alt="package.json文件介绍"><br>dependencies字段指定了项目运行所依赖的模块。<br>devDependencies指定项目开发所需要的模块。<br>它们都指向一个对象。该对象的各个成员，分别由模块名和对应的版本要求组成，表示依赖的模块及其版本范围。</p>
+<p><font color="blue">安装模块</font><br>如果一个模块不在package.json文件之中，可以单独安装这个模块，并使用相应的参数，将其写入package.json文件之中。例单独安装express模块：<br>$ npm install express –save　　　　–save参数表示将该模块写入dependencies属性<br>$ npm install express –save-dev　　　　–save-dev表示将该模块写入devDependencies属性</p>
+<hr>
+<p><font color="red">3. browserslist字段</font><br><img src="/images/package.json文件介绍/3.png" alt="package.json文件介绍"><br>browserslist指定该模板供浏览器使用的版本，项目的浏览器兼容情况。Browserify这样的浏览器打包工具，通过它就知道该打包那个文件。</p>
+<hr>
+<p><font color="red">4. engines字段</font><br><img src="/images/package.json文件介绍/4.png" alt="package.json文件介绍"><br>engines字段指明了该模块运行的平台<br>比如 Node 的某个版本或者浏览器，指定适用的npm版本。</p>
+<hr>
+<p><strong>日常啰嗦</strong>：反思：一直以来学的东西太多了，然而每个学的又不深，所以时间一久导致全部都忘记了。感觉写在博客里还是有好处的，有一种成就感，虽然没有访客，但是有一种与时代接轨的感觉。很多感受交杂在一起促使我继续写文（虽然有时是复制粘贴的，但是也比单纯的网上浏览在脑海中留下的印象深很多，有一种把别人的东西变成自己成果的感觉 ？？窃取的快乐？？）。之前是单纯地记在电脑的笔记本上，但是他没有一个很好的目录浏览功能，写完之后也没有成就感，所以写了几篇之后就荒废了。然后就是写在纸质的本子上，记在本子上印象是挺深的，但是还是难以检索，难以分类。而且用手记太费时间了（不像写文可以复制粘贴，可以撤回之类的），毕竟自己太渣，别人写的东西都是自己所不懂的知识点，所以有很多东西要记。手写的工作量太大也导致记录这一工作荒废了。现在开始写博，希望可以坚持下去，或者发现这一弊处的话可以找到更好的方法。</p>
 
       
     </div>
@@ -374,8 +392,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/27/gulp流程/" rel="next" title="gulp流程">
-                <i class="fa fa-chevron-left"></i> gulp流程
+              <a href="/2018/06/27/gulp的使用/" rel="next" title="gulp的使用">
+                <i class="fa fa-chevron-left"></i> gulp的使用
               </a>
             
           </div>
@@ -383,6 +401,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/29/浏览器兼容性/" rel="prev" title="浏览器兼容性">
+                浏览器兼容性 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -454,7 +476,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -465,7 +487,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -551,7 +573,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.4k字</span>
+  <span class="post-count">博客全站共7.6k字</span>
 </div>
         
 

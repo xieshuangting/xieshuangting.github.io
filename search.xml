@@ -3,14 +3,14 @@
   
     
     <entry>
-      <title>package.json文件介绍</title>
-      <link href="/2018/06/28/package-json%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/"/>
-      <url>/2018/06/28/package-json%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/</url>
-      <content type="html"><![CDATA[<p>dependencies是项目依赖,<br>devDependencies是开发时项目依赖.</p>]]></content>
+      <title>gulp常用插件</title>
+      <link href="/2018/06/29/gulp%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/"/>
+      <url>/2018/06/29/gulp%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<p><img src="/images/gulp常用插件/1.jpg" alt="gulp常用插件"><a id="more"></a><br>转化代码是为了兼容性</p><p><font color="blue">gulp-react</font>转换jsx代码</p><p><font color="blue">gulp-babel</font>转换es6代码</p><p><font color="blue">gulp-less</font>转换less代码</p><p><font color="blue">gulp-sass</font>转换sass代码</p><p>插件安装npm install –save-dev gulp-uglify</p><hr><p><font color="red">1. gulp-uglify（JS压缩）</font><br>gulp-uglify用来压缩js文件，使用的是uglify引擎。<br><img src="/images/gulp常用插件/2.png" alt="gulp常用插件"><br>小技巧，第二个参数’！js/*.min.js’是用来过滤掉后缀为min.js，！感叹号为排除模式。</p><hr><p><font color="red">2. gulp-minify-css（CSS压缩）</font><br><img src="/images/gulp常用插件/3.png" alt="gulp常用插件"></p><hr><p><font color="red">3. gulp-minify-html（html压缩）</font><br><img src="/images/gulp常用插件/4.png" alt="gulp常用插件"></p><hr><p><font color="red">4. gulp-concat（文件合并）</font><br>合并CSS与JS文件，减少http请求。<br><img src="/images/gulp常用插件/5.png" alt="gulp常用插件"></p><hr><p><font color="red">5. gulp-less（编译Less）</font><br><img src="/images/gulp常用插件/6.png" alt="gulp常用插件"></p><hr><p><font color="red">6. gulp-sass（编译Sass）</font><br><img src="/images/gulp常用插件/7.png" alt="gulp常用插件"></p><hr><p><strong>日常啰嗦</strong>：文章内容转载自Rin阳<a href="https://www.jianshu.com/p/98db023b5b89" target="_blank" rel="noopener">https://www.jianshu.com/p/98db023b5b89</a> 这些应该是工作中主要用到的插件。</p>]]></content>
       
       <categories>
           
-          <category> vue </category>
+          <category> 打包工具 </category>
           
       </categories>
       
@@ -18,10 +18,61 @@
     </entry>
     
     <entry>
-      <title>gulp流程</title>
-      <link href="/2018/06/27/gulp%E6%B5%81%E7%A8%8B/"/>
-      <url>/2018/06/27/gulp%E6%B5%81%E7%A8%8B/</url>
-      <content type="html"><![CDATA[]]></content>
+      <title>reset.css和normalize.css的区别</title>
+      <link href="/2018/06/29/reset-css%E5%92%8Cnormalize-css%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+      <url>/2018/06/29/reset-css%E5%92%8Cnormalize-css%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+      <content type="html"><![CDATA[<p><font color="red">reset.css</font><br>是将所有的浏览器的自带样式重置掉，这样更易于保持各浏览器渲染的一致性<br><img src="/images/reset.css和normalize.css的区别/2.png" alt="reset.css和normalize.css的区别"><a id="more"></a></p><p><font color="red">normalize.css</font><br>根据官网的定义： normalize.css是一个现代的，为HTML5准备的reset.css的替代品。它可以使元素的渲染在多个浏览器下都能保持一致并且符合规范。它所瞄准的，也都是些需要<font color="blue">规范化</font>的样式。<br><img src="/images/reset.css和normalize.css的区别/1.png" alt="reset.css和normalize.css的区别"></p>]]></content>
+      
+      <categories>
+          
+          <category> css </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>浏览器兼容性</title>
+      <link href="/2018/06/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7/"/>
+      <url>/2018/06/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7/</url>
+      <content type="html"><![CDATA[<font color="red">1. 浏览器兼容性？？</font><br>由于市场上浏览器种类众多，而不同浏览器其内核亦不尽相同，所以各个浏览器对网页的解析就有一定出入，这也是导致浏览器兼容问题出现的主要原因，我们的网页需要在主流浏览器上正常运行，就需要做好浏览器兼容。<a id="more"></a><br><font color="blue">四大内核</font><br>使用<font color="blue">Trident</font>内核的浏览器：IE；<br>使用<font color="blue">Gecko</font>内核的浏览器：Netcape6及以上版本、FireFox；<br>使用<font color="blue">Presto</font>内核的浏览器：Opera7及以上版本；<br>使用<font color="blue">Webkit</font>内核的浏览器：Safari、Chrome。<br>而我现在所说的兼容性问题，主要是说IE与几个主流浏览器如firefox，google等。而对IE浏览器来说，IE7又是个跨度，因为之前的版本更新甚慢，bug甚多。从IE8开始，IE浏览器渐渐遵循标准，到IE9后由于大家都一致认为标准很重要，可以说在兼容性上比较好了，但是在中国来说，由于xp的占有率问题，使用IE7以下的用户仍然很多，所以我们不得不考虑低版本浏览器的兼容。<br>对浏览器兼容问题，一般分:<font color="red">HTML，Javascript兼容，CSS兼容</font>。 其中html相关问题比较容易处理，无非是高版本浏览器用了低版本浏览器无法识别的元素，导致其不能解析，所以平时注意一点就是。特别是HTML5增加了许多新标签，低版本浏览器有点影响时代进步啊。<br><br>—-<br><font color="red">2. css兼容性</font><br><font color="blue">问题一：不同浏览器的标签默认的外补丁(margin)和内补丁(padding)不同</font><br>问题症状：随便写几个标签，不加样式控制的情况下，各自的margin和padding差异较大。<br>解决方案：css里 *{margin:0;padding:0;}<br><br><font color="blue">问题二：块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大</font><br>问题症状:常见症状是ie6中后面的一块被顶到下一行<br>解决方案：在float的标签样式控制中加入 display:inline;将其转化为行内属性<br>备注：我们最常用的就是div+css布局了，而div就是一个典型的块属性标签，横向布局的时候我们通常都是用div float实现的，横向的间距设置如果用margin实现，这就是一个必然会碰到的兼容性问题。<br><br><font color="blue">问题三：设置较小高度标签（一般小于10px），在ie6，ie7，遨游中高度超出自己设置高度</font><br>问题症状：ie6、7和遨游里这个标签的高度不受控制，超出自己设置的高度<br>碰到频率：60%<br>解决方案：给超出高度的标签设置overflow:hidden;或者设置行高line-height 小于你设置的高度。<br>备注：这种情况一般出现在我们设置小圆角背景的标签里。出现这个问题的原因是ie8之前的浏览器都会给标签一个最小默认的行高的高度。即使你的标签是空的，这个标签的高度还是会达到默认的行高。<br><br><font color="blue">问题四：行内属性标签，设置display:block后采用float布局，又有横行的margin的情况，ie6间距bug（类似第二种）</font><br>问题症状：ie6里的间距比超过设置的间距<br>碰到几率：20%<br>解决方案：在display:block;后面加入display:inline;display:table;<br>备注：行内属性标签，为了设置宽高，我们需要设置display:block;(除了input标签比较特殊)。在用float布局并有横向的margin后，在ie6下，他就具有了块属性float后的横向margin的bug。不过因为它本身就是行内属性标签，所以我们再加上display:inline的话，它的高宽就不可设了。这时候我们还需要在display:inline后面加入display:talbe。<br><br><font color="blue">问题五：图片默认有间距</font><br>问题症状：几个img标签放在一起的时候，有些浏览器会有默认的间距，加上问题一中提到的通配符也不起作用。<br>碰到几率：20%<br>解决方案：使用float属性为img布局<br>备注：因为img标签是行内属性标签，所以只要不超出容器宽度，img标签都会排在一行里，但是部分浏览器的img标签之间会有个间距。去掉这个间距使用float是正道<br><br><font color="blue">问题六：标签最低高度设置min-height不兼容</font><br>问题症状：因为min-height本身就是一个不兼容的css属性，所以设置min-height时不能很好的被各个浏览器兼容<br>碰到几率：5%<br>解决方案：如果我们要设置一个标签的最小高度200px，需要进行的设置为：{min-height:200px; height:auto !important; height:200px; overflow:visible;}<br>备注：在B/S系统前端开时，有很多情况下我们有这种需求。当内容小于一个值（如300px）时。容器的高度为300px；当内容高度大于这个值时，容器高度被撑高，而不是出现滚动条。这时候我们就会面临这个兼容性问题。<br><br><font color="blue">问题七：透明度的兼容css设置</font><hr><p><strong>日常啰嗦</strong>：当初有人问我关于浏览器兼容性的时候我一脸懵，我确定我之前有接触过，但是就是说不出口。而且也很怀疑自己所知道的是不是符合答案的。所以现在我想把他做一个归纳汇总。</p>]]></content>
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>package.json文件介绍</title>
+      <link href="/2018/06/28/package-json%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/"/>
+      <url>/2018/06/28/package-json%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/</url>
+      <content type="html"><![CDATA[<p><font color="red">1. package.json介绍</font><br>package.json在Node项目中用于描述项目的一些基本信息，以及依赖的配置，一般每一个Node项目的根目录下都有一个package.json文件。<a id="more"></a></p><p><font color="blue">package.json文件的创建</font><br>在项目的根目录中我们可以通过$ npm init来初始化一个package.json文件，其内容是一个Json对象。<br>$ npm install 命令根据这个配置文件，自动下载所需的模块，也就是配置项目所需的运行和开发环境。</p><p><font color="blue">为什么要保存配置信息至package.json？</font><br>因为node插件包相对来说非常庞大，所以不加入版本管理，将配置信息写入package.json并将其加入版本管理，其他开发者对应下载即可（命令提示符执行npm install，则会根据package.json下载所有需要的包，npm install –production只下载dependencies节点的包）。</p><hr><p><font color="red">2. scripts字段</font><br><img src="/images/package.json文件介绍/1.png" alt="package.json文件介绍"><br>scripts指定了运行脚本命令的npm命令行缩写，比如start指定了运行npm run start时，所要执行的命令。<br>以上的设置指定了npm run dev、npm run start、npm run build时，所要执行的命令。</p><hr><p><font color="red">2. dependencies字段，devDependencies字段</font><br><img src="/images/package.json文件介绍/2.png" alt="package.json文件介绍"><br>dependencies字段指定了项目运行所依赖的模块。<br>devDependencies指定项目开发所需要的模块。<br>它们都指向一个对象。该对象的各个成员，分别由模块名和对应的版本要求组成，表示依赖的模块及其版本范围。</p><p><font color="blue">安装模块</font><br>如果一个模块不在package.json文件之中，可以单独安装这个模块，并使用相应的参数，将其写入package.json文件之中。例单独安装express模块：<br>$ npm install express –save　　　　–save参数表示将该模块写入dependencies属性<br>$ npm install express –save-dev　　　　–save-dev表示将该模块写入devDependencies属性</p><hr><p><font color="red">3. browserslist字段</font><br><img src="/images/package.json文件介绍/3.png" alt="package.json文件介绍"><br>browserslist指定该模板供浏览器使用的版本，项目的浏览器兼容情况。Browserify这样的浏览器打包工具，通过它就知道该打包那个文件。</p><hr><p><font color="red">4. engines字段</font><br><img src="/images/package.json文件介绍/4.png" alt="package.json文件介绍"><br>engines字段指明了该模块运行的平台<br>比如 Node 的某个版本或者浏览器，指定适用的npm版本。</p><hr><p><strong>日常啰嗦</strong>：反思：一直以来学的东西太多了，然而每个学的又不深，所以时间一久导致全部都忘记了。感觉写在博客里还是有好处的，有一种成就感，虽然没有访客，但是有一种与时代接轨的感觉。很多感受交杂在一起促使我继续写文（虽然有时是复制粘贴的，但是也比单纯的网上浏览在脑海中留下的印象深很多，有一种把别人的东西变成自己成果的感觉 ？？窃取的快乐？？）。之前是单纯地记在电脑的笔记本上，但是他没有一个很好的目录浏览功能，写完之后也没有成就感，所以写了几篇之后就荒废了。然后就是写在纸质的本子上，记在本子上印象是挺深的，但是还是难以检索，难以分类。而且用手记太费时间了（不像写文可以复制粘贴，可以撤回之类的），毕竟自己太渣，别人写的东西都是自己所不懂的知识点，所以有很多东西要记。手写的工作量太大也导致记录这一工作荒废了。现在开始写博，希望可以坚持下去，或者发现这一弊处的话可以找到更好的方法。</p>]]></content>
+      
+      <categories>
+          
+          <category> node </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>gulp的使用</title>
+      <link href="/2018/06/27/gulp%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+      <url>/2018/06/27/gulp%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<p>gulp中文官网：<a href="https://www.gulpjs.com.cn/" target="_blank" rel="noopener">https://www.gulpjs.com.cn/</a></p><hr><font color="red">1. gulp介绍</font><br>gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；她不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成。<a id="more"></a><br><br>gulp是<font color="blue">基于Nodejs</font>的自动任务运行器， 她能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并<font color="blue">监听</font>文件在改动后重复指定的这些步骤。在实现上，她借鉴了Unix操作系统的<font color="blue">管道</font>（pipe）思想，前一级的输出，直接变成后一级的输入，使得在操作上非常简单。<br><br>gulp 和 grunt 非常类似，但相比于 grunt 的频繁 IO 操作，gulp 的<font color="blue">流操作</font>，能更快地更便捷地完成构建工作。<br><br>——–<br><font color="red">2. gulp的使用步骤</font><br>首先当然是安装nodejs，通过nodejs的npm全局安装和项目安装gulp（$ npm install gulp -g），其次在项目里安装所需要的gulp插件（$ npm install gulp –save-dev,$ npm install gulp-less –save-dev），然后新建gulp的配置文件gulpfile.js并写好配置信息（定义gulp任务），最后通过命令提示符运行gulp任务即可。<br><font color="blue">安装nodejs -&gt; 全局安装gulp -&gt; 项目安装gulp以及gulp插件 -&gt; 配置gulpfile.js -&gt; 运行任务</font><p>细心的你可能会发现，我们全局安装了gulp，项目也安装了gulp，全局安装gulp是为了执行gulp任务，本地安装gulp则是为了调用gulp插件的功能。</p><hr><p><font color="red">3. 新建gulpfile.js文件</font></p><p><font color="blue">说明</font>：gulpfile.js是gulp项目的配置文件，是位于项目根目录的普通js文件（其实将gulpfile.js放入其他文件夹下亦可）。<br><img src="/images/gulp的使用/1.png" alt="gulp的使用"></p><hr><p><font color="red">4. 运行gulp</font><br>$ gulp 任务名称<br>例如编译less：$ gulp testLess（任务名称）<br>当执行$ gulp default或$ gulp 将会调用default任务里的所有任务[‘testLess’,’elseTask’]。</p><hr><p><strong>日常啰嗦</strong>：在极客学院的培训课上有一章节叫做‘任务10 掌握前端工业化框架(高级进阶)’，里面介绍了grunt，gulp，bower，yeoman，FIS,FIS3这些打包工具，还是当时学的时候有点懂，久了就忘记了，还是需要把有必要的工具总结下，以便得到巩固。</p>]]></content>
+      
+      <categories>
+          
+          <category> 打包工具 </category>
+          
+      </categories>
       
       
     </entry>
@@ -60,7 +111,7 @@
       <title>vue目录结构</title>
       <link href="/2018/06/27/vue%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
       <url>/2018/06/27/vue%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</url>
-      <content type="html"><![CDATA[<ol><li>主目录结构<br><img src="/images/vue目录结构/1.png" alt="vue目录结构"></li></ol><p><font color="red">build:</font>    项目构建(webpack)相关代码<br><img src="/images/vue目录结构/3.png" alt="vue目录结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">build.js:</font>生产环境构建脚本<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">utils.js:</font>构建相关工具方法<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">webpack.base.conf.js:</font>wabpack基础配置<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">webpack.dev.conf.js:</font>wabpack开发环境配置<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">webpack.prod.conf.js:</font>wabpack生产环境配置</p><p><font color="red">config:</font> 配置目录，包括端口号等.可以使用默认的。<br><img src="/images/vue目录结构/4.png" alt="vue目录结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">dev.env.js:</font>开发环境变量<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">index.js:</font>项目配置文件<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">prod.env.js:</font>生产环境变量</p><p><font color="red">node_modules:</font> npm 加载的项目依赖模块</p><p><font color="red">src:</font> 这里是我们要开发的目录，基本上要做的事情都在这个目录里。里面包含了几个目录及文件：<br><img src="/images/vue目录结构/2.png" alt="vue目录结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">assets:</font>资源目录，放置一些图片，如logo等。这里的资源会被wabpack构建<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">components:</font> 公共组件目录。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">routes:</font>前端路由。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">App.vue:</font> 根组件，项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">main.js:</font> 入口js文件。</p><p><font color="red">static:</font> 静态资源目录，如图片、字体等。不会被wabpack构建</p><p><font color="red">.xxxx文件:</font>    这些是一些配置文件，包括语法配置，git配置等。</p><p><font color="red">index.html:</font> 首页入口文件，你可以添加一些 meta 信息或统计代码啥的。</p><p><font color="red">package.json:</font> 项目配置文件</p><p><font color="red">README.md:</font>    项目的说明文档，markdown格式</p><hr><p><strong>日常啰嗦</strong>：这个也是在网上多家比较总结出来。恩从基础打起。</p>]]></content>
+      <content type="html"><![CDATA[<ol><li>主目录结构<br><img src="/images/vue目录结构/1.png" alt="vue目录结构"><a id="more"></a></li></ol><p><font color="red">build:</font>    项目构建(webpack)相关代码<br><img src="/images/vue目录结构/3.png" alt="vue目录结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">build.js:</font>生产环境构建脚本<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">utils.js:</font>构建相关工具方法<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">webpack.base.conf.js:</font>wabpack基础配置<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">webpack.dev.conf.js:</font>wabpack开发环境配置<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">webpack.prod.conf.js:</font>wabpack生产环境配置</p><p><font color="red">config:</font> 配置目录，包括端口号等.可以使用默认的。<br><img src="/images/vue目录结构/4.png" alt="vue目录结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">dev.env.js:</font>开发环境变量<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">index.js:</font>项目配置文件<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">prod.env.js:</font>生产环境变量</p><p><font color="red">node_modules:</font> npm 加载的项目依赖模块</p><p><font color="red">src:</font> 这里是我们要开发的目录，基本上要做的事情都在这个目录里。里面包含了几个目录及文件：<br><img src="/images/vue目录结构/2.png" alt="vue目录结构"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">assets:</font>资源目录，放置一些图片，如logo等。这里的资源会被wabpack构建<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">components:</font> 公共组件目录。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">routes:</font>前端路由。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">App.vue:</font> 根组件，项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">main.js:</font> 入口js文件。</p><p><font color="red">static:</font> 静态资源目录，如图片、字体等。不会被wabpack构建</p><p><font color="red">.xxxx文件:</font>    这些是一些配置文件，包括语法配置，git配置等。</p><p><font color="red">index.html:</font> 首页入口文件，你可以添加一些 meta 信息或统计代码啥的。</p><p><font color="red">package.json:</font> 项目配置文件</p><p><font color="red">README.md:</font>    项目的说明文档，markdown格式</p><hr><p><strong>日常啰嗦</strong>：这个也是在网上多家比较总结出来。恩从基础打起。进一步了解了webpack构建。</p>]]></content>
       
       <categories>
           
@@ -150,7 +201,7 @@
       <title>hexo开博小坑</title>
       <link href="/2018/06/27/hexo%E5%BC%80%E5%8D%9A%E5%B0%8F%E5%9D%91/"/>
       <url>/2018/06/27/hexo%E5%BC%80%E5%8D%9A%E5%B0%8F%E5%9D%91/</url>
-      <content type="html"><![CDATA[<ol><li>在本地安装完hexo，设置_config.yml之后，将hexo同步到github时，一直报错，报错信息如下：<br><img src="/images/hexo安装小坑/hexo安装小坑1.png" alt="hexo安装小坑"><a id="more"></a>百度了好久为什么会这样，后来发现是自己眼瞎，百度出来的文章明明写着<br><img src="/images/hexo安装小坑/hexo安装小坑3.jpg" alt="hexo安装小坑"><br>所以配置的_config.yml文件应该是<br><img src="/images/hexo安装小坑/hexo安装小坑2.png" alt="hexo安装小坑"></li></ol><p><font color="red"><strong>扩展</strong>：</font>至于为什么需要在冒号后加空白符呢？这是因为yaml文件的语法的规定<br>每个冒号后面一定要有一个空格（以冒号结尾不需要空格，表示文件路径的模版可以不需要空格），这里指的是键值对，例如：mykey: my_value</p><hr><p>2.创建仓库时需要注意的地方:仓库名字一定要是 你的账户名字.github.io<br>不知道为什么账号名字不能为大写（所以为了开博，我废弃了之前的XIEshuangTING账号）（以后再来填坑）</p><p><strong>日常啰嗦</strong>：为了顺应潮流，想开博的心思已经不能再耽搁了。本来想在阿里云服务器上搭建博客的，奈何自己不太懂服务器的知识（怪自己上课没认真听讲，不过我觉得学校讲的知识应该也是不足以支撑实践的，不要拆穿我，这是给自己的安慰=.=），捣鼓了几天，还是没捣鼓出来，我这暴脾气一下子就上来了，我一定要征服你。所以又捣鼓了几天，果然理想和现实是有差距的，这差距真特么地烦人，所以我就华丽丽地放弃了哈哈。那这样不行我们就下降标准吧，所以就有了这个hexo+github的博客。</p>]]></content>
+      <content type="html"><![CDATA[<ol><li>在本地安装完hexo，设置_config.yml之后，将hexo同步到github时，一直报错，报错信息如下：<br><img src="/images/hexo安装小坑/hexo安装小坑1.png" alt="hexo安装小坑"><a id="more"></a>百度了好久为什么会这样，后来发现是自己眼瞎，百度出来的文章明明写着<br><img src="/images/hexo安装小坑/hexo安装小坑3.jpg" alt="hexo安装小坑"><br>所以配置的_config.yml文件应该是<br><img src="/images/hexo安装小坑/hexo安装小坑2.png" alt="hexo安装小坑"></li></ol><p><font color="red"><strong>扩展</strong>：</font>至于为什么需要在冒号后加空白符呢？这是因为yaml文件的语法的规定<br>每个冒号后面一定要有一个空格（以冒号结尾不需要空格，表示文件路径的模版可以不需要空格），这里指的是键值对，例如：mykey: my_value</p><hr><p>2.创建仓库时需要注意的地方:仓库名字一定要是 你的账户名字.github.io<br>不知道为什么账号名字不能为大写（所以为了开博，我废弃了之前的XIEshuangTING账号）（以后再来填坑）</p><hr><p><strong>日常啰嗦</strong>：为了顺应潮流，想开博的心思已经不能再耽搁了。本来想在阿里云服务器上搭建博客的，奈何自己不太懂服务器的知识（怪自己上课没认真听讲，不过我觉得学校讲的知识应该也是不足以支撑实践的，不要拆穿我，这是给自己的安慰=.=），捣鼓了几天，还是没捣鼓出来，我这暴脾气一下子就上来了，我一定要征服你。所以又捣鼓了几天，果然理想和现实是有差距的，这差距真特么地烦人，所以我就华丽丽地放弃了哈哈。那这样不行我们就下降标准吧，所以就有了这个hexo+github的博客。</p>]]></content>
       
       <categories>
           
