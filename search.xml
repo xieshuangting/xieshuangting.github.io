@@ -3,6 +3,124 @@
   
     
     <entry>
+      <title>元素垂直居中</title>
+      <link href="/2018/06/30/%E5%85%83%E7%B4%A0%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/"/>
+      <url>/2018/06/30/%E5%85%83%E7%B4%A0%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/</url>
+      <content type="html"><![CDATA[<p>演示地址：<a href="https://xieshuangting.github.io/calculate" target="_blank" rel="noopener">https://xieshuangting.github.io/calculate</a><a id="more"></a><br><img src="/images/背景色百分之百填充/1.png" alt="背景色百分之百填充"></p><hr><p><font color="red">1. 水平居中</font></p><p><font color="blue">行内元素</font>: 设置其父元素的text-align:center，</p><p><font color="blue">块级元素</font>:</p><ul><li>定宽：margin:0 auto;</li><li>不定宽：</li></ul>]]></content>
+      
+      <categories>
+          
+          <category> css </category>
+          
+          <category> 计算器 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>颜色渐变</title>
+      <link href="/2018/06/30/%E9%A2%9C%E8%89%B2%E6%B8%90%E5%8F%98/"/>
+      <url>/2018/06/30/%E9%A2%9C%E8%89%B2%E6%B8%90%E5%8F%98/</url>
+      <content type="html"><![CDATA[<hr><p><font color="red">2. 颜色渐变</font><br>渐变属于背景图片。渐变的语法有两种，一种是渐变类型写在参数内的方式如<font color="blue">渐变（线性，参数）</font> background:-webkit-gradient(linear, 0 0, 0 100%, from(＃2074af), to(＃2c91d2));，另一种是渐变类型写在参数外的方式如<font color="blue">线性渐变（参数）</font>background: linear-gradient(to bottom,#9349d4 10%,#354a77 70%);一般采用后者。</p><p><font color="blue">线性渐变</font><br>基本语法：前缀-linear-gradient（渐变线起点位置或使用角度确定渐变线，开始颜色，[中间多个颜色[及位置]]，结束颜色）。[]代表可选<br>渐变线采用<font color="blue">关键字</font>或者<font color="blue">角度</font><br>关键字有top,bottom,left,right,top left,top right,bottom lift,bottom right<br>使用角度时，渐变线为指向右侧的渐变线沿逆时针方向旋转一定的角度<br>background: -webkit-linear-gradient(top,red,yellow 25%,green 50%,blue 75%,purple);</p><p><font color="blue">径向渐变</font><br>基本语法：前缀-radial-gradient（[径向渐变的圆心位置]，[渐变的形状][渐变的大小]，开始颜色，[中间颜色],结束颜色）<br>圆心的位置有3类值可以选择：长度值，可为负值；百分比，可为负值；关键字。此值不写时默认为center<br>形状有2个值可选：circle为圆形，ellipse为椭圆。默认为ellipse<br>大小有3类值可选：长度值，百分比，关键字：closest-side指径向渐变的半径长度为从圆心到离圆心最近的边，closest-corner指径向渐变的半径长度为从圆心到离圆心最近的角，farthest-side指径向渐变的半径长度为从圆心到离圆心最远的边，farthest-corner指径向渐变的半径长度为从圆心到离圆心最远的角<br><img src="/images/height:100%背景色百分之百填充/5.png" alt="height:100%背景色百分之百填充"><br>background: -webkit-radial-gradient(30px 40px,circle closest-side,red,white);</p>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>作用域链</title>
+      <link href="/2018/06/29/%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE/"/>
+      <url>/2018/06/29/%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE/</url>
+      <content type="html"><![CDATA[]]></content>
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>粘性定位position:sticky</title>
+      <link href="/2018/06/29/%E7%B2%98%E6%80%A7%E5%9B%BA%E5%AE%9Aposition-sticky/"/>
+      <url>/2018/06/29/%E7%B2%98%E6%80%A7%E5%9B%BA%E5%AE%9Aposition-sticky/</url>
+      <content type="html"><![CDATA[<p><font color="red">粘性定位</font>是相对定位和固定定位的混合。元素在跨越特定阈值前为相对定位，之后为固定定位。<a id="more"></a></p><p>#one { position: sticky; top: 10px; }<br>在 viewport 视口滚动到元素 top 距离小于 10px 之前，元素为相对定位。之后，元素将固定在与顶部距离 10px 的位置，直到 viewport 视口回滚到阈值以下。<br>使用它，我们不再用监听scroll事件，即可实现导航栏滚动绝对定位的效果。</p><p><font color="red">生效条件</font><br>1.需要注意的是，使用该属性有几个必要条件，否则会失效：<br>2.父元素不能overflow:hidden或者overflow:auto属性。<br>3.必须指定top、bottom、left、right4个值之一，否则只会处于相对定位<br>4.父元素的高度不能低于sticky元素的高度<br>5.sticky元素仅在其父元素内生效</p><p><font color="red">兼容</font><br>position: -webkit-sticky;<br>position: sticky;</p><hr><p><strong>日常啰嗦</strong>：本文转载自这名字真不对<a href="https://www.jianshu.com/p/b72f504121f5" target="_blank" rel="noopener">https://www.jianshu.com/p/b72f504121f5</a><br>这个属性好像以前做什么东西时有看过，但是想不起来是什么了，这垃圾脑子。不过今天在前端面试题里看到这个属性，马上就百度了下。这个属性很强大呀，无奈就是浏览器的支持不好。</p>]]></content>
+      
+      <categories>
+          
+          <category> css </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>IE6不支持position:fixed问题</title>
+      <link href="/2018/06/29/IE6%E4%B8%8D%E6%94%AF%E6%8C%81position-fixed%E9%97%AE%E9%A2%98/"/>
+      <url>/2018/06/29/IE6%E4%B8%8D%E6%94%AF%E6%8C%81position-fixed%E9%97%AE%E9%A2%98/</url>
+      <content type="html"><![CDATA[<!-- <font color='red'>问题：</font>IE7已经支持position:fixed了，而IE6却不支持，解决这个问题的办法如下：现在有一个元素的id是element，它需要实现fixed效果，我们既想要它在正常的浏览器下使用，也想要它在IE 6下正常工作，那么可以使用CSS hack：复制代码#element {position: fixed;top: 450px; /* 其他浏览器下定位，在这里可设置坐标*/_position: absolute; /*IE6 用absolute模拟fixed*//*IE6 动态设置top位置*/_top: expression(eval(document.documentElement.scrollTop) +  450); }复制代码　　这样就可以实现这个元素距离顶部450像素固定，你还可以添加下面的代码实现去除页面抖动的效果：*html body{background-image:url(about:blank);background-attachment:fixed;}　　在前文中，通过_top设置CSS样式，那么怎么修改expression的样式呢：var domThis=$(this)[0];domThis.style.setExpression('top', 'eval((document.documentElement).scrollTop + ' +  50 + ')');　　通过这种方式，就可以达到修改的目的了。 --><!-- 这个兼容性问题通常是采用JS+绝对定位方式处理使元素固定在浏览器的顶部：#top{_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop));}使元素固定在浏览器的底部：#top{_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}这两段代码只能实现在最底部跟最顶部，你可以使用 _margin-top:10px; 或者 _margin-bottom:10px; 修改其中的数值控制元素的位置。position:fixed; 闪动问题现在，问题还没有完全解决。在用了上面的办法后，你会发现：被固定定位的元素在滚动滚动条的时候会闪动。解决闪动问题的办法是在 CSS 文件中加入：*html{background-image:url(about:blank);background-attachment:fixed; -->]]></content>
+      
+      <categories>
+          
+          <category> 兼容性 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>背景色百分之百填充</title>
+      <link href="/2018/06/29/%E8%83%8C%E6%99%AF%E8%89%B2%E7%99%BE%E5%88%86%E4%B9%8B%E7%99%BE%E5%A1%AB%E5%85%85/"/>
+      <url>/2018/06/29/%E8%83%8C%E6%99%AF%E8%89%B2%E7%99%BE%E5%88%86%E4%B9%8B%E7%99%BE%E5%A1%AB%E5%85%85/</url>
+      <content type="html"><![CDATA[<p>演示地址：<a href="https://xieshuangting.github.io/calculate" target="_blank" rel="noopener">https://xieshuangting.github.io/calculate</a><a id="more"></a><br><img src="/images/背景色百分之百填充/1.png" alt="背景色百分之百填充"></p><hr><p><font color="red">关键height：100%</font><br><img src="/images/背景色百分之百填充/2.png" alt="背景色百分之百填充"></p><p><font color="blue">%</font>: 基于包含它的块级对象的百分比高度。<br>100%这个属性值可以理解为一个<font color="blue">计算属性</font>！它是需要有一个<font color="blue">基准值</font>！而这个基准值就是其父级元素的高度值！<br>浏览器一般默认解释为内容的高度，而不是100%。div的100%是从其上一级div的宽高继承来的，有一点很关键，就是要设置div100%显示，必须设置<font color="blue">其上一级div</font>的宽度或高度，否则无效。<br><img src="/images/背景色百分之百填充/3.png" alt="背景色百分之百填充"></p><p><font color="red">注:</font>因为body默认会有8px的margin值！所以会抖动。解决抖动的代码如下：<br>body{<br>    margin: 0;<br>}</p><p><font color="blue"><strong>扩展</strong></font>：另一种实现方法：改变position属性</p><p>#box{<br>    position: absolute;<br>    //position: fixed; //或者利用这样的方法<br>    height: 100%;<br>    width: 100%;<br>    background: red;<br>}<br>这样的写法，省略了个body,html添加属性值。仅仅给#box添加就行！原理是将#box脱离文档流，height的值就可以响应屏幕的高度了！<br>还有就是width:100%记得写上，否则宽度无用</p><hr><p><strong>日常啰嗦</strong>：<font color="blue">部分内容转载自szy1000的专栏<a href="https://blog.csdn.net/u011456552/article/details/75628958" target="_blank" rel="noopener">https://blog.csdn.net/u011456552/article/details/75628958</a></font> &nbsp; 一直以来都知道要设置背景的话要把html和body的height设置为100%，但是不知道为什么，这篇文很好的为我解了惑。</p>]]></content>
+      
+      <categories>
+          
+          <category> css </category>
+          
+          <category> 计算器 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>网上的前端面试题</title>
+      <link href="/2018/06/29/%E7%BD%91%E4%B8%8A%E7%9A%84%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+      <url>/2018/06/29/%E7%BD%91%E4%B8%8A%E7%9A%84%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+      <content type="html"><![CDATA[<p><font color="red">position的值，relative和absolute分别是相对于谁进行定位的？</font><br>inherit    :规定应该从父元素继承 position 属性的值。<br>absolute :生成绝对定位的元素，相对于<font color="blue">最近一级</font>的定位不是 static 的父元素来进行定位。<br>fixed :（IE6不支持）生成绝对定位的元素，通常相对于浏览器窗口或 frame 进行定位。<br>relative :生成相对定位的元素，相对于其在普通流中的位置进行定位。<br>static :默认值。没有定位，元素出现在正常的流中。</p><p><font color="blue">sticky</font> :生成粘性定位的元素，容器的位置根据正常文档流计算得出。(详情见<a href="https://xieshuangting.github.io/2018/06/29/粘性固定position-sticky/#more" target="_blank" rel="noopener">https://xieshuangting.github.io/2018/06/29/粘性固定position-sticky/#more</a>)</p>]]></content>
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>grunt</title>
+      <link href="/2018/06/29/grunt%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+      <url>/2018/06/29/grunt%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<p>grunt中文官网：<a href="http://www.gruntjs.net/" target="_blank" rel="noopener">http://www.gruntjs.net/</a></p><hr><p><font color="red">1. grunt介绍</font><br>一句话：自动化。对于需要反复重复的任务，例如压缩（minification）、编译、单元测试、linting等，自动化工具可以减轻你的劳动，简化你的工作。当你在 Gruntfile 文件正确配置好了任务，任务运行器就会自动帮你或你的小组完成大部分无聊的工作。<br>Grunt执行的每个任务都是各种插件配置的集合，这些配置都是彼此独立，按序执行的。</p><p>安装grunt工作<br>1.在当前目录下配置好package.json—-npm init<br>2.安装grunt—–npm install grunt –save-dev<br>3.创建Gruntfile.Js文件(在里面配置需求的task）</p>]]></content>
+      
+      <categories>
+          
+          <category> 自动化构建工具 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>gulp常用插件</title>
       <link href="/2018/06/29/gulp%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/"/>
       <url>/2018/06/29/gulp%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/</url>
@@ -10,7 +128,7 @@
       
       <categories>
           
-          <category> 打包工具 </category>
+          <category> 自动化构建工具 </category>
           
       </categories>
       
@@ -51,7 +169,7 @@
       <title>package.json文件介绍</title>
       <link href="/2018/06/28/package-json%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/"/>
       <url>/2018/06/28/package-json%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/</url>
-      <content type="html"><![CDATA[<p><font color="red">1. package.json介绍</font><br>package.json在Node项目中用于描述项目的一些基本信息，以及依赖的配置，一般每一个Node项目的根目录下都有一个package.json文件。<a id="more"></a></p><p><font color="blue">package.json文件的创建</font><br>在项目的根目录中我们可以通过$ npm init来初始化一个package.json文件，其内容是一个Json对象。<br>$ npm install 命令根据这个配置文件，自动下载所需的模块，也就是配置项目所需的运行和开发环境。</p><p><font color="blue">为什么要保存配置信息至package.json？</font><br>因为node插件包相对来说非常庞大，所以不加入版本管理，将配置信息写入package.json并将其加入版本管理，其他开发者对应下载即可（命令提示符执行npm install，则会根据package.json下载所有需要的包，npm install –production只下载dependencies节点的包）。</p><hr><p><font color="red">2. scripts字段</font><br><img src="/images/package.json文件介绍/1.png" alt="package.json文件介绍"><br>scripts指定了运行脚本命令的npm命令行缩写，比如start指定了运行npm run start时，所要执行的命令。<br>以上的设置指定了npm run dev、npm run start、npm run build时，所要执行的命令。</p><hr><p><font color="red">2. dependencies字段，devDependencies字段</font><br><img src="/images/package.json文件介绍/2.png" alt="package.json文件介绍"><br>dependencies字段指定了项目运行所依赖的模块。<br>devDependencies指定项目开发所需要的模块。<br>它们都指向一个对象。该对象的各个成员，分别由模块名和对应的版本要求组成，表示依赖的模块及其版本范围。</p><p><font color="blue">安装模块</font><br>如果一个模块不在package.json文件之中，可以单独安装这个模块，并使用相应的参数，将其写入package.json文件之中。例单独安装express模块：<br>$ npm install express –save　　　　–save参数表示将该模块写入dependencies属性<br>$ npm install express –save-dev　　　　–save-dev表示将该模块写入devDependencies属性</p><hr><p><font color="red">3. browserslist字段</font><br><img src="/images/package.json文件介绍/3.png" alt="package.json文件介绍"><br>browserslist指定该模板供浏览器使用的版本，项目的浏览器兼容情况。Browserify这样的浏览器打包工具，通过它就知道该打包那个文件。</p><hr><p><font color="red">4. engines字段</font><br><img src="/images/package.json文件介绍/4.png" alt="package.json文件介绍"><br>engines字段指明了该模块运行的平台<br>比如 Node 的某个版本或者浏览器，指定适用的npm版本。</p><hr><p><strong>日常啰嗦</strong>：反思：一直以来学的东西太多了，然而每个学的又不深，所以时间一久导致全部都忘记了。感觉写在博客里还是有好处的，有一种成就感，虽然没有访客，但是有一种与时代接轨的感觉。很多感受交杂在一起促使我继续写文（虽然有时是复制粘贴的，但是也比单纯的网上浏览在脑海中留下的印象深很多，有一种把别人的东西变成自己成果的感觉 ？？窃取的快乐？？）。之前是单纯地记在电脑的笔记本上，但是他没有一个很好的目录浏览功能，写完之后也没有成就感，所以写了几篇之后就荒废了。然后就是写在纸质的本子上，记在本子上印象是挺深的，但是还是难以检索，难以分类。而且用手记太费时间了（不像写文可以复制粘贴，可以撤回之类的），毕竟自己太渣，别人写的东西都是自己所不懂的知识点，所以有很多东西要记。手写的工作量太大也导致记录这一工作荒废了。现在开始写博，希望可以坚持下去，或者发现这一弊处的话可以找到更好的方法。</p>]]></content>
+      <content type="html"><![CDATA[<p><font color="red">1. package.json介绍</font><br>package.json在Node项目中用于描述项目的一些基本信息，以及依赖的配置，一般每一个Node项目的根目录下都有一个package.json文件。<a id="more"></a></p><p><font color="blue">package.json文件的创建</font><br>在项目的根目录中我们可以通过$ npm init来初始化一个package.json文件，其内容是一个Json对象。<br>$ npm install 命令根据这个配置文件，自动下载所需的模块，也就是配置项目所需的运行和开发环境。</p><p><font color="blue">为什么要保存配置信息至package.json？</font><br>因为node插件包相对来说非常庞大，所以不加入版本管理，将配置信息写入package.json并将其加入版本管理，其他开发者对应下载即可（命令提示符执行npm install，则会根据package.json下载所有需要的包，npm install –production只下载dependencies节点的包）。</p><p><font color="blue">注：</font>json文件不能添加注释</p><hr><p><font color="red">2. scripts字段</font><br><img src="/images/package.json文件介绍/1.png" alt="package.json文件介绍"><br>scripts指定了运行脚本命令的npm命令行缩写，比如start指定了运行npm run start时，所要执行的命令。<br>以上的设置指定了npm run dev、npm run start、npm run build时，所要执行的命令。</p><hr><p><font color="red">2. dependencies字段，devDependencies字段</font><br><img src="/images/package.json文件介绍/2.png" alt="package.json文件介绍"><br>dependencies字段指定了项目运行所依赖的模块。<br>devDependencies指定项目开发所需要的模块。<br>它们都指向一个对象。该对象的各个成员，分别由模块名和对应的版本要求组成，表示依赖的模块及其版本范围。</p><p><font color="blue">安装模块</font><br>如果一个模块不在package.json文件之中，可以单独安装这个模块，并使用相应的参数，将其写入package.json文件之中。例单独安装express模块：<br>$ npm install express –save　　　　–save参数表示将该模块写入dependencies属性<br>$ npm install express –save-dev　　　　–save-dev表示将该模块写入devDependencies属性</p><hr><p><font color="red">3. browserslist字段</font><br><img src="/images/package.json文件介绍/3.png" alt="package.json文件介绍"><br>browserslist指定该模板供浏览器使用的版本，项目的浏览器兼容情况。Browserify这样的浏览器打包工具，通过它就知道该打包那个文件。</p><hr><p><font color="red">4. engines字段</font><br><img src="/images/package.json文件介绍/4.png" alt="package.json文件介绍"><br>engines字段指明了该模块运行的平台<br>比如 Node 的某个版本或者浏览器，指定适用的npm版本。</p><hr><p><strong>日常啰嗦</strong>：反思：一直以来学的东西太多了，然而每个学的又不深，所以时间一久导致全部都忘记了。感觉写在博客里还是有好处的，有一种成就感，虽然没有访客，但是有一种与时代接轨的感觉。很多感受交杂在一起促使我继续写文（虽然有时是复制粘贴的，但是也比单纯的网上浏览在脑海中留下的印象深很多，有一种把别人的东西变成自己成果的感觉 ？？窃取的快乐？？）。之前是单纯地记在电脑的笔记本上，但是他没有一个很好的目录浏览功能，写完之后也没有成就感，所以写了几篇之后就荒废了。然后就是写在纸质的本子上，记在本子上印象是挺深的，但是还是难以检索，难以分类。而且用手记太费时间了（不像写文可以复制粘贴，可以撤回之类的），毕竟自己太渣，别人写的东西都是自己所不懂的知识点，所以有很多东西要记。手写的工作量太大也导致记录这一工作荒废了。现在开始写博，希望可以坚持下去，或者发现这一弊处的话可以找到更好的方法。</p>]]></content>
       
       <categories>
           
@@ -70,7 +188,7 @@
       
       <categories>
           
-          <category> 打包工具 </category>
+          <category> 自动化构建工具 </category>
           
       </categories>
       
@@ -186,7 +304,7 @@
       <title>hexo写文必备常识</title>
       <link href="/2018/06/27/hexo%E5%86%99%E6%96%87%E5%BF%85%E5%A4%87%E5%B8%B8%E8%AF%86/"/>
       <url>/2018/06/27/hexo%E5%86%99%E6%96%87%E5%BF%85%E5%A4%87%E5%B8%B8%E8%AF%86/</url>
-      <content type="html"><![CDATA[<ol><li>修改文章的字体和颜色</li></ol><p><font color="red">我是红色哟</font><br><img src="/images/hexo写文必备常识/1.jpg" alt="hexo写文必备常识"></p><a id="more"></a><hr><ol start="2"><li>在首页上出现‘阅读全文’按钮</li></ol><p><img src="/images/hexo写文必备常识/2.png" alt="hexo写文必备常识"></p><hr><ol start="3"><li>在文章内引入图片</li></ol><p>在source目录下新建一个存放图片的文件夹images（自定义）<br>将图片存放在images里面，引用时图片路径为/images/XXX.jpg</p><p>我是将每一篇文章的图片都区分开，存放在不同的目录下，所以图片引用路径为<br><img src="/images/hexo写文必备常识/3.jpg" alt="hexo写文必备常识"></p><hr><ol start="4"><li>Front-matter的冒号后面应添加一个空白格</li></ol><p>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量<br><img src="/images/hexo写文必备常识/5.png" alt="hexo写文必备常识"></p><p>若是冒号后面没有添加空白格，则会显示如下错误：<br><img src="/images/hexo写文必备常识/4.png" alt="hexo写文必备常识"></p><hr><ol start="5"><li>在文章内添加空格</li></ol><p>a. 在中文输入法下使用全角：shift＋空格键切换至全角模式，之后再按空格键，那么空格键就会生效。<br>b. 添加&#160;或者&nbsp;</p><hr><p><strong>日常啰嗦</strong>：每次写文都有点底气不足，野心很大，奈何技术上跟不上，或者是上次学了用了的命令这次又忘光，上网百度又费时间。所以现在就准备把一些常用的写文必备命令写下来，我看你这样还忘不忘，就算忘了我也不怕，现在我有宝典在手哈哈。</p>]]></content>
+      <content type="html"><![CDATA[<ol><li>修改文章的字体和颜色</li></ol><p><font color="red">我是红色哟</font><br><img src="/images/hexo写文必备常识/1.jpg" alt="hexo写文必备常识"></p><a id="more"></a><hr><ol start="2"><li>在首页上出现‘阅读全文’按钮</li></ol><p><img src="/images/hexo写文必备常识/2.png" alt="hexo写文必备常识"></p><hr><ol start="3"><li>在文章内引入图片</li></ol><p>在source目录下新建一个存放图片的文件夹images（自定义）<br>将图片存放在images里面，引用时图片路径为/images/XXX.jpg</p><p>我是将每一篇文章的图片都区分开，存放在不同的目录下，所以图片引用路径为<br><img src="/images/hexo写文必备常识/3.jpg" alt="hexo写文必备常识"></p><hr><ol start="4"><li>Front-matter的冒号后面应添加一个空白格</li></ol><p>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量<br><img src="/images/hexo写文必备常识/5.png" alt="hexo写文必备常识"></p><p>若是冒号后面没有添加空白格，则会显示如下错误：<br><img src="/images/hexo写文必备常识/4.png" alt="hexo写文必备常识"></p><hr><ol start="5"><li>在文章内添加空格</li></ol><p>a. 在中文输入法下使用全角：shift＋空格键切换至全角模式，之后再按空格键，那么空格键就会生效。<br><img src="/images/hexo写文必备常识/6.png" alt="hexo写文必备常识"></p><hr><p><strong>日常啰嗦</strong>：每次写文都有点底气不足，野心很大，奈何技术上跟不上，或者是上次学了用了的命令这次又忘光，上网百度又费时间。所以现在就准备把一些常用的写文必备命令写下来，我看你这样还忘不忘，就算忘了我也不怕，现在我有宝典在手哈哈。</p>]]></content>
       
       <categories>
           
