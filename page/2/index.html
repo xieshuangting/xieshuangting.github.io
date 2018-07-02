@@ -260,6 +260,187 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/29/IE6不支持position-fixed问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xieshuangting">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RECODE TRACE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/29/IE6不支持position-fixed问题/" itemprop="url">IE6不支持position:fixed问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-29T18:31:14+08:00">
+                2018-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/兼容性/" itemprop="url" rel="index">
+                    <span itemprop="name">兼容性</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!-- <font color='red'>问题：</font>IE7已经支持position:fixed了，而IE6却不支持，解决这个问题的办法如下：
+
+现在有一个元素的id是element，它需要实现fixed效果，我们既想要它在正常的浏览器下使用，也想要它在IE 6下正常工作，那么可以使用CSS hack：
+
+复制代码
+#element {
+position: fixed;
+top: 450px; /* 其他浏览器下定位，在这里可设置坐标*/
+_position: absolute; /*IE6 用absolute模拟fixed*/
+/*IE6 动态设置top位置*/
+_top: expression(eval(document.documentElement.scrollTop) +  450); 
+}
+复制代码
+　　这样就可以实现这个元素距离顶部450像素固定，你还可以添加下面的代码实现去除页面抖动的效果：
+
+*html body{
+background-image:url(about:blank);
+background-attachment:fixed;
+}
+　　在前文中，通过_top设置CSS样式，那么怎么修改expression的样式呢：
+
+var domThis=$(this)[0];
+domThis.style.setExpression(
+'top', 'eval((document.documentElement).scrollTop + ' +  50 + ')'
+);
+　　通过这种方式，就可以达到修改的目的了。 -->
+<!-- 这个兼容性问题通常是采用JS+绝对定位方式处理
+使元素固定在浏览器的顶部：#top{
+_position:absolute;
+_bottom:auto;
+_top:expression(eval(document.documentElement.scrollTop));
+}使元素固定在浏览器的底部：#top{
+_position:absolute;
+_bottom:auto;
+_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}这两段代码只能实现在最底部跟最顶部，你可以使用 _margin-top:10px; 或者 _margin-bottom:10px; 修改其中的数值控制元素的位置。
+position:fixed; 闪动问题
+
+现在，问题还没有完全解决。在用了上面的办法后，你会发现：被固定定位的元素在滚动滚动条的时候会闪动。解决闪动问题的办法是在 CSS 文件中加入：*html{
+background-image:url(about:blank);
+background-attachment:fixed; -->
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/29/背景色百分之百填充/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -417,7 +598,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/29/网上的前端面试题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/29/position/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xieshuangting">
@@ -436,7 +617,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/29/网上的前端面试题/" itemprop="url">网上的前端面试题</a></h1>
+                <a class="post-title-link" href="/2018/06/29/position/" itemprop="url">position</a></h1>
         
 
         <div class="post-meta">
@@ -471,8 +652,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
                   </a>
                 </span>
 
@@ -509,17 +701,14 @@
 
       
         
-          
-            <p><font color="red">position的值，relative和absolute分别是相对于谁进行定位的？</font><br>inherit    :规定应该从父元素继承 position 属性的值。<br>absolute :生成绝对定位的元素，相对于<font color="blue">最近一级</font>的定位不是 static 的父元素来进行定位。<br>fixed :（IE6不支持）生成绝对定位的元素，通常相对于浏览器窗口或 frame 进行定位。<br>relative :生成相对定位的元素，相对于其在普通流中的位置进行定位。<br>static :默认值。没有定位，元素出现在正常的流中。</p>
-<p><font color="blue">sticky</font> :生成粘性定位的元素，容器的位置根据正常文档流计算得出。(详情见<a href="https://xieshuangting.github.io/2018/06/29/粘性固定position-sticky/#more" target="_blank" rel="noopener">https://xieshuangting.github.io/2018/06/29/粘性固定position-sticky/#more</a>)</p>
-<hr>
-<p><font color="red">谈谈你对webpack的看法</font><br>WebPack 是一个<font color="blue">模块打包工具</font>，你可以使用WebPack管理你的模块依赖，并编绎输出模块们所需的静态文件。它能够很好地管理、打包Web开发中所用到的HTML、JavaScript、CSS以及各种静态文件（图片、字体等），让开发过程更加高效。对于不同类型的资源，webpack有对应的模块加载器。webpack模块打包器会分析模块间的依赖关系，最后生成了优化且合并后的<font color="blue">静态资源</font>。</p>
-<p>webpack的两大特色：<br>1.code splitting（可以自动完成）<br>在以前，为了减少 HTTP 请求，通常地，我们都会把所有的代码都打包成一个单独的 JS 文件。但是，如果这个 JS 文件体积很大的话，那就得不偿失了。<br>这时，我们不妨把所有代码分成一块一块，需要某块代码的时候再去加载它；还可以利用浏览器的缓存，下次用到它的话，直接从缓存中读取。很显然，这种做法可以加快我们网页的加载速度，美滋滋！<br>所以说，Code Splitting 其实就是把代码分成很多很多块（ chunk ）<br>2.loader 可以处理各种类型的静态文件，并且支持串联操作</p>
-<p>webpack 是以commonJS的形式来书写脚本，但对 AMD/CMD 的支持也很全面，方便旧项目进行代码迁移。<br>webpack具有requireJs和browserify的功能，但仍有很多自己的新特性：<br>1.对 CommonJS 、 AMD 、ES6的语法做了兼容<br>2.对js、css、图片等资源文件都支持打包<br>3.串联式模块加载器以及插件机制，让其具有更好的灵活性和扩展性，例如提供对CoffeeScript、ES6的支持<br>4.有独立的配置文件webpack.config.js<br>5.可以将代码切割成不同的chunk，实现按需加载，降低了初始化时间<br>6.支持 SourceUrls 和 SourceMaps，易于调试<br>7.具有强大的Plugin接口，大多是内部插件，使用起来比较灵活<br>8.webpack 使用异步 IO 并具有多级缓存。这使得 webpack 很快且在增量编译上更加快</p>
-<hr>
-<p><font color="red">说说你对作用域链的理解</font><br>作用域链的作用是保证执行环境里有权访问的变量和函数是有序的，作用域链的变量只能向上访问，变量访问到window对象即被终止，作用域链向下访问变量是不被允许的。</p>
-
-          
+          <h1 id="position-属性规定元素的定位类型。"><a href="#position-属性规定元素的定位类型。" class="headerlink" title="position 属性规定元素的定位类型。"></a>position 属性规定元素的定位类型。</h1><p><font color="red">inherit</font>:规定应该从父元素继承 position 属性的值。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/29/position/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1576,152 +1765,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/27/vue-cli 搭建项目/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xieshuangting">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="RECODE TRACE">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/27/vue-cli 搭建项目/" itemprop="url">vue-cli 搭建项目</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-27T22:51:09+08:00">
-                2018-06-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/vue/" itemprop="url" rel="index">
-                    <span itemprop="name">vue</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <font color="#42b983">1. 创建一个基于 webpack 模板的新项目</font><br>$ vue init webpack 目录名<br><img src="/images/vue-cli 搭建项目/2.png" alt="vue-cli 搭建项目">
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/27/vue-cli 搭建项目/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1776,7 +1819,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1787,7 +1830,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1873,7 +1916,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.1k字</span>
+  <span class="post-count">博客全站共12.2k字</span>
 </div>
         
 
