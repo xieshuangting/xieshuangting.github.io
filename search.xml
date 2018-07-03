@@ -3,6 +3,36 @@
   
     
     <entry>
+      <title>jQuery的选择器</title>
+      <link href="/2018/07/02/jQuery%E7%9A%84%E9%80%89%E6%8B%A9%E5%99%A8/"/>
+      <url>/2018/07/02/jQuery%E7%9A%84%E9%80%89%E6%8B%A9%E5%99%A8/</url>
+      <content type="html"><![CDATA[<p>(1)、基本选择器：#id,.class,element,*;</p><p>(2)、层次选择器：parent &gt; child，prev + next ，prev ~ siblings<a id="more"></a></p><p>(3)、基本过滤器选择器：:first，:last ，:not ，:even ，:odd ，:eq ，:gt ，:lt</p><p>(4)、内容过滤器选择器： :contains ，:empty<br>$(“:contains(‘W3School’)”)    包含指定字符串的所有元素<br>$(“:empty”)    无子（元素）节点的所有元素</p><p>(5)、可见性过滤器选择器：:hidden ，:visible</p><p>(6)、属性过滤器选择器：[attribute] ，[attribute=value] ，[attribute!=value] ，[attribute^=value] ，[attribute$=value] ，[attribute*=value]</p><p>(7)、子元素过滤器选择器：:nth-child ，:first-child ，:last-child ，:only-child</p><p>(8)、表单选择器： :input ，:text ，:password ，:radio ，:checkbox ，:submit 等；</p><p>(9)、表单过滤器选择器：:enabled ，:disabled ，:checked ，:selected</p>]]></content>
+      
+      <categories>
+          
+          <category> jQuery </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>typeof和instanceof</title>
+      <link href="/2018/07/02/typeof%E5%92%8Cinstanceof/"/>
+      <url>/2018/07/02/typeof%E5%92%8Cinstanceof/</url>
+      <content type="html"><![CDATA[<p>javascript的7种数据类型:字符串、数字、布尔、数组、对象、Null、Undefined<br><strong>相同点：</strong>JavaScript 中 typeof 和 instanceof 常用来判断一个变量是否为空，或者是什么类型的。<a id="more"></a></p><hr><p><strong>typeof的定义和用法：</strong>返回值是一个字符串，用来说明变量的数据类型。是一个一元运算，放在一个运算数之前。<br>一、对于数字类型的操作数而言， typeof 返回的值是 number。比如说：typeof(1)，返回的值就是number。<br>上面是举的常规数字，对于<font color="red">非常规的数字类型</font>而言，其结果返回的也是number。比如typeof(NaN)，NaN在JavaScript中代表的是特殊非数字值，但是它本身是一个数字类型。在JavaScript中，特殊的数字类型还有几种：<br>Infinity 表示无穷大特殊值<br>NaN　　　　　　　　　　　　特殊的非数字值<br>Number.MAX_VALUE　　　　　可表示的最大数字<br>Number.MIN_VALUE　　　　　可表示的最小数字（与零最接近）<br>Number.NaN　　　　　 　　　特殊的非数字值<br>Number.POSITIVE_INFINITY　表示正无穷大的特殊值<br>Number.NEGATIVE_INFINITY  表 示负无穷大的特殊值<br>以上特殊类型，在用typeof进行运算后，其结果都将是number。<br>二、对于字符串类型， typeof 返回的值是 string。比如typeof(“123”)返回的值是string。<br>三、对于布尔类型， typeof 返回的值是 boolean 。比如typeof(true)返回的值是boolean。<br>四、对于对象、数组、null 返回的值是 object 。比如typeof(window)，typeof(document)，typeof(null)返回的值都是object。<br>五、 对于函数类型，返回的值是 function。比如：typeof(eval)，typeof(Date)返回的值都是function。<br>六、如 果运算数是没有定义的（比如说不存在的变量、函数或者undefined），将返回undefined。比如：typeof(sss)、typeof(undefined)都返回undefined。<br><strong>细节：</strong><br>(1)、typeof 一般只能返回如下几个结果：number,boolean,string,function,object,undefined。<br>(2)、typeof 来获取一个变量是否存在，如 if(typeof a!=”undefined”){alert(“ok”)}，而不要去使用 if(a) 因为如果 a 不存在（未声明）则会出错。<br>(3)、对于 Array,Null 等特殊对象使用 typeof 一律返回 object，这正是 typeof 的局限性。</p><hr><p><strong>Instanceof定义和用法：</strong>用来判断一个构造函数的prototype属性所指向的对象是否存在另外一个要检测对象的原型链上。instanceof 用于判断一个变量是否属于某个对象的实例。<br>实例演示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a instanceof b?alert(&quot;true&quot;):alert(&quot;false&quot;); //a是b的实例？真:假</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = new Array(); </span><br><span class="line">alert(a instanceof Array);  // true</span><br><span class="line">alert(a instanceof Object)  // true</span><br></pre></td></tr></table></figure><p>如上，会返回 true，同时 alert(a instanceof Object) 也会返回 true;这是因为 Array 是 object 的子类。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function test()&#123;&#125;;</span><br><span class="line">var a = new test();</span><br><span class="line">alert(a instanceof test)   // true</span><br></pre></td></tr></table></figure></p><p><strong>细节：</strong><br>(1)、如下，得到的结果为‘N’,这里的 instanceof 测试的 object 是指 js 语法中的 object，不是指 dom 模型对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if (window instanceof Object)&#123; alert(&apos;Y&apos;)&#125; else &#123;  alert(&apos;N&apos;);&#125;  // &apos;N&apos;</span><br></pre></td></tr></table></figure></p><hr><p><strong>日常小叨</strong>：这是两个很小的知识点，但是可能是日常中没有用，所以老是忘记。这下就不怕了，忘了就来翻翻看。</p>]]></content>
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>DOM节点关系属性</title>
       <link href="/2018/07/02/DOM%E8%8A%82%E7%82%B9%E5%85%B3%E7%B3%BB%E5%B1%9E%E6%80%A7/"/>
       <url>/2018/07/02/DOM%E8%8A%82%E7%82%B9%E5%85%B3%E7%B3%BB%E5%B1%9E%E6%80%A7/</url>
@@ -374,7 +404,7 @@
       <title>hexo目录结构</title>
       <link href="/2018/06/27/hexo%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
       <url>/2018/06/27/hexo%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</url>
-      <content type="html"><![CDATA[<ol><li>主目录结构<br><img src="/images/hexo目录结构/1.png" alt="hexo目录结构"><a id="more"></a></li></ol><p><font color="#ec6149">public：</font>生成的网站文件，发布的站点文件。</p><p><font color="#ec6149">scaffolds：</font>scaffolds是“脚手架、骨架”的意思，当你新建一篇文章(hexo new ‘title’)的时候，hexo是根据这个目录下的文件进行构建的。</p><p><font color="#ec6149">source：</font>这个目录很重要，新建的文章都是在保存在这个目录下的。</p><p><font color="#ec6149">themes：</font>网站主题目录，hexo有非常好的主题拓展，支持的主题也很丰富。该目录下，每一个子目录就是一个主题。</p><p><font color="#ec6149">_config.yml：</font>全局配置文件，网站的很多信息都在这里配置，诸如网站名称，副标题，描述，作者，语言，主题，部署等等参数。</p><p><font color="#ec6149">package.json：</font>hexo框架的参数和所依赖插件。</p><hr><ol start="2"><li>source目录结构<br><img src="/images/hexo目录结构/2.png" alt="hexo目录结构"></li></ol><p><font color="#ec6149">_posts：</font>需要新建的博文都放在 _posts目录下。 _posts目录下是一个个 markdown 文件。md文件会被编译成html文件，放到public文件夹下。<br><img src="/images/hexo目录结构/3.png" alt="hexo目录结构"></p><p><font color="#ec6149">tag：</font>标签文件夹。</p><p><font color="#ec6149">category：</font>分类文件夹。</p><p><strong>日常啰嗦</strong>：本文是在网上多家比较复制粘贴过来的。</p>]]></content>
+      <content type="html"><![CDATA[<ol><li>主目录结构<br><img src="/images/hexo目录结构/1.png" alt="hexo目录结构"><a id="more"></a></li></ol><p><font color="#ec6149">public：</font>生成的网站文件，发布的站点文件。</p><p><font color="#ec6149">scaffolds：</font>scaffolds是“脚手架、骨架”的意思，当你新建一篇文章(hexo new ‘title’)的时候，hexo是根据这个目录下的文件进行构建的。</p><p><font color="#ec6149">source：</font>这个目录很重要，新建的文章都是在保存在这个目录下的。</p><p><font color="#ec6149">themes：</font>网站主题目录，hexo有非常好的主题拓展，支持的主题也很丰富。该目录下，每一个子目录就是一个主题。</p><p><font color="#ec6149">_config.yml：</font>全局配置文件，网站的很多信息都在这里配置，诸如网站名称，副标题，描述，作者，语言，主题，部署等等参数。</p><p><font color="#ec6149">package.json：</font>hexo框架的参数和所依赖插件。</p><hr><ol start="2"><li>source目录结构<br><img src="/images/hexo目录结构/2.png" alt="hexo目录结构"></li></ol><p><font color="#ec6149">_posts：</font>需要新建的博文都放在 _posts目录下。 _posts目录下是一个个 markdown 文件。md文件会被编译成html文件，放到public文件夹下。<br><img src="/images/hexo目录结构/3.png" alt="hexo目录结构"></p><p><font color="#ec6149">tag：</font>标签文件夹。</p><p><font color="#ec6149">category：</font>分类文件夹。</p><hr><p><strong>日常小叨</strong>：本文是在网上多家比较复制粘贴过来的。</p>]]></content>
       
       <categories>
           
