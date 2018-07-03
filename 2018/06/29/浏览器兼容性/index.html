@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="RECODE TRACE">
 <meta property="og:description" content="1. 浏览器兼容性？？由于市场上浏览器种类众多，而不同浏览器其内核亦不尽相同，所以各个浏览器对网页的解析就有一定出入，这也是导致浏览器兼容问题出现的主要原因，我们的网页需要在主流浏览器上正常运行，就需要做好浏览器兼容。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-29T05:34:07.479Z">
+<meta property="og:updated_time" content="2018-07-03T05:45:09.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器兼容性">
 <meta name="twitter:description" content="1. 浏览器兼容性？？由于市场上浏览器种类众多，而不同浏览器其内核亦不尽相同，所以各个浏览器对网页的解析就有一定出入，这也是导致浏览器兼容问题出现的主要原因，我们的网页需要在主流浏览器上正常运行，就需要做好浏览器兼容。">
@@ -349,10 +349,11 @@
       
 
       
-        <font color="red">1. 浏览器兼容性？？</font><br>由于市场上浏览器种类众多，而不同浏览器其内核亦不尽相同，所以各个浏览器对网页的解析就有一定出入，这也是导致浏览器兼容问题出现的主要原因，我们的网页需要在主流浏览器上正常运行，就需要做好浏览器兼容。<a id="more"></a><br><font color="blue">四大内核</font><br>使用<font color="blue">Trident</font>内核的浏览器：IE；<br>使用<font color="blue">Gecko</font>内核的浏览器：Netcape6及以上版本、FireFox；<br>使用<font color="blue">Presto</font>内核的浏览器：Opera7及以上版本；<br>使用<font color="blue">Webkit</font>内核的浏览器：Safari、Chrome。<br>而我现在所说的兼容性问题，主要是说IE与几个主流浏览器如firefox，google等。而对IE浏览器来说，IE7又是个跨度，因为之前的版本更新甚慢，bug甚多。从IE8开始，IE浏览器渐渐遵循标准，到IE9后由于大家都一致认为标准很重要，可以说在兼容性上比较好了，但是在中国来说，由于xp的占有率问题，使用IE7以下的用户仍然很多，所以我们不得不考虑低版本浏览器的兼容。<br>对浏览器兼容问题，一般分:<font color="red">HTML，Javascript兼容，CSS兼容</font>。 其中html相关问题比较容易处理，无非是高版本浏览器用了低版本浏览器无法识别的元素，导致其不能解析，所以平时注意一点就是。特别是HTML5增加了许多新标签，低版本浏览器有点影响时代进步啊。<br><br>—-<br><font color="red">2. css兼容性</font><br><font color="blue">问题一：不同浏览器的标签默认的外补丁(margin)和内补丁(padding)不同</font><br>问题症状：随便写几个标签，不加样式控制的情况下，各自的margin和padding差异较大。<br>解决方案：css里 *{margin:0;padding:0;}<br><br><font color="blue">问题二：块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大</font><br>问题症状:常见症状是ie6中后面的一块被顶到下一行<br>解决方案：在float的标签样式控制中加入 display:inline;将其转化为行内属性<br>备注：我们最常用的就是div+css布局了，而div就是一个典型的块属性标签，横向布局的时候我们通常都是用div float实现的，横向的间距设置如果用margin实现，这就是一个必然会碰到的兼容性问题。<br><br><font color="blue">问题三：设置较小高度标签（一般小于10px），在ie6，ie7，遨游中高度超出自己设置高度</font><br>问题症状：ie6、7和遨游里这个标签的高度不受控制，超出自己设置的高度<br>碰到频率：60%<br>解决方案：给超出高度的标签设置overflow:hidden;或者设置行高line-height 小于你设置的高度。<br>备注：这种情况一般出现在我们设置小圆角背景的标签里。出现这个问题的原因是ie8之前的浏览器都会给标签一个最小默认的行高的高度。即使你的标签是空的，这个标签的高度还是会达到默认的行高。<br><br><font color="blue">问题四：行内属性标签，设置display:block后采用float布局，又有横行的margin的情况，ie6间距bug（类似第二种）</font><br>问题症状：ie6里的间距比超过设置的间距<br>碰到几率：20%<br>解决方案：在display:block;后面加入display:inline;display:table;<br>备注：行内属性标签，为了设置宽高，我们需要设置display:block;(除了input标签比较特殊)。在用float布局并有横向的margin后，在ie6下，他就具有了块属性float后的横向margin的bug。不过因为它本身就是行内属性标签，所以我们再加上display:inline的话，它的高宽就不可设了。这时候我们还需要在display:inline后面加入display:talbe。<br><br><font color="blue">问题五：图片默认有间距</font><br>问题症状：几个img标签放在一起的时候，有些浏览器会有默认的间距，加上问题一中提到的通配符也不起作用。<br>碰到几率：20%<br>解决方案：使用float属性为img布局<br>备注：因为img标签是行内属性标签，所以只要不超出容器宽度，img标签都会排在一行里，但是部分浏览器的img标签之间会有个间距。去掉这个间距使用float是正道<br><br><font color="blue">问题六：标签最低高度设置min-height不兼容</font><br>问题症状：因为min-height本身就是一个不兼容的css属性，所以设置min-height时不能很好的被各个浏览器兼容<br>碰到几率：5%<br>解决方案：如果我们要设置一个标签的最小高度200px，需要进行的设置为：{min-height:200px; height:auto !important; height:200px; overflow:visible;}<br>备注：在B/S系统前端开时，有很多情况下我们有这种需求。当内容小于一个值（如300px）时。容器的高度为300px；当内容高度大于这个值时，容器高度被撑高，而不是出现滚动条。这时候我们就会面临这个兼容性问题。<br><br><font color="blue">问题七：透明度的兼容css设置</font>
+        <h1 id="1-浏览器兼容性？？"><a href="#1-浏览器兼容性？？" class="headerlink" title="1. 浏览器兼容性？？"></a><font color="red">1. 浏览器兼容性？？</font></h1><p>由于市场上浏览器种类众多，而不同浏览器其内核亦不尽相同，所以各个浏览器对网页的解析就有一定出入，这也是导致浏览器兼容问题出现的主要原因，我们的网页需要在主流浏览器上正常运行，就需要做好浏览器兼容。<a id="more"></a></p>
+<font color="blue">四大内核</font><br>使用<font color="blue">Trident</font>内核的浏览器：IE；<br>使用<font color="blue">Gecko</font>内核的浏览器：Netcape6及以上版本、FireFox；<br>使用<font color="blue">Presto</font>内核的浏览器：Opera7及以上版本；<br>使用<font color="blue">Webkit</font>内核的浏览器：Safari、Chrome。<br>而我现在所说的兼容性问题，主要是说IE与几个主流浏览器如firefox，google等。而对IE浏览器来说，IE7又是个跨度，因为之前的版本更新甚慢，bug甚多。从IE8开始，IE浏览器渐渐遵循标准，到IE9后由于大家都一致认为标准很重要，可以说在兼容性上比较好了，但是在中国来说，由于xp的占有率问题，使用IE7以下的用户仍然很多，所以我们不得不考虑低版本浏览器的兼容。<br>对浏览器兼容问题，一般分:<font color="red">HTML，Javascript兼容，CSS兼容</font>。 其中html相关问题比较容易处理，无非是高版本浏览器用了低版本浏览器无法识别的元素，导致其不能解析，所以平时注意一点就是。特别是HTML5增加了许多新标签，低版本浏览器有点影响时代进步啊。<br><br>—-<br># <font color="red">2. css兼容性</font><br>## <font color="blue">问题一：不同浏览器的标签默认的外补丁(margin)和内补丁(padding)不同</font><br>问题症状：随便写几个标签，不加样式控制的情况下，各自的margin和padding差异较大。<br>解决方案：css里 *{margin:0;padding:0;}<br><br>## <font color="blue">问题二：图片默认有间距</font><br>问题症状：几个img标签放在一起的时候，有些浏览器会有默认的间距，加上问题一中提到的通配符也不起作用。<br>详情见<a href="http://localhost:4000/2018/07/03/图片之间的间距问题/" target="_blank" rel="noopener">http://localhost:4000/2018/07/03/图片之间的间距问题/</a><br><br>## <font color="blue">问题二：图片默认有间距</font>
 
 <hr>
-<p><strong>日常啰嗦</strong>：当初有人问我关于浏览器兼容性的时候我一脸懵，我确定我之前有接触过，但是就是说不出口。而且也很怀疑自己所知道的是不是符合答案的。所以现在我想把他做一个归纳汇总。</p>
+<p><strong>日常小叨</strong>：当初有人问我关于浏览器兼容性的时候我一脸懵，我确定我之前有接触过，但是就是说不出口。而且也很怀疑自己所知道的是不是符合答案的。所以现在我想把他做一个归纳汇总。</p>
 
       
     </div>
@@ -441,8 +442,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -461,7 +471,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -513,6 +523,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-浏览器兼容性？？"><span class="nav-number">1.</span> <span class="nav-text">1. 浏览器兼容性？？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
