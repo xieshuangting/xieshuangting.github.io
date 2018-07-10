@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="MUI-最接近原生APP体验的高性能前端框架 第一章:课程介绍">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MUI框架的使用(1)">
+<meta property="og:url" content="http://yoursite.com/2018/07/08/mui框架的使用-1/index.html">
+<meta property="og:site_name" content="RECODE TRACE">
+<meta property="og:description" content="MUI-最接近原生APP体验的高性能前端框架 第一章:课程介绍">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/1.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/2.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/3.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/4.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/5.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/6.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/7.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/8.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/9.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/10.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/11.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/12.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/13.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/14.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/15.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/16.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/17.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/18.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/19.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/20.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/21.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/22.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/23.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/24.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/25.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/26.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/27.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/28.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/29.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/30.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/31.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/32.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/33.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/34.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/35.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/36.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/37.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/38.png">
+<meta property="og:image" content="http://yoursite.com/images/mui框架的使用-1/39.png">
+<meta property="og:updated_time" content="2018-07-10T02:05:54.148Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MUI框架的使用(1)">
+<meta name="twitter:description" content="MUI-最接近原生APP体验的高性能前端框架 第一章:课程介绍">
+<meta name="twitter:image" content="http://yoursite.com/images/mui框架的使用-1/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/08/mui框架的使用-1/"/>
+
+
+
+
+
+  <title>MUI框架的使用(1) | RECODE TRACE</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/xieshuangting" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">RECODE TRACE</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/08/mui框架的使用-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xieshuangting">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RECODE TRACE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">MUI框架的使用(1)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-08T22:24:50+08:00">
+                2018-07-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MUI/" itemprop="url" rel="index">
+                    <span itemprop="name">MUI</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MUI/仿豆瓣电影/" itemprop="url" rel="index">
+                    <span itemprop="name">仿豆瓣电影</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>MUI-最接近原生APP体验的高性能前端框架</p>
+<h3 id="第一章-课程介绍"><a href="#第一章-课程介绍" class="headerlink" title="第一章:课程介绍"></a>第一章:课程介绍</h3><p><img src="/images/mui框架的使用-1/1.png"><a id="more"></a><br><img src="/images/mui框架的使用-1/2.png"></p>
+<h3 id="第二章-MUI基础知识概述"><a href="#第二章-MUI基础知识概述" class="headerlink" title="第二章:MUI基础知识概述"></a>第二章:MUI基础知识概述</h3><p><img src="/images/mui框架的使用-1/3.png"><br><img src="/images/mui框架的使用-1/4.png"><br><img src="/images/mui框架的使用-1/5.png"><br><img src="/images/mui框架的使用-1/6.png"><br><img src="/images/mui框架的使用-1/7.png"><br><img src="/images/mui框架的使用-1/8.png"></p>
+<h3 id="第三章-项目概述及框架搭建"><a href="#第三章-项目概述及框架搭建" class="headerlink" title="第三章:项目概述及框架搭建"></a>第三章:项目概述及框架搭建</h3><h4 id="1-制作tab页面"><a href="#1-制作tab页面" class="headerlink" title="1.制作tab页面"></a>1.制作tab页面</h4><p><img src="/images/mui框架的使用-1/9.png"><br>让HBuilder检测到夜神模拟器：在菜单栏里设置工具–&gt;选项–&gt;HBuild–&gt;第三方安卓模拟器端口：62001<br>框架生成的默认模式：<br><img src="/images/mui框架的使用-1/10.png"><br>默认的总共有5个tab，需要更改为3个tab<br>1.先在manifest.json文件里更改text，width，icon等属性，并删除不需要的代码。<br>2.修改icon。在css的mui.css里查找所需的icon的代码，复制到manifest.json里的icon属性里。增加u<br>例如：\e466-&gt;\ue466<br>3.修改js的util.js。将83行的8改为6<br>4.删除index.html的47到147代码，并修改剩下的代码</p>
+<h4 id="2-调整模板"><a href="#2-调整模板" class="headerlink" title="2.调整模板"></a>2.调整模板</h4><p><img src="/images/mui框架的使用-1/11.png"><br><img src="/images/mui框架的使用-1/12.png"><br><img src="/images/mui框架的使用-1/13.png"><br>index是首页文件，可以把new-webview.html删除掉。<br>文件重命名：在html文件里把文件名更改，之后到util.js里面更改subpages设置<br>清空页面内容：把预设的html代码和css代码和js代码都清掉<br>修改tab底色：在manifest.json页面修改subNViews的backgroundColor的颜色，删除launchwebview的”background”: “#fff”<br>修改内容底色，在每个HTML页面中修改body的background<br><img src="/images/mui框架的使用-1/14.png"><br>修改路径之后要自己手动修改，subnview–mui对tab的原生封装</p>
+<h3 id="第4章-电影列表功能实战"><a href="#第4章-电影列表功能实战" class="headerlink" title="第4章:电影列表功能实战"></a>第4章:电影列表功能实战</h3><h4 id="1-搜索框"><a href="#1-搜索框" class="headerlink" title="1.搜索框"></a>1.搜索框</h4><p><img src="/images/mui框架的使用-1/15.png"><br><img src="/images/mui框架的使用-1/16.png"></p>
+<p><font color="red">注：</font>.mui-content类的默认背景色是灰色的。<br>tap点击事件<br>选择器mui（‘.wrap-search’）[0]<br>绑定事件：addEventListen(‘tap’,function(){})</p>
+<h4 id="2-热映列表布局"><a href="#2-热映列表布局" class="headerlink" title="2.热映列表布局"></a>2.热映列表布局</h4><p><img src="/images/mui框架的使用-1/17.png"><br><img src="/images/mui框架的使用-1/18.png"><br><img src="/images/mui框架的使用-1/19.png"><br><img src="/images/mui框架的使用-1/20.png"><br>编写style.css文件。<br>在.mui-scroll-wrapper上添加top:50px的样式，可以离顶部50px的距离（不用设置position，区域滚动组件默认为absolute定位，全屏显示）<br>给img元素添加mui-pull-left类，使其左浮动<br>mui-ellipsis类，使文本单行显示<br><img src="/images/mui框架的使用-1/21.png"><br>手动初始化scroll：mui(‘.mui-scroll-wrapper’).scroll({})</p>
+<h4 id="3-获取热映列表接口数据"><a href="#3-获取热映列表接口数据" class="headerlink" title="3.获取热映列表接口数据"></a>3.获取热映列表接口数据</h4><p><img src="/images/mui框架的使用-1/22.png"><br><img src="/images/mui框架的使用-1/23.png"><br>mui.getJSON()(url[,data][,success])<br>豆瓣接口为：<a href="http://api.douban.com/v2/movie/in_theaters" target="_blank" rel="noopener">http://api.douban.com/v2/movie/in_theaters</a><br>编写数据转换函数convert（）<br>电影风格（将数组转换成用逗号拼接的字符串）：item.genres.toString().replace(/,/g,’ / ‘)<br>在多个演员中间加入’/’:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var directors = &apos;&apos;;</span><br><span class="line">for(var i=0;i&lt;item.directors.length;i++)&#123;</span><br><span class="line">	directors += item.directors[i].name;</span><br><span class="line">	if(i != item.directors.length - 1)&#123;</span><br><span class="line">		directors += &apos; / &apos;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-使用Vue进行数据绑定"><a href="#4-使用Vue进行数据绑定" class="headerlink" title="4.使用Vue进行数据绑定"></a>4.使用Vue进行数据绑定</h4><p><img src="/images/mui框架的使用-1/24.png"><br><img src="/images/mui框架的使用-1/25.png"><br><img src="/images/mui框架的使用-1/26.png"><br>引入Vue.min.js文件<br>使用Vue：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var data_movies = new Vue(&#123;  //注：Vue首字母大写</span><br><span class="line">	el:&apos;#movies&apos;,</span><br><span class="line">	data:&#123;</span><br><span class="line">		movies:[]</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h4 id="5-下拉刷新上拉加载"><a href="#5-下拉刷新上拉加载" class="headerlink" title="5.下拉刷新上拉加载"></a>5.下拉刷新上拉加载</h4><p><img src="/images/mui框架的使用-1/27.png"><br><img src="/images/mui框架的使用-1/28.png"><br><img src="/images/mui框架的使用-1/29.png"><br><img src="/images/mui框架的使用-1/30.png"><br>bug两个进度条，DOM自带的一个和scroll控件的一个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mui(&apos;.mui-scroll-wrapper&apos;).scroll(&#123;</span><br><span class="line">	indicators:false</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/mui框架的使用-1/31.png"></p>
+<p>mui中iOS平台的下拉刷新（Android平台的下拉刷新使用的是双webview+原生滚动方案）、popover、可拖动式选项卡均使用了scroll组件。 为方便大家使用，mui还额外为scroll插件封装了部分方法。</p>
+<h4 id="6-预加载电影详情页"><a href="#6-预加载电影详情页" class="headerlink" title="6.预加载电影详情页"></a>6.预加载电影详情页</h4><p><img src="/images/mui框架的使用-1/32.png"><br><img src="/images/mui框架的使用-1/33.png"><br>新建电影详情的html页面，选择含有mui的html模板。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//预加载的电影详情页面</span><br><span class="line">var detailPage = mui.preload(&#123;</span><br><span class="line">    id:&apos;movie-detail&apos;,//默认使用当前页面的url作为id</span><br><span class="line">	url:&apos;./html/movie-detail.html&apos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/mui框架的使用-1/34.png"></p>
+<h3 id="第5章-电影详情功能实战"><a href="#第5章-电影详情功能实战" class="headerlink" title="第5章:电影详情功能实战"></a>第5章:电影详情功能实战</h3><h4 id="1-电影详情页面跳转和数据传递"><a href="#1-电影详情页面跳转和数据传递" class="headerlink" title="1. 电影详情页面跳转和数据传递"></a>1. 电影详情页面跳转和数据传递</h4><p>在tab顶部增加横线：在manifest.json文件里面添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;tag&quot;: &quot;rect&quot;,</span><br><span class="line">	&quot;id&quot;: &quot;tabBorder&quot;,</span><br><span class="line">	&quot;text&quot;: &quot;\ue502&quot;,</span><br><span class="line">	&quot;position&quot;: &#123;</span><br><span class="line">		&quot;top&quot;: &quot;0&quot;,</span><br><span class="line">		&quot;left&quot;: &quot;0&quot;,</span><br><span class="line">		&quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">		&quot;height&quot;: &quot;1px&quot;</span><br><span class="line">	&#125;,</span><br><span class="line">	&quot;rectStyles&quot;: &#123;</span><br><span class="line">		&quot;color&quot;:&quot;#ccc&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/mui框架的使用-1/35.png"><br><img src="/images/mui框架的使用-1/36.png"><br><img src="/images/mui框架的使用-1/37.png"><br><img src="/images/mui框架的使用-1/38.png"><br><img src="/images/mui框架的使用-1/39.png"><br>若没有使用预加载就是用什么？传参</p>
+<p><strong><font color="red">待解决的问题，滚动和打开新页面</font></strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/06/响应式的页面实现/" rel="next" title="响应式的页面实现">
+                <i class="fa fa-chevron-left"></i> 响应式的页面实现
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="xieshuangting" />
+            
+              <p class="site-author-name" itemprop="name">xieshuangting</p>
+              <p class="site-description motion-element" itemprop="description">当你发现自己的才华撑不起野心时，就请安静下来学习吧</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/xieshuangting" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:962367782@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章-课程介绍"><span class="nav-number">1.</span> <span class="nav-text">第一章:课程介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章-MUI基础知识概述"><span class="nav-number">2.</span> <span class="nav-text">第二章:MUI基础知识概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三章-项目概述及框架搭建"><span class="nav-number">3.</span> <span class="nav-text">第三章:项目概述及框架搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-制作tab页面"><span class="nav-number">3.1.</span> <span class="nav-text">1.制作tab页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-调整模板"><span class="nav-number">3.2.</span> <span class="nav-text">2.调整模板</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第4章-电影列表功能实战"><span class="nav-number">4.</span> <span class="nav-text">第4章:电影列表功能实战</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-搜索框"><span class="nav-number">4.1.</span> <span class="nav-text">1.搜索框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-热映列表布局"><span class="nav-number">4.2.</span> <span class="nav-text">2.热映列表布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-获取热映列表接口数据"><span class="nav-number">4.3.</span> <span class="nav-text">3.获取热映列表接口数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-使用Vue进行数据绑定"><span class="nav-number">4.4.</span> <span class="nav-text">4.使用Vue进行数据绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-下拉刷新上拉加载"><span class="nav-number">4.5.</span> <span class="nav-text">5.下拉刷新上拉加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-预加载电影详情页"><span class="nav-number">4.6.</span> <span class="nav-text">6.预加载电影详情页</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第5章-电影详情功能实战"><span class="nav-number">5.</span> <span class="nav-text">第5章:电影详情功能实战</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-电影详情页面跳转和数据传递"><span class="nav-number">5.1.</span> <span class="nav-text">1. 电影详情页面跳转和数据传递</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xieshuangting</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+  </div>
+  <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+ -->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共16.2k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
