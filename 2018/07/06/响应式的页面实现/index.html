@@ -85,19 +85,20 @@
 
 
 
-<meta name="description" content="定义不同的css文件12&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;……&amp;quot; media=&amp;quot;screen and (max-width:768px)&amp;quot;&amp;gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;">
+<meta name="description" content="响应式布局概念Responsive design，意在实现不同屏幕分辨率的终端上浏览网页的不同展示方式。通过响应式设计能使网站在手机和平板电脑上有更好的浏览阅读体验。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="响应式的页面实现">
 <meta property="og:url" content="http://yoursite.com/2018/07/06/响应式的页面实现/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="定义不同的css文件12&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;……&amp;quot; media=&amp;quot;screen and (max-width:768px)&amp;quot;&amp;gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;">
+<meta property="og:description" content="响应式布局概念Responsive design，意在实现不同屏幕分辨率的终端上浏览网页的不同展示方式。通过响应式设计能使网站在手机和平板电脑上有更好的浏览阅读体验。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/07/06/响应式的页面实现/image.jpg">
 <meta property="og:image" content="http://yoursite.com/images/响应式页面的实现/1.png">
-<meta property="og:updated_time" content="2018-07-06T14:17:37.063Z">
+<meta property="og:updated_time" content="2018-07-10T02:09:48.558Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="响应式的页面实现">
-<meta name="twitter:description" content="定义不同的css文件12&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;……&amp;quot; media=&amp;quot;screen and (max-width:768px)&amp;quot;&amp;gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;">
-<meta name="twitter:image" content="http://yoursite.com/images/响应式页面的实现/1.png">
+<meta name="twitter:description" content="响应式布局概念Responsive design，意在实现不同屏幕分辨率的终端上浏览网页的不同展示方式。通过响应式设计能使网站在手机和平板电脑上有更好的浏览阅读体验。">
+<meta name="twitter:image" content="http://yoursite.com/2018/07/06/响应式的页面实现/image.jpg">
 
 
 
@@ -351,7 +352,46 @@
       
 
       
-        <p>定义不同的css文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;……&quot; media=&quot;screen and (max-width:768px)&quot;&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;……&quot; media=&quot;screen and (min-width:769px)&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+        <h3 id="响应式布局概念"><a href="#响应式布局概念" class="headerlink" title="响应式布局概念"></a>响应式布局概念</h3><p>Responsive design，意在实现不同屏幕分辨率的终端上浏览网页的不同展示方式。通过响应式设计能使网站在手机和平板电脑上有更好的浏览阅读体验。<a id="more"></a></p>
+<h4 id="响应式设计的步骤"><a href="#响应式设计的步骤" class="headerlink" title="响应式设计的步骤"></a>响应式设计的步骤</h4><ol>
+<li>设置 Meta 标签</li>
+</ol>
+<p>大多数移动浏览器将HTML页面放大为宽的视图（viewport）以符合屏幕分辨率。你可以使用视图的meta标签来进行重置。下面的视图标签告诉浏览器，使用设备的宽度作为视图宽度并禁止初始的缩放。在<head>标签里加入这个meta标签。</head></p>
+<p><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><br>[1]user-scalable = no 属性能够解决 iPad 切换横屏之后触摸才能回到具体尺寸的问题。</p>
+<ol start="2">
+<li>通过媒介查询来设置样式 Media Queries</li>
+</ol>
+<p>Media Queries 是响应式设计的核心。</p>
+<p>它根据条件告诉浏览器如何为指定视图宽度渲染页面。假如一个终端的分辨率小于 980px，那么可以这样写：</p>
+<p>@media screen and (max-width: 980px) {</p>
+<p>  #head { … }</p>
+<p>  #content { … }</p>
+<p>  #footer { … }<br>}<br>这里的样式就会覆盖上面已经定义好的样式。</p>
+<ol start="4">
+<li>设置多种试图宽度</li>
+</ol>
+<p>假如我们要设定兼容 iPad 和 iphone 的视图，那么可以这样设置：</p>
+<p>/<strong> iPad </strong>/<br>@media only screen and (min-width: 768px) and (max-width: 1024px) {}<br>/<strong> iPhone </strong>/<br>@media only screen and (min-width: 320px) and (max-width: 767px) {}<br>恩，差不多就这样的一个原理。</p>
+<p>一些注意的</p>
+<ol>
+<li>宽度需要使用百分比</li>
+</ol>
+<p>例如这样：</p>
+<p>#head { width: 100% }</p>
+<p>#content { width: 50%; }</p>
+<ol start="2">
+<li>处理图片缩放的方法</li>
+</ol>
+<p>简单的解决方法可以使用百分比，但这样不友好，会放大或者缩小图片。那么可以尝试给图片指定的最大宽度为百分比。假如图片超过了，就缩小。假如图片小了，就原尺寸输出。<br>img { width: auto; max-width: 100%; }<br>用::before和::after伪元素 +content 属性来动态显示一些内容或者做其它很酷的事情，在 css3 中，任何元素都可以使用 content 属性了，这个方法就是结合 css3 的 attr 属性和 HTML 自定义属性的功能： HTML 结构：<br><img src="image.jpg" data-src-600px="image-600px.jpg" data-src-800px="image-800px.jpg" alt=""><br>CSS 控制：</p>
+<p>@media (min-device-width:600px) {<br>    img[data-src-600px] {<br>        content: attr(data-src-600px, url);<br>    }<br>}</p>
+<p>@media (min-device-width:800px) {<br>    img[data-src-800px] {<br>        content: attr(data-src-800px, url);<br>    }<br>}</p>
+<ol start="3">
+<li>其他属性</li>
+</ol>
+<p>例如 pre ，iframe，video 等，都需要和img一样控制好宽度。对于table，建议不要增加 padding 属性，低分辨率下使用内容居中：</p>
+<p>table th, table td { padding: 0 0; text-align: center; }</p>
+<p>以上内容和代码来自：掌心，感谢，欢迎查看我之前做过的响应式设计：查看演示</p>
+<p>定义不同的css文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;……&quot; media=&quot;screen and (max-width:768px)&quot;&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;……&quot; media=&quot;screen and (min-width:769px)&quot;&gt;</span><br></pre></td></tr></table></figure></p>
 <p>或者只定义定义一个css文件<br><img src="/images/响应式页面的实现/1.png"></p>
 
       
@@ -441,8 +481,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -461,7 +510,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -472,7 +521,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -513,6 +562,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式布局概念"><span class="nav-number">1.</span> <span class="nav-text">响应式布局概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#响应式设计的步骤"><span class="nav-number">1.1.</span> <span class="nav-text">响应式设计的步骤</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -558,7 +623,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共16.2k字</span>
+  <span class="post-count">博客全站共19.7k字</span>
 </div>
         
 
