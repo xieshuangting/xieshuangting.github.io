@@ -3,6 +3,51 @@
   
     
     <entry>
+      <title>9.5小结</title>
+      <link href="/2018/09/05/9-5%E5%B0%8F%E7%BB%93/"/>
+      <url>/2018/09/05/9-5%E5%B0%8F%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h3 id="一-overflow"><a href="#一-overflow" class="headerlink" title="一.overflow"></a>一.overflow</h3><p>overflow：属性规定当内容溢出元素框时发生的事情。<a id="more"></a><br><img src="/images/9-5小结/1.png"><br><em>遇到的问题</em>：使用js或者jq设置没有反应。<br>没解决。<br>使用另外的方法。当点击一个菜单的时候关闭所有的二级菜单。<br><code>$(&quot;.list&quot;).hide(100);</code></p><h3 id="二-position-fixed"><a href="#二-position-fixed" class="headerlink" title="二.position:fixed"></a>二.position:fixed</h3><p>当容器高度为100%时，设置之后用top属性的话，会看不到最下面的内容<br>可以使用padding-top。</p><h3 id="三-绘制三角形"><a href="#三-绘制三角形" class="headerlink" title="三.绘制三角形"></a>三.绘制三角形</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">width: 0px;</span><br><span class="line">height: 0px;</span><br><span class="line">border-left: 10px red solid;</span><br><span class="line">border-bottom: 10px transparent solid;</span><br><span class="line">border-top: 10px transparent solid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>留下的疑惑：如何改变三角形的角度。</p><h3 id="四-默认设置最小的饼图面积"><a href="#四-默认设置最小的饼图面积" class="headerlink" title="四.默认设置最小的饼图面积"></a>四.默认设置最小的饼图面积</h3><p>minAngle:10(设置默认的最小角度)<br><img src="/images/9-5小结/2.png"></p>]]></content>
+      
+      <categories>
+          
+          <category> 工作小结 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>9.4小结</title>
+      <link href="/2018/09/04/9-4%E5%B0%8F%E7%BB%93/"/>
+      <url>/2018/09/04/9-4%E5%B0%8F%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h3 id="一-table属性"><a href="#一-table属性" class="headerlink" title="一.table属性"></a>一.table属性</h3><p>1.table默认是没有边框的<br><img src="/images/9-4小结/1.png"><br>2.<code>&lt;table border=&quot;4&quot;&gt;</code>:规定表格边框的宽度。<br><img src="/images/9-4小结/2.png"><br>3.<code>cellpadding=&quot;10&quot;</code>:属性规定单元边沿与其内容之间的空白。<br><img src="/images/9-4小结/3.png"><br>4.<code>cellspacing=&quot;10&quot;</code>:属性规定单元格之间的空间。<br><img src="/images/9-4小结/4.png"><br><em>注</em>：234属性不一定需要border属性，只是有了border可以更好地展示出效果。<br>5.<code>width=400</code>:属性规定单元格之间的空间。</p><h3 id="二-iframe高度自适应"><a href="#二-iframe高度自适应" class="headerlink" title="二.iframe高度自适应"></a>二.iframe高度自适应</h3><p>如果有人也是使用iframe嵌套进去的方法，页面中的内容高度不再自适应了，此时计算div的高度的方法又是没错的，那么有可能就是没有把页面方法同一个域中去执行，所以的解决的方法就是可以放在服务器下去执行。如果你是使用浏览器直接打开，那么使用的可能是file协议，所以才会导致浏览器报错，说域为空。</p><h3 id="三-flex自适应"><a href="#三-flex自适应" class="headerlink" title="三.flex自适应"></a>三.flex自适应</h3><p>flex-wrap设置项目是否在一条线上，默认为nowrap<br><img src="/images/9-4小结/5.png"><br><a href="https://blog.csdn.net/qq_34648000/article/details/79115294" target="_blank" rel="noopener">https://blog.csdn.net/qq_34648000/article/details/79115294</a></p><h3 id="四-省略号要在display-block里用"><a href="#四-省略号要在display-block里用" class="headerlink" title="四.省略号要在display:block里用"></a>四.省略号要在<code>display:block</code>里用</h3>]]></content>
+      
+      <categories>
+          
+          <category> 工作笔记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>8.21小结</title>
+      <link href="/2018/08/21/8-21%E5%B0%8F%E7%BB%93/"/>
+      <url>/2018/08/21/8-21%E5%B0%8F%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h3 id="一-元素不存在时返回的是什么"><a href="#一-元素不存在时返回的是什么" class="headerlink" title="一.元素不存在时返回的是什么"></a>一.元素不存在时返回的是什么<a id="more"></a></h3><p><img src="/images/8-21小结/1.png"><br><img src="/images/8-21小结/3.png"><br><img src="/images/8-21小结/2.png"></p><h3 id="二-absolute只坚持一点，就以父级左上角为原点进行定位，父级的padding对其根本没有影响。"><a href="#二-absolute只坚持一点，就以父级左上角为原点进行定位，父级的padding对其根本没有影响。" class="headerlink" title="二.absolute只坚持一点，就以父级左上角为原点进行定位，父级的padding对其根本没有影响。"></a>二.absolute只坚持一点，就以父级左上角为原点进行定位，父级的padding对其根本没有影响。</h3><p><img src="/images/8-21小结/4.png"><br><img src="/images/8-21小结/5.png"><br><img src="/images/8-21小结/6.png"></p><h3 id="三-transition"><a href="#三-transition" class="headerlink" title="三.transition"></a>三.transition</h3><h3 id="四-v-model获取变化的select选中值"><a href="#四-v-model获取变化的select选中值" class="headerlink" title="四.v-model获取变化的select选中值"></a>四.v-model获取变化的select选中值</h3><p><img src="/images/8-21小结/7.png"><br><img src="/images/8-21小结/8.png"></p>]]></content>
+      
+      <categories>
+          
+          <category> 工作笔记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>8.10小结</title>
       <link href="/2018/08/10/8-10%E5%B0%8F%E7%BB%93/"/>
       <url>/2018/08/10/8-10%E5%B0%8F%E7%BB%93/</url>
