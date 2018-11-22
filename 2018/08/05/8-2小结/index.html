@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="RECODE TRACE">
 <meta property="og:description" content="一.jquery的动画animate()遇到的问题：当想要导航栏隐藏时，使用了$(&amp;quot;#page-wrapper&amp;quot;).animate({marginLeft:&amp;quot;0&amp;quot;});之前的理解笔记：animate()方法执行css属性集(即{XX:xx})的自定义动画只有数字值可以创建动画，比如{margin:”300px”}字符串无法创建动画，例如background-">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-05T08:58:25.850Z">
+<meta property="og:updated_time" content="2018-10-17T12:25:59.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8.2小结">
 <meta name="twitter:description" content="一.jquery的动画animate()遇到的问题：当想要导航栏隐藏时，使用了$(&amp;quot;#page-wrapper&amp;quot;).animate({marginLeft:&amp;quot;0&amp;quot;});之前的理解笔记：animate()方法执行css属性集(即{XX:xx})的自定义动画只有数字值可以创建动画，比如{margin:”300px”}字符串无法创建动画，例如background-">
@@ -358,7 +358,11 @@
 <h4 id="3-使用预定义的值"><a href="#3-使用预定义的值" class="headerlink" title="3.使用预定义的值"></a>3.使用预定义的值</h4><p>您甚至可以把属性的动画值设置为 “show”、”hide” 或 “toggle”：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;div&quot;).animate(&#123;</span><br><span class="line">    height:&apos;toggle&apos;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>将height设置为hide的话，就只会执行一次操作：隐藏。再次点击不会显示。</p>
 <h4 id="4-使用队列功能"><a href="#4-使用队列功能" class="headerlink" title="4.使用队列功能"></a>4.使用队列功能</h4><p>默认地，jQuery 提供针对动画的队列功能。<br>这意味着如果您在彼此之后编写多个 animate() 调用，jQuery 会创建包含这些方法调用的”内部”队列。然后逐一运行这些 animate 调用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">  var div=$(&quot;div&quot;);</span><br><span class="line">  div.animate(&#123;height:&apos;300px&apos;,opacity:&apos;0.4&apos;&#125;,&quot;slow&quot;);</span><br><span class="line">  div.animate(&#123;width:&apos;300px&apos;,opacity:&apos;0.8&apos;&#125;,&quot;slow&quot;);</span><br><span class="line">  div.animate(&#123;height:&apos;100px&apos;,opacity:&apos;0.4&apos;&#125;,&quot;slow&quot;);</span><br><span class="line">  div.animate(&#123;width:&apos;100px&apos;,opacity:&apos;0.8&apos;&#125;,&quot;slow&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h4 id="二-获取浏览器的高度"><a href="#二-获取浏览器的高度" class="headerlink" title="二.获取浏览器的高度"></a>二.获取浏览器的高度</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;#&quot; method=&quot;get&quot; name=&quot;form1&quot; id=&quot;form1&quot;&gt; </span><br><span class="line">&lt;!--显示浏览器窗口的实际尺寸--&gt; </span><br><span class="line">浏览器窗口 的 实际高度: &lt;input type=&quot;text&quot; name=&quot;availHeight&quot; size=&quot;4&quot;/&gt;&lt;br /&gt; </span><br><span class="line">浏览器窗口 的 实际宽度: &lt;input type=&quot;text&quot; name=&quot;availWidth&quot; size=&quot;4&quot;/&gt;&lt;br /&gt; </span><br><span class="line">&lt;/form&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	var winWidth = 0; </span><br><span class="line">	var winHeight = 0; </span><br><span class="line">	function findDimensions()&#123; </span><br><span class="line">		//获取窗口宽度 </span><br><span class="line">		if (window.innerWidth) &#123;</span><br><span class="line">			winWidth = window.innerWidth; </span><br><span class="line">		&#125;</span><br><span class="line">		else if ((document.body) &amp;&amp; (document.body.clientWidth))&#123; </span><br><span class="line">			winWidth = document.body.clientWidth; </span><br><span class="line">		&#125;</span><br><span class="line">		//获取窗口高度 </span><br><span class="line">		// if (window.innerHeight) &#123;</span><br><span class="line">		// 	winHeight = window.innerHeight; </span><br><span class="line">		// &#125;</span><br><span class="line">		// else if ((document.body) &amp;&amp; (document.body.clientHeight))&#123; </span><br><span class="line">		// 	winHeight = document.body.clientHeight; </span><br><span class="line">		// &#125;</span><br><span class="line">		// //通过深入Document内部对body进行检测，获取窗口大小 </span><br><span class="line">		// if (document.documentElement &amp;&amp; document.documentElement.clientHeight &amp;&amp; document.documentElement.clientWidth) </span><br><span class="line">		// &#123; </span><br><span class="line">		// 	winHeight = document.documentElement.clientHeight; </span><br><span class="line">		// 	winWidth = document.documentElement.clientWidth; </span><br><span class="line">		// &#125; </span><br><span class="line">		//结果输出至两个文本框 </span><br><span class="line">		document.form1.availHeight.value= winHeight; </span><br><span class="line">		document.form1.availWidth.value= winWidth; </span><br><span class="line">	&#125; </span><br><span class="line">	findDimensions(); </span><br><span class="line">	//调用函数，获取数值 </span><br><span class="line">	window.onresize=findDimensions; </span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="二-window-resize"><a href="#二-window-resize" class="headerlink" title="二.$(window).resize"></a>二.$(window).resize</h3><p>遇到的问题：想要调整好iframe的高度，使之适应浏览器的高度又不出现滚动条。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;调整资金池后台首页的样式<br>语法：<code>$(selector).resize(function)</code></p>
+<p>resize() 方法触发 resize 事件，或规定当发生 resize 事件时运行的函数。<br>$(selector).offset().top:  获得selector的上面部分的高度。<br>$(window).height():  获得当前窗口的高度。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(window).resize(function() &#123;</span><br><span class="line">	$(selector).height($(window).height() - $(selector).offset().top - 60);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>实际应用了<code>$(selector).css(&quot;height&quot;,($(window).height() - 全部额外的高度)+&quot;px&quot;);</code></p>
+<h3 id="三-获取元素高度"><a href="#三-获取元素高度" class="headerlink" title="三.获取元素高度"></a>三.获取元素高度</h3><p>遇到的问题：想要获得加载出来的li的高度</p>
+<h3 id="二-获取浏览器的高度"><a href="#二-获取浏览器的高度" class="headerlink" title="二.获取浏览器的高度"></a>二.获取浏览器的高度</h3>
       
     </div>
     
@@ -475,7 +479,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -486,7 +490,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -537,7 +541,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-jquery的动画animate"><span class="nav-number">1.</span> <span class="nav-text">一.jquery的动画animate()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-可操作多个属性"><span class="nav-number">1.1.</span> <span class="nav-text">1.可操作多个属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-使用相对值"><span class="nav-number">1.2.</span> <span class="nav-text">2.使用相对值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-使用预定义的值"><span class="nav-number">1.3.</span> <span class="nav-text">3.使用预定义的值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-使用队列功能"><span class="nav-number">1.4.</span> <span class="nav-text">4.使用队列功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二-获取浏览器的高度"><span class="nav-number">1.5.</span> <span class="nav-text">二.获取浏览器的高度</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-jquery的动画animate"><span class="nav-number">1.</span> <span class="nav-text">一.jquery的动画animate()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-可操作多个属性"><span class="nav-number">1.1.</span> <span class="nav-text">1.可操作多个属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-使用相对值"><span class="nav-number">1.2.</span> <span class="nav-text">2.使用相对值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-使用预定义的值"><span class="nav-number">1.3.</span> <span class="nav-text">3.使用预定义的值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-使用队列功能"><span class="nav-number">1.4.</span> <span class="nav-text">4.使用队列功能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-window-resize"><span class="nav-number">2.</span> <span class="nav-text">二.$(window).resize</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-获取元素高度"><span class="nav-number">3.</span> <span class="nav-text">三.获取元素高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-获取浏览器的高度"><span class="nav-number">4.</span> <span class="nav-text">二.获取浏览器的高度</span></a></li></ol></div>
             
 
           </div>
@@ -588,7 +592,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共23.2k字</span>
+  <span class="post-count">博客全站共28.4k字</span>
 </div>
         
 

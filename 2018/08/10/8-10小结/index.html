@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="RECODE TRACE">
 <meta property="og:description" content="日常小叨今天换种格式，先把日常小叨写在前面吧。对于今天的工作现状发表一下感想吧1.对于一些样式，表现形式相同的html片段一定要用组件封装。不然后续要修改的地方更多。2.后台小哥问的问题也很一针见血的指出了我的不足。虽然当时回答出来了。但是，也是在演示了n个错误示范中才想起来的（捂脸）。我可是个搞前端的呀。  一.vue组件化1.可以不对组件命名。2.父-子父组件向子组件传数据是通过v-on:co">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-10T15:37:03.541Z">
+<meta property="og:updated_time" content="2018-10-17T12:26:05.035Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8.10小结">
 <meta name="twitter:description" content="日常小叨今天换种格式，先把日常小叨写在前面吧。对于今天的工作现状发表一下感想吧1.对于一些样式，表现形式相同的html片段一定要用组件封装。不然后续要修改的地方更多。2.后台小哥问的问题也很一针见血的指出了我的不足。虽然当时回答出来了。但是，也是在演示了n个错误示范中才想起来的（捂脸）。我可是个搞前端的呀。  一.vue组件化1.可以不对组件命名。2.父-子父组件向子组件传数据是通过v-on:co">
@@ -352,6 +352,8 @@
         <p><strong>日常小叨</strong><br>今天换种格式，先把日常小叨写在前面吧。对于今天的工作现状发表一下感想吧<br>1.对于一些样式，表现形式相同的html片段一定要用组件封装。不然后续要修改的地方更多。<br>2.后台小哥问的问题也很一针见血的指出了我的不足。虽然当时回答出来了。但是，也是在演示了n个错误示范中才想起来的（捂脸）。我可是个搞前端的呀。</p>
 <hr>
 <h3 id="一-vue组件化"><a href="#一-vue组件化" class="headerlink" title="一.vue组件化"></a>一.vue组件化</h3><p>1.可以不对组件命名。<br>2.<strong>父-子</strong><br>父组件向子组件传数据是通过<code>v-on:contentList=&quot;content&quot;</code>(括号内的是父组件传递的具体数据名)<br>子组件接受父组件传递的数据是使用<code>props:{contentList:{type:Array}}</code><br>3.<strong>子-父</strong><br>子组件向父组件传数据是使用<code>this.$emit(&#39;cart-add&#39;, event.target)</code>(第一个参数:在父组件中监听的事件名。第二个参数:传递的数据)<br>在父组件中引入子组件时，定义一个on的方法监听子组件的状态<code>v-on:cart-add=&quot;cartAdd&quot;</code>(括号内为父组件中实际执行的函数名)。再在method里面使用该传递的数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cartAdd: function (value) &#123;</span><br><span class="line">	// value就是子组件传过来的值</span><br><span class="line">	this.name = value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>疑问？</strong>在父组件中怎么更新传入子组件的数据<br>数组的变化可不可以检测到</p>
+<h3 id="二-对于onclick，addEventListener，on，bind，attachEvent的用法区别"><a href="#二-对于onclick，addEventListener，on，bind，attachEvent的用法区别" class="headerlink" title="二.对于onclick，addEventListener，on，bind，attachEvent的用法区别"></a>二.对于onclick，addEventListener，on，bind，attachEvent的用法区别</h3><p>关键字click<br>on() 方法在被选元素及子元素上添加一个或多个事件处理程序。<br>自 jQuery 版本 1.7 起，on() 方法是 bind()、live() 和 delegate() 方法的新的替代品。<br>使用 on() 方法添加的事件处理程序适用于当前及未来的元素（比如由脚本创建的新元素）。<br>bind() 方法向被选元素添加一个或多个事件处理程序，以及当事件发生时运行的函数。<br>addEventListener() 方法用于向指定元素添加事件句柄。<br>关键字onclick<br>注意： Internet Explorer 8 及更早IE版本不支持 addEventListener() 方法，，Opera 7.0 及 Opera 更早版本也不支持。 但是，对于这些不支持该函数的浏览器，你可以使用 attachEvent() 方法来添加事件句柄 (查看 “更多实例” 了解跨浏览器的解决方案)。<br>在dom元素上操作 也是onclick<br>object.onclick=function(){SomeJavaScriptCode};</p>
 
       
     </div>
@@ -469,7 +471,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -480,7 +482,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -531,7 +533,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-vue组件化"><span class="nav-number">1.</span> <span class="nav-text">一.vue组件化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-vue组件化"><span class="nav-number">1.</span> <span class="nav-text">一.vue组件化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-对于onclick，addEventListener，on，bind，attachEvent的用法区别"><span class="nav-number">2.</span> <span class="nav-text">二.对于onclick，addEventListener，on，bind，attachEvent的用法区别</span></a></li></ol></div>
             
 
           </div>
@@ -582,7 +584,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共23.2k字</span>
+  <span class="post-count">博客全站共28.4k字</span>
 </div>
         
 
