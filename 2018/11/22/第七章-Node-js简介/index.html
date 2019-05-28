@@ -85,20 +85,20 @@
 
 
 
-<meta name="description" content="Node.js是javascript的运行环境，之前的js代码都是运行在浏览器中的，浏览器负责解释和执行代码。浏览器端的js代码在执行的时候会受到各种各样的安全性的限制。会放在一个安全沙箱里面。有很多的功能我们不能用，对客户系统的操作是有限的。node可以安装到很多的系统中，可以编写系统级和服务器端的js代码，之后交给Node.js来解读。这样就可以使用系统级的API，比如文件操作，网络编程，不用">
+<meta name="description" content="慕课网视频《所向披靡的响应式开发》第七章的笔记。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第七章.Node.js简介">
 <meta property="og:url" content="http://yoursite.com/2018/11/22/第七章-Node-js简介/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="Node.js是javascript的运行环境，之前的js代码都是运行在浏览器中的，浏览器负责解释和执行代码。浏览器端的js代码在执行的时候会受到各种各样的安全性的限制。会放在一个安全沙箱里面。有很多的功能我们不能用，对客户系统的操作是有限的。node可以安装到很多的系统中，可以编写系统级和服务器端的js代码，之后交给Node.js来解读。这样就可以使用系统级的API，比如文件操作，网络编程，不用">
+<meta property="og:description" content="慕课网视频《所向披靡的响应式开发》第七章的笔记。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/第七章.Node.js简介/1.png">
 <meta property="og:image" content="http://yoursite.com/images/第七章.Node.js简介/2.png">
 <meta property="og:image" content="http://yoursite.com/images/第七章.Node.js简介/3.png">
-<meta property="og:updated_time" content="2018-11-22T13:59:52.131Z">
+<meta property="og:updated_time" content="2019-05-28T13:35:59.479Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第七章.Node.js简介">
-<meta name="twitter:description" content="Node.js是javascript的运行环境，之前的js代码都是运行在浏览器中的，浏览器负责解释和执行代码。浏览器端的js代码在执行的时候会受到各种各样的安全性的限制。会放在一个安全沙箱里面。有很多的功能我们不能用，对客户系统的操作是有限的。node可以安装到很多的系统中，可以编写系统级和服务器端的js代码，之后交给Node.js来解读。这样就可以使用系统级的API，比如文件操作，网络编程，不用">
+<meta name="twitter:description" content="慕课网视频《所向披靡的响应式开发》第七章的笔记。">
 <meta name="twitter:image" content="http://yoursite.com/images/第七章.Node.js简介/1.png">
 
 
@@ -353,7 +353,7 @@
       
 
       
-        <p>Node.js是javascript的运行环境，之前的js代码都是运行在浏览器中的，浏览器负责解释和执行代码。浏览器端的js代码在执行的时候会受到各种各样的安全性的限制。会放在一个安全沙箱里面。有很多的功能我们不能用，对客户系统的操作是有限的。node可以安装到很多的系统中，可以编写系统级和服务器端的js代码，之后交给Node.js来解读。这样就可以使用系统级的API，比如文件操作，网络编程，不用受到浏览器的限制。<br>chrome V8引擎使用C++开发的一个js的解释引擎。独立于浏览器环境的。<br>chrome和V8引擎关系：V8引擎一出生就被chrome拿来使用。<br>优点：其他的js引擎都是将js代码转换成字节码，V8引擎会将js代码编译成原生的机器码，会做一系列的优化，运行速度可以媲美二进制的程序。<br>总结起来就是可以在非浏览器的环境下运行js代码，而且速度很快。<br>典型的事件驱动：js有很多的异步编程，依赖于回调函数。<br>非阻塞的IO模型是配合事件驱动来的。比如读取文件的时候，在读取文件的时候可以执行其他的事情，而不会挂起。<br><img src="/images/第七章.Node.js简介/1.png" width="60%"><br><img src="/images/第七章.Node.js简介/2.png" width="40%"><br><img src="/images/第七章.Node.js简介/3.png" width="40%"></p>
+        <p>慕课网视频《所向披靡的响应式开发》第七章的笔记。<br><a id="more"></a><br>Node.js是javascript的运行环境，之前的js代码都是运行在浏览器中的，浏览器负责解释和执行代码。浏览器端的js代码在执行的时候会受到各种各样的安全性的限制。会放在一个安全沙箱里面。有很多的功能我们不能用，对客户系统的操作是有限的。node可以安装到很多的系统中，可以编写系统级和服务器端的js代码，之后交给Node.js来解读。这样就可以使用系统级的API，比如文件操作，网络编程，不用受到浏览器的限制。<br>chrome V8引擎使用C++开发的一个js的解释引擎。独立于浏览器环境的。<br>chrome和V8引擎关系：V8引擎一出生就被chrome拿来使用。<br>优点：其他的js引擎都是将js代码转换成字节码，V8引擎会将js代码编译成原生的机器码，会做一系列的优化，运行速度可以媲美二进制的程序。<br>总结起来就是可以在非浏览器的环境下运行js代码，而且速度很快。<br>典型的事件驱动：js有很多的异步编程，依赖于回调函数。<br>非阻塞的IO模型是配合事件驱动来的。比如读取文件的时候，在读取文件的时候可以执行其他的事情，而不会挂起。<br><img src="/images/第七章.Node.js简介/1.png" width="60%"><br><img src="/images/第七章.Node.js简介/2.png" width="40%"><br><img src="/images/第七章.Node.js简介/3.png" width="40%"></p>
 <p>低版本的IE浏览器再打开带有端口号的ip地址的时候需要加上http协议，不然有时候会打不开<br>http-server：Node.js的服务器</p>
 
       
@@ -560,7 +560,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.2k字</span>
+  <span class="post-count">博客全站共38.2k字</span>
 </div>
         
 

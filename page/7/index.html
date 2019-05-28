@@ -510,27 +510,14 @@
 
       
         
-          
-            <p>演示地址：<a href="http://www.xieshuangting.cn" target="_blank" rel="noopener">www.xieshuangting.cn</a></p>
-<h3 id="一-课程介绍"><a href="#一-课程介绍" class="headerlink" title="一.课程介绍"></a>一.课程介绍</h3><h4 id="1-导学"><a href="#1-导学" class="headerlink" title="1.导学"></a>1.导学</h4><p><img src="/images/全栈打造商城-1/2.png"><br><img src="/images/全栈打造商城-1/3.png"><br><img src="/images/全栈打造商城-1/4.png"><br><img src="/images/全栈打造商城-1/5.png"></p>
-<h4 id="2-前端框架的回顾"><a href="#2-前端框架的回顾" class="headerlink" title="2.前端框架的回顾"></a>2.前端框架的回顾</h4><p><img src="/images/全栈打造商城-1/1.png"><br><img src="/images/全栈打造商城-1/6.png"><br><img src="/images/全栈打造商城-1/7.png"></p>
-<h4 id="3-vue概括以及核心思想"><a href="#3-vue概括以及核心思想" class="headerlink" title="3.vue概括以及核心思想"></a>3.vue概括以及核心思想</h4><p><img src="/images/全栈打造商城-1/8.png"><br><img src="/images/全栈打造商城-1/9.png"><br><img src="/images/全栈打造商城-1/10.png"><br><img src="/images/全栈打造商城-1/11.png"><br><img src="/images/全栈打造商城-1/12.png"><br><img src="/images/全栈打造商城-1/13.png"><br><img src="/images/全栈打造商城-1/14.png"></p>
-<h4 id="4-vue优点对比"><a href="#4-vue优点对比" class="headerlink" title="4.vue优点对比"></a>4.vue优点对比</h4><p><img src="/images/全栈打造商城-1/15.png"><br><img src="/images/全栈打造商城-1/16.png"><br><img src="/images/全栈打造商城-1/17.png"><br>状态管理工具:vuex</p>
-<h3 id="二-vue基础"><a href="#二-vue基础" class="headerlink" title="二.vue基础"></a>二.vue基础</h3><h4 id="1-vue环境搭建"><a href="#1-vue环境搭建" class="headerlink" title="1.vue环境搭建"></a>1.vue环境搭建</h4><p><img src="/images/全栈打造商城-1/18.png"><br>项目名称小写（大写不通过）</p>
-<h4 id="2-vue配置"><a href="#2-vue配置" class="headerlink" title="2.vue配置"></a>2.vue配置</h4><p>vue的目录结构</p>
-<h4 id="3-vue的基础语法"><a href="#3-vue的基础语法" class="headerlink" title="3.vue的基础语法"></a>3.vue的基础语法</h4><p><img src="/images/全栈打造商城-1/19.png"><br><img src="/images/全栈打造商城-1/20.png"><br>对象语法:v-bind:class 指令也可以与普通的 class 属性共存。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;static&quot;</span><br><span class="line">     v-bind:class=&quot;&#123; active: isActive, &apos;text-danger&apos;: hasError &#125;&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<p>数组语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:class=&quot;[activeClass, errorClass]&quot;&gt;&lt;/div&gt;</span><br><span class="line">data: &#123;</span><br><span class="line">  activeClass: &apos;active&apos;,</span><br><span class="line">  errorClass: &apos;text-danger&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>style绑定-对象语法：内联样式<br><img src="/images/全栈打造商城-1/21.png"><br>v-cloak属性和 CSS 规则如 <font color="red">[v-cloak] { display: none }</font>一起用<br>v-cloak属性的 html 标签在页面初始化时会被隐藏。<br>在 vuejs instance ready 之后，v-cloak 属性会被自动去除，也就是对应的标签会变为可见。<br>为什么我用的 v-cloak 无效？<br>在实际项目中，我们常通过 @import 来加载 css 文件<br>例如：@import “style.css”<br>而 <font color="red">@import 是在页面 DOM 完全载入后才会进行加载</font>，如果我们将 [v-cloak] 写在 @import 加载的 css 文件中，就会导致页面仍旧闪烁。<br>为了避免这种情况，我们可以将 [v-cloak] 写在 link 引入的 css 中，或者写一个内联 css 样式，这样就得到了解决。<br><img src="/images/全栈打造商城-1/22.png"><br><img src="/images/全栈打造商城-1/23.png"><br>可以使用script引入node_modules的资源<br><img src="/images/全栈打造商城-1/24.png"></p>
-<h3 id="三：Vue-router"><a href="#三：Vue-router" class="headerlink" title="三：Vue-router"></a>三：Vue-router</h3><h4 id="1-路由基础介绍"><a href="#1-路由基础介绍" class="headerlink" title="1.路由基础介绍"></a>1.路由基础介绍</h4><p><img src="/images/全栈打造商城-1/25.png"><br><img src="/images/全栈打造商城-1/26.png"><br><img src="/images/全栈打造商城-1/27.png"><br>在 HTML5 history 模式下，router-link 会拦截点击事件，让浏览器不在重新加载页面。<br>router-link 标签渲染成了 a 标签，to 属性变成了a 标签的 href 属性，这时就明白了点击跳转的意思。router-view 标签渲染成了我们定义的组件，其实它就是一个占位符，它在什么地方，匹配路径的组件就在什么地方，所以 router-link 和router-view 标签一一对应，成对出现。</p>
-<p><font color="blue">router-link跳转标签，相当于a<br>router-view组件渲染</font></p>
-<p><font color="red"><strong>扩展：</strong></font><br>1.你要懂的单页面应用和多页面应用 <a href="https://juejin.im/post/5a0ea4ec6fb9a0450407725c" target="_blank" rel="noopener">https://juejin.im/post/5a0ea4ec6fb9a0450407725c</a><br>2.vue-router 基本使用 <a href="https://www.cnblogs.com/SamWeb/p/6610733.html" target="_blank" rel="noopener">https://www.cnblogs.com/SamWeb/p/6610733.html</a><br><img src="/images/全栈打造商城-1/28.png"></p>
-<h4 id="2-动态路由匹配"><a href="#2-动态路由匹配" class="headerlink" title="2.动态路由匹配"></a>2.动态路由匹配</h4><p>应用：详情页面，根据商品的id来加载页面<br><img src="/images/全栈打造商城-1/29.png"><br>在src中新建router文件，就会自动生成index.js文件<br><img src="/images/全栈打造商城-1/30.png"><br>在src中新建views文件，再新建GoodsList组件（views文件放置页面，component放置可以复用的组件）<br>$route对history的封装<br><img src="/images/全栈打造商城-1/31.png"><br><img src="/images/全栈打造商城-1/32.png"><br>vue-router 默认 hash 模式 —— 使用 URL 的 hash 来模拟一个完整的 URL，于是当 URL 改变时，页面不会重新加载。因为对于正常的页面来说，更换url一定是会导致页面的更换的， 而只有更换url中的查询字符串和hash值得时候才不会重新加载页面。 这里也就是这个道理。<br>所以，如果不想要，可以使用路由的history模式！！！ 这种模式充分利用了history.pushState API来完成URL的跳转而不需要重新加载页面。</p>
-<p><font color="red"><strong>扩展：</strong></font><br>如何去除vue项目中的 # — History模式<br><a href="https://www.cnblogs.com/zhuzhenwei918/p/6892066.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhuzhenwei918/p/6892066.html</a></p>
-<h4 id="3-嵌套路由"><a href="#3-嵌套路由" class="headerlink" title="3.嵌套路由"></a>3.嵌套路由</h4><p>应用：（比如个人主页中的个人信息）同个页面不同菜单的切换<br>二级路由的路径，不用加‘/’<br><img src="/images/全栈打造商城-1/33.png"><br>应用的时候使用绝对地址<br><img src="/images/全栈打造商城-1/34.png"></p>
-<h4 id="4-编程式路由"><a href="#4-编程式路由" class="headerlink" title="4.编程式路由"></a>4.编程式路由</h4><p><img src="/images/全栈打造商城-1/35.png"><br><img src="/images/全栈打造商城-1/36.png"><br><img src="/images/全栈打造商城-1/37.png"><br>jump(){}  是es6的写法，原来的写法jump：function(){}<br><img src="/images/全栈打造商城-1/38.png"><br>$route.params.goodId组件跟组件之间路由切换的时候参数的传递(路由的参数)<br><img src="/images/全栈打造商城-1/39.png"><br>$route.query.goodId动态路由页面之间<br><img src="/images/全栈打造商城-1/40.png"></p>
-<h4 id="5-命名路由和命名视图"><a href="#5-命名路由和命名视图" class="headerlink" title="5.命名路由和命名视图"></a>5.命名路由和命名视图</h4><p><img src="/images/全栈打造商城-1/41.png"><br><img src="/images/全栈打造商城-1/42.png"><br><img src="/images/全栈打造商城-1/43.png"><br><img src="/images/全栈打造商城-1/44.png"><br><img src="/images/全栈打造商城-1/46.png"><br><img src="/images/全栈打造商城-1/45.png"><br>命名视图（一般不使用）<br><img src="/images/全栈打造商城-1/47.png"><br><img src="/images/全栈打造商城-1/48.png"></p>
-
-          
+          <p>学完了慕课网视频《vue2.0+node.js+MongoDB全栈打造商城》，并且也把改商城开发好了。但是时间久了也忘记了具体的细节了，所以想在看一遍并且记录下来。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/24/vue2-0-node-js-MongoDB全栈打造商城/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -862,7 +849,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.2k字</span>
+  <span class="post-count">博客全站共38.2k字</span>
 </div>
         
 

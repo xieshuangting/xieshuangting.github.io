@@ -85,17 +85,17 @@
 
 
 
-<meta name="description" content="这篇文章我好像是在2018.08.24号收藏的。留到现在才开始看真的是对自己太无语了。总结起来就是一句话，对知识没有渴望的程度==太懒了参考：http://csscoke.com/2018/08/21/css-vertical-align/">
+<meta name="description" content="这篇文章我好像是在2018.08.24号收藏的。留到现在才认真看  哭唧唧参考：http://csscoke.com/2018/08/21/css-vertical-align/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS垂直居中技巧">
 <meta property="og:url" content="http://yoursite.com/2019/05/27/CSS垂直居中技巧/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="这篇文章我好像是在2018.08.24号收藏的。留到现在才开始看真的是对自己太无语了。总结起来就是一句话，对知识没有渴望的程度==太懒了参考：http://csscoke.com/2018/08/21/css-vertical-align/">
+<meta property="og:description" content="这篇文章我好像是在2018.08.24号收藏的。留到现在才认真看  哭唧唧参考：http://csscoke.com/2018/08/21/css-vertical-align/">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-27T04:30:43.208Z">
+<meta property="og:updated_time" content="2019-05-28T09:45:53.599Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS垂直居中技巧">
-<meta name="twitter:description" content="这篇文章我好像是在2018.08.24号收藏的。留到现在才开始看真的是对自己太无语了。总结起来就是一句话，对知识没有渴望的程度==太懒了参考：http://csscoke.com/2018/08/21/css-vertical-align/">
+<meta name="twitter:description" content="这篇文章我好像是在2018.08.24号收藏的。留到现在才认真看  哭唧唧参考：http://csscoke.com/2018/08/21/css-vertical-align/">
 
 
 
@@ -349,7 +349,7 @@
       
 
       
-        <p>这篇文章我好像是在2018.08.24号收藏的。留到现在才开始看真的是对自己太无语了。总结起来就是一句话，对知识没有渴望的程度==太懒了<br>参考：<a href="http://csscoke.com/2018/08/21/css-vertical-align/" target="_blank" rel="noopener">http://csscoke.com/2018/08/21/css-vertical-align/</a><br><a id="more"></a></p>
+        <p>这篇文章我好像是在2018.08.24号收藏的。留到现在才认真看  哭唧唧<br>参考：<a href="http://csscoke.com/2018/08/21/css-vertical-align/" target="_blank" rel="noopener">http://csscoke.com/2018/08/21/css-vertical-align/</a><br><a id="more"></a></p>
 <h2 id="适用情景：单行文字垂直居中技巧"><a href="#适用情景：单行文字垂直居中技巧" class="headerlink" title="适用情景：单行文字垂直居中技巧"></a>适用情景：单行文字垂直居中技巧</h2><h3 id="1-Line-height"><a href="#1-Line-height" class="headerlink" title="1.Line-height"></a>1.Line-height</h3><p><code>line-height:100%</code></p>
 <h2 id="适用情景：多对象的垂直居中技巧"><a href="#适用情景：多对象的垂直居中技巧" class="headerlink" title="适用情景：多对象的垂直居中技巧"></a>适用情景：多对象的垂直居中技巧</h2><h3 id="2-Line-height-inline-block"><a href="#2-Line-height-inline-block" class="headerlink" title="2.Line-height + inline-block"></a>2.Line-height + inline-block</h3><p>既然可以使用第一种方式对行元素达成垂直居中的话，当然没有理由不能做到多行啊~但是你需要将多个元素或多行元素当成一个行元素来看待，所以我们必须要将这些数据多包一层，并将其设定为inline-block，并在该inline-block对象的外层对象使用inline-block来代替height的设置，如此便可以达到垂直居中的目的了.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.ex2&#123;</span><br><span class="line">	width: 500px;</span><br><span class="line">	border: 1px solid #f00;</span><br><span class="line">	line-height: 200px;</span><br><span class="line">	text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">.ex2 .content&#123;</span><br><span class="line">	display: inline-block;</span><br><span class="line">	height: auto;</span><br><span class="line">	line-height:1;</span><br><span class="line">	width: 400px;</span><br><span class="line">	background: #ccc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="3-before-inline-block"><a href="#3-before-inline-block" class="headerlink" title="3.:before + inline-block"></a>3.:before + inline-block</h3><p>:before 伪类元素搭配 inline-block 属性的写法应该是很传统的垂直居中的技巧了，此方式的好处在于子元素居中可以不需要特别设定高度，我们将利用:before伪类元素设定为100%高的inline-block，再搭配上将需要居中的子元素同样设置成inline-block性质后，就能使用vertical-align:middle来达到垂直居中的目的了，此方式在以往其实是个非常棒的垂直居中解决方案，唯独需要特别处理掉inline-block元素之间的4-5px空间这个小缺陷，但也很实用了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">.ex3&#123;</span><br><span class="line">	width: 500px;</span><br><span class="line">	height: 250px;</span><br><span class="line">	border: 1px solid #f00;</span><br><span class="line">	margin: auto;</span><br><span class="line">	text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">.ex3::before&#123;</span><br><span class="line">	content:&apos;&apos;;</span><br><span class="line">	display: inline-block;</span><br><span class="line">	height: 100%;</span><br><span class="line">	width: 0;</span><br><span class="line">	vertical-align: middle;</span><br><span class="line">&#125;</span><br><span class="line">.ex3 .content&#123;</span><br><span class="line">	width: 400px;</span><br><span class="line">	background: #ccc;</span><br><span class="line">	display: inline-block;</span><br><span class="line">	vertical-align: middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -594,7 +594,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.2k字</span>
+  <span class="post-count">博客全站共38.2k字</span>
 </div>
         
 

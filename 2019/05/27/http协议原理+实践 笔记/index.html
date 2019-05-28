@@ -85,20 +85,23 @@
 
 
 
-<meta name="description" content="二．HTTP协议基础及发展历史2.1 5层网络模型介绍2.2 HTTP协议的发展历史2.3 HTTP的三次握手三次握手是为了防止服务端开启一些无用的连接，可以及时的察觉到因为网络的原因导致端口关闭 2.4 URI-URL和URN2.5 HTTP报文格式2.6 创建一个最简单的web服务 三．HTTP各种特性总览3.1 认识HTTP客户端3.2 CORS跨域请求的限制与解决3.3 CORS跨域限制">
+<meta name="description" content="本文是在观看了慕课网的《http协议原理+实践》之后笔记。by 2019.02.20">
 <meta property="og:type" content="article">
 <meta property="og:title" content="http协议原理+实践 笔记">
 <meta property="og:url" content="http://yoursite.com/2019/05/27/http协议原理+实践 笔记/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="二．HTTP协议基础及发展历史2.1 5层网络模型介绍2.2 HTTP协议的发展历史2.3 HTTP的三次握手三次握手是为了防止服务端开启一些无用的连接，可以及时的察觉到因为网络的原因导致端口关闭 2.4 URI-URL和URN2.5 HTTP报文格式2.6 创建一个最简单的web服务 三．HTTP各种特性总览3.1 认识HTTP客户端3.2 CORS跨域请求的限制与解决3.3 CORS跨域限制">
+<meta property="og:description" content="本文是在观看了慕课网的《http协议原理+实践》之后笔记。by 2019.02.20">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/52.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/1.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/2.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/3.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/4.png">
+<meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/50.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/5.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/6.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/7.png">
+<meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/51.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/8.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/9.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/10.png">
@@ -113,7 +116,6 @@
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/19.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/20.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/21.png">
-<meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/22.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/23.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/24.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/25.png">
@@ -141,11 +143,11 @@
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/47.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/48.png">
 <meta property="og:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/49.png">
-<meta property="og:updated_time" content="2019-05-27T09:45:02.282Z">
+<meta property="og:updated_time" content="2019-05-28T09:00:00.693Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http协议原理+实践 笔记">
-<meta name="twitter:description" content="二．HTTP协议基础及发展历史2.1 5层网络模型介绍2.2 HTTP协议的发展历史2.3 HTTP的三次握手三次握手是为了防止服务端开启一些无用的连接，可以及时的察觉到因为网络的原因导致端口关闭 2.4 URI-URL和URN2.5 HTTP报文格式2.6 创建一个最简单的web服务 三．HTTP各种特性总览3.1 认识HTTP客户端3.2 CORS跨域请求的限制与解决3.3 CORS跨域限制">
-<meta name="twitter:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/1.png">
+<meta name="twitter:description" content="本文是在观看了慕课网的《http协议原理+实践》之后笔记。by 2019.02.20">
+<meta name="twitter:image" content="http://yoursite.com/images/http协议原理+实践%20笔记/52.png">
 
 
 
@@ -399,16 +401,30 @@
       
 
       
-        <a id="more"></a>
-<h3 id="二．HTTP协议基础及发展历史"><a href="#二．HTTP协议基础及发展历史" class="headerlink" title="二．HTTP协议基础及发展历史"></a>二．HTTP协议基础及发展历史</h3><p>2.1 5层网络模型介绍<br><img src="/images/http协议原理+实践 笔记/1.png"><br><img src="/images/http协议原理+实践 笔记/2.png"><br><img src="/images/http协议原理+实践 笔记/3.png"><br><img src="/images/http协议原理+实践 笔记/4.png"><br>2.2 HTTP协议的发展历史<br><img src="/images/http协议原理+实践 笔记/5.png"><br><img src="/images/http协议原理+实践 笔记/6.png"><br><img src="/images/http协议原理+实践 笔记/7.png"><br><img src="/images/http协议原理+实践 笔记/8.png"><br>2.3 HTTP的三次握手<br><img src="/images/http协议原理+实践 笔记/9.png"><br>三次握手是为了防止服务端开启一些无用的连接，可以及时的察觉到因为网络的原因导致端口关闭<br><img src="/images/http协议原理+实践 笔记/10.png"></p>
-<p>2.4 URI-URL和URN<br><img src="/images/http协议原理+实践 笔记/11.png"><br><img src="/images/http协议原理+实践 笔记/12.png"><br><img src="/images/http协议原理+实践 笔记/13.png"><br>2.5 HTTP报文格式<br><img src="/images/http协议原理+实践 笔记/14.png"><br><img src="/images/http协议原理+实践 笔记/15.png"><br>2.6 创建一个最简单的web服务<br><img src="/images/http协议原理+实践 笔记/16.png"></p>
-<h3 id="三．HTTP各种特性总览"><a href="#三．HTTP各种特性总览" class="headerlink" title="三．HTTP各种特性总览"></a>三．HTTP各种特性总览</h3><p>3.1 认识HTTP客户端<br><img src="/images/http协议原理+实践 笔记/17.png"><br><img src="/images/http协议原理+实践 笔记/18.png"><br>3.2 CORS跨域请求的限制与解决<br><img src="/images/http协议原理+实践 笔记/19.png"><br><img src="/images/http协议原理+实践 笔记/20.png"><br><img src="/images/http协议原理+实践 笔记/21.png"><br>3.3 CORS跨域限制以及预请求验证<br>在跨域的时候允许的请求只有get，head，post，因为只有这三种方法不用预请求<br><img src="/images/http协议原理+实践 笔记/22.png"><br><img src="/images/http协议原理+实践 笔记/23.png"><br>后面两个很少用到(没见过)<br><img src="/images/http协议原理+实践 笔记/24.png"><br>3.4 缓存头Cache-Control的含义和使用<br><img src="/images/http协议原理+实践 笔记/25.png"><br>Public：html返回的经过的所有路径都会缓存该html<br>Private：只有发起请求的浏览器才可以进行缓存<br>no-cache：要经过服务器端的验证才可以使用缓存<br>no-store:不管什么时候都不可以经行缓存</p>
-<p>缓存的到期时间<br>在代理服务器种s-maxage会代替max-age，浏览器还是按照max-age的过期时间<br><img src="/images/http协议原理+实践 笔记/26.png"><br>must-revalidate：要是过期了只有从原服务器重新发送请求获取数据<br>proxy-revalidate：缓存服务器必须在过期的时候去原服务器重新请求一遍，不能使用本地的缓存</p>
-<p>no-transform：告诉服务器不能随意改动缓存<br><img src="/images/http协议原理+实践 笔记/27.png"><br>多个值可以使用逗号分隔。若有相同属性设置则后面的覆盖前面的<br>有时候客户端的缓存还没到过期时间，但是服务器的文件改变了，这时候浏览器并不会重新下载缓存文件。解决办法：hash编码文件名</p>
-<p>3.5 缓存验证Last-Modified和Etag的使用<br><img src="/images/http协议原理+实践 笔记/28.png"><br><img src="/images/http协议原理+实践 笔记/29.png"><br><img src="/images/http协议原理+实践 笔记/30.png"><br><img src="/images/http协议原理+实践 笔记/31.png"><br><img src="/images/http协议原理+实践 笔记/32.png"><br>第一次请求<br><img src="/images/http协议原理+实践 笔记/33.png"><br>第二次访问<br><img src="/images/http协议原理+实践 笔记/34.png"></p>
-<p>3.6 cookie和session<br><img src="/images/http协议原理+实践 笔记/35.png"><br><img src="/images/http协议原理+实践 笔记/36.png"><br>3.7 HTTP长连接<br><img src="/images/http协议原理+实践 笔记/37.png"><br>Connnection ID: TCP连接的id，可以区分使用的是否是同个链接<br>谷歌可以同时创建7个tcp连接，所以一次性可以请求7个链接，剩余的请求将等待之前的tcp传输完才可以请求</p>
-<p>3.8 数据协商<br><img src="/images/http协议原理+实践 笔记/38.png"><br><img src="/images/http协议原理+实践 笔记/39.png"><br><img src="/images/http协议原理+实践 笔记/40.png"><br>服务端的content对应客户端的accept<br><img src="/images/http协议原理+实践 笔记/41.png"><br><img src="/images/http协议原理+实践 笔记/42.png"><br>压缩会减少网络传输的开销<br>3.9 Redirect<br><img src="/images/http协议原理+实践 笔记/43.png"><br>301转向(或叫301重定向，301跳转)是当用户或搜索引擎向网站服务器发出浏览请求时，服务器返回的HTTP数据流中头信息(header)中的状态码的一种，表示本网页永久性转移到另一个地址。<br>302重定向又称之为302代表暂时性转移(Temporarily Moved )，英文名称：302 redirect。</p>
-<p>3.10 CSP=content-security-policy(内容安全策略)<br><img src="/images/http协议原理+实践 笔记/44.png"><br><img src="/images/http协议原理+实践 笔记/45.png"><br><img src="/images/http协议原理+实践 笔记/46.png"><br><img src="/images/http协议原理+实践 笔记/47.png"><br><img src="/images/http协议原理+实践 笔记/48.png"><br><img src="/images/http协议原理+实践 笔记/49.png"></p>
+        <p>本文是在观看了慕课网的《http协议原理+实践》之后笔记。<br>by 2019.02.20<a id="more"></a><br>发现有个更全更详细的笔记：<a href="https://so.csdn.net/so/search/s.do?q=http&amp;t=blog&amp;u=zhanghuali0210" target="_blank" rel="noopener">https://so.csdn.net/so/search/s.do?q=http&amp;t=blog&amp;u=zhanghuali0210</a></p>
+<h3 id="一．课程导学"><a href="#一．课程导学" class="headerlink" title="一．课程导学"></a>一．课程导学</h3><p><img src="/images/http协议原理+实践 笔记/52.png"></p>
+<h3 id="二．HTTP协议基础及发展历史"><a href="#二．HTTP协议基础及发展历史" class="headerlink" title="二．HTTP协议基础及发展历史"></a>二．HTTP协议基础及发展历史</h3><h4 id="2-1-5层网络模型介绍"><a href="#2-1-5层网络模型介绍" class="headerlink" title="2.1 5层网络模型介绍"></a>2.1 5层网络模型介绍</h4><p><img src="/images/http协议原理+实践 笔记/1.png" width="80%"><br><img src="/images/http协议原理+实践 笔记/2.png" width="50%"><br><img src="/images/http协议原理+实践 笔记/3.png" width="50%"><br><img src="/images/http协议原理+实践 笔记/4.png" width="40%"></p>
+<h4 id="2-2-HTTP协议的发展历史"><a href="#2-2-HTTP协议的发展历史" class="headerlink" title="2.2 HTTP协议的发展历史"></a>2.2 HTTP协议的发展历史</h4><p><img src="/images/http协议原理+实践 笔记/50.png"><br><img src="/images/http协议原理+实践 笔记/5.png" width="50%"><br><img src="/images/http协议原理+实践 笔记/6.png" width="50%"><br><img src="/images/http协议原理+实践 笔记/7.png" width="50%"><br>参考：<a href="https://www.cnblogs.com/chengdabelief/p/6686603.html" target="_blank" rel="noopener">https://www.cnblogs.com/chengdabelief/p/6686603.html</a><br><img src="/images/http协议原理+实践 笔记/51.png"><br><img src="/images/http协议原理+实践 笔记/8.png" width="50%"></p>
+<h4 id="2-3-HTTP的三次握手"><a href="#2-3-HTTP的三次握手" class="headerlink" title="2.3 HTTP的三次握手"></a>2.3 HTTP的三次握手</h4><p><img src="/images/http协议原理+实践 笔记/9.png" width="80%"><br>第一次握手：建立连接时，客户端发送syn包（syn=j）到服务器，并进入SYN_SENT状态，等待服务器确认；SYN：同步序列编号（Synchronize Sequence Numbers）。<br>第二次握手：服务器收到syn包，必须确认客户的SYN（ack=j+1），同时自己也发送一个SYN包（seq=k），即SYN+ACK包，此时服务器进入SYN_RECV状态；<br>第三次握手：客户端收到服务器的SYN+ACK包，向服务器发送确认包ACK(ack=k+1），此包发送完毕，客户端和服务器进入ESTABLISHED（TCP连接成功）状态，完成三次握手。<br>完成三次握手，客户端与服务器开始传送数据。<br>三次握手是为了防止服务端开启一些无用的连接，可以及时的察觉到因为网络的原因导致端口关闭<br><img src="/images/http协议原理+实践 笔记/10.png"></p>
+<h4 id="2-4-URI-URL和URN"><a href="#2-4-URI-URL和URN" class="headerlink" title="2.4 URI-URL和URN"></a>2.4 URI-URL和URN</h4><p><img src="/images/http协议原理+实践 笔记/11.png" width="50%"><br><img src="/images/http协议原理+实践 笔记/12.png" width="60%"><br><img src="/images/http协议原理+实践 笔记/13.png" width="40%"></p>
+<h4 id="2-5-HTTP报文格式"><a href="#2-5-HTTP报文格式" class="headerlink" title="2.5 HTTP报文格式"></a>2.5 HTTP报文格式</h4><p><img src="/images/http协议原理+实践 笔记/14.png" width="40%"><br><img src="/images/http协议原理+实践 笔记/15.png" width="40%"></p>
+<h4 id="2-6-创建一个最简单的web服务"><a href="#2-6-创建一个最简单的web服务" class="headerlink" title="2.6 创建一个最简单的web服务"></a>2.6 创建一个最简单的web服务</h4><p><img src="/images/http协议原理+实践 笔记/16.png"></p>
+<h3 id="三．HTTP各种特性总览"><a href="#三．HTTP各种特性总览" class="headerlink" title="三．HTTP各种特性总览"></a>三．HTTP各种特性总览</h3><h4 id="3-1-认识HTTP客户端"><a href="#3-1-认识HTTP客户端" class="headerlink" title="3.1 认识HTTP客户端"></a>3.1 认识HTTP客户端</h4><p><img src="/images/http协议原理+实践 笔记/17.png"><br><img src="/images/http协议原理+实践 笔记/18.png"></p>
+<h4 id="3-2-CORS跨域请求的限制与解决"><a href="#3-2-CORS跨域请求的限制与解决" class="headerlink" title="3.2 CORS跨域请求的限制与解决"></a>3.2 CORS跨域请求的限制与解决</h4><p>跨域资源共享Cross-origin resource sharing<br><img src="/images/http协议原理+实践 笔记/19.png"><br><img src="/images/http协议原理+实践 笔记/20.png"><br><img src="/images/http协议原理+实践 笔记/21.png"></p>
+<h4 id="3-3-CORS跨域限制以及预请求验证"><a href="#3-3-CORS跨域限制以及预请求验证" class="headerlink" title="3.3 CORS跨域限制以及预请求验证"></a>3.3 CORS跨域限制以及预请求验证</h4><p><img src="/images/http协议原理+实践 笔记/23.png" width="50%"><br>在跨域的时候允许的请求只有get，head，post，因为只有这三种方法不用预请求<br>若要在这3种方法之外的方法请求，则要加上<code>&#39;Access-Control-Allow-Methods&#39;:&#39;PUT&#39;</code><br>默认允许的<code>Content-Type：text/plain、multipart/form-data、applicaton/x-www-form-urlencoded</code></p>
+<p><code>&#39;Access-Control-Allow-Headers&#39;:&#39;X-Test-Cors&#39;</code>:<br>跨域资源共享标准规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 GET 以外的 HTTP 请求，或者搭配某些 MIME 类型的 POST 请求），浏览器必须首先使用 OPTIONS 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨域请求。服务器确认允许之后，才发起实际的 HTTP 请求。在预检请求的返回中，服务器端也可以通知客户端，是否需要携带身份凭证（包括 Cookies 和 HTTP 认证相关数据）。<br>预请求的Request Method是OPTIONS。通过OPTIONS请求获得服务端的允许，然后再实际的发送post请求。<br><img src="/images/http协议原理+实践 笔记/24.png"></p>
+<h4 id="3-4-缓存头Cache-Control的含义和使用"><a href="#3-4-缓存头Cache-Control的含义和使用" class="headerlink" title="3.4 缓存头Cache-Control的含义和使用"></a>3.4 缓存头Cache-Control的含义和使用</h4><p><img src="/images/http协议原理+实践 笔记/25.png" width="50%"><br><code>Public</code>：指示响应可以被任何缓存所缓存。例如：html返回的经过的所有路径都会缓存该html<br><code>Private</code>：指示响应信息的全部或部分用于单个用户，而不能用一个共享缓存来缓存。这可以让源服务器指示，响应的特定部分只用于一个用户，而对其他用户的请求则是一个不可靠的响应。一个 private（非共享）缓存可以缓存这样的响应。例如：只有发起请求的浏览器才可以进行缓存<br><code>no-cache</code>：如果 no-cache 指令没有规定 field-name，那么一个缓存不能使用响应以满足接下来的、没有与源服务器重新验证的请求。这可以让源服务器防止缓存，甚至是已被配置的缓存，返回给客户端陈旧的响应。要经过服务器端的验证才可以使用缓存<br><code>no-store</code>:如果是在一个请求中发送，那么缓存不能存储这个请求或任何响应的任何部分给它。如果在一个响应中发送，那么缓存不能存储它引起的响应或请求的任何部分.不管什么时候都不可以经行缓存</p>
+<p>缓存的到期时间<br>在代理服务器中s-maxage会代替max-age，浏览器还是按照max-age的过期时间<br><img src="/images/http协议原理+实践 笔记/26.png" width="50%"><br>must-revalidate：要是过期了只有从原服务器重新发送请求获取数据<br>proxy-revalidate：缓存服务器必须在过期的时候去原服务器重新请求一遍，不能使用本地的缓存</p>
+<p>no-transform：告诉服务器不能随意改动缓存<br><img src="/images/http协议原理+实践 笔记/27.png" width="50%"><br>多个值可以使用逗号分隔。若有相同属性设置则后面的覆盖前面的<br>有时候客户端的缓存还没到过期时间，但是服务器的文件改变了，这时候浏览器并不会重新下载缓存文件。</p>
+<font color="red">解决办法：hash编码文件名</font>
+
+<h4 id="3-5-缓存验证Last-Modified和Etag的使用"><a href="#3-5-缓存验证Last-Modified和Etag的使用" class="headerlink" title="3.5 缓存验证Last-Modified和Etag的使用"></a>3.5 缓存验证Last-Modified和Etag的使用</h4><p><img src="/images/http协议原理+实践 笔记/28.png"><br><img src="/images/http协议原理+实践 笔记/29.png" width="40%"><br><img src="/images/http协议原理+实践 笔记/30.png" width="50%"><br><img src="/images/http协议原理+实践 笔记/31.png" width="50%"><br><img src="/images/http协议原理+实践 笔记/32.png"><br>第一次请求<br><img src="/images/http协议原理+实践 笔记/33.png"><br>第二次访问<br><img src="/images/http协议原理+实践 笔记/34.png"></p>
+<h4 id="3-6-cookie和session"><a href="#3-6-cookie和session" class="headerlink" title="3.6 cookie和session"></a>3.6 cookie和session</h4><p><img src="/images/http协议原理+实践 笔记/35.png" width="40%"><br><img src="/images/http协议原理+实践 笔记/36.png" width="50%"></p>
+<h4 id="3-7-HTTP长连接"><a href="#3-7-HTTP长连接" class="headerlink" title="3.7 HTTP长连接"></a>3.7 HTTP长连接</h4><p><img src="/images/http协议原理+实践 笔记/37.png"><br>Connnection ID: TCP连接的id，可以区分使用的是否是同个链接<br>谷歌可以同时创建7个tcp连接，所以一次性可以请求7个链接，剩余的请求将等待之前的连接传输完才可以请求</p>
+<h4 id="3-8-数据协商"><a href="#3-8-数据协商" class="headerlink" title="3.8 数据协商"></a>3.8 数据协商</h4><p><img src="/images/http协议原理+实践 笔记/38.png" width="40%"><br><img src="/images/http协议原理+实践 笔记/39.png" width="40%"><br><img src="/images/http协议原理+实践 笔记/40.png"><br>服务端的content对应客户端的accept<br><img src="/images/http协议原理+实践 笔记/41.png" width="50%"><br><img src="/images/http协议原理+实践 笔记/42.png"><br>gzip：压缩会减少网络传输的开销</p>
+<h4 id="3-9-Redirect"><a href="#3-9-Redirect" class="headerlink" title="3.9 Redirect"></a>3.9 Redirect</h4><p><img src="/images/http协议原理+实践 笔记/43.png"><br>301转向(或叫301重定向，301跳转)是当用户或搜索引擎向网站服务器发出浏览请求时，服务器返回的HTTP数据流中头信息(header)中的状态码的一种，表示本网页永久性转移到另一个地址。<br>302重定向又称之为302代表暂时性转移(Temporarily Moved )，英文名称：302 redirect。</p>
+<h4 id="3-10-CSP-content-security-policy-内容安全策略"><a href="#3-10-CSP-content-security-policy-内容安全策略" class="headerlink" title="3.10 CSP=content-security-policy(内容安全策略)"></a>3.10 CSP=content-security-policy(内容安全策略)</h4><p><img src="/images/http协议原理+实践 笔记/44.png" width="40%"><br><img src="/images/http协议原理+实践 笔记/45.png" width="40%"><br><img src="/images/http协议原理+实践 笔记/46.png" width="50%"><br><img src="/images/http协议原理+实践 笔记/47.png"><br><img src="/images/http协议原理+实践 笔记/48.png"><br><img src="/images/http协议原理+实践 笔记/49.png"></p>
+<p>参考：<a href="https://www.cnblogs.com/heluan/p/8620312.html" target="_blank" rel="noopener">https://www.cnblogs.com/heluan/p/8620312.html</a><br><strong>HTTP的基本优化</strong><br>影响一个 HTTP 网络请求的因素主要有两个：<font color="red">带宽和延迟</font>。<br><strong>带宽：</strong><br>如果说我们还停留在拨号上网的阶段，带宽可能会成为一个比较严重影响请求的问题，但是现在网络基础建设已经使得带宽得到极大的提升，我们不再会担心由带宽而影响网速，那么就只剩下延迟了。<br><strong>延迟：</strong><br><code>浏览器阻塞（HOL blocking）</code>：浏览器会因为一些原因阻塞请求。浏览器对于同一个域名，同时只能有 7 个连接（这个根据浏览器内核不同可能会有所差异），超过浏览器最大连接数限制，后续请求就会被阻塞。<br><code>DNS 查询（DNS Lookup）</code>：浏览器需要知道目标服务器的 IP 才能建立连接。将域名解析为 IP 的这个系统就是 DNS。这个通常可以利用DNS缓存结果来达到减少这个时间的目的。<br><code>建立连接（Initial connection）</code>：HTTP 是基于 TCP 协议的，浏览器最快也要在第三次握手时才能捎带 HTTP 请求报文，达到真正的建立连接，但是这些连接无法复用会导致每次请求都经历三次握手和慢启动。三次握手在高延迟的场景下影响较明显，慢启动则对文件类大请求影响较大。</p>
 
       
     </div>
@@ -584,7 +600,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#二．HTTP协议基础及发展历史"><span class="nav-number">1.</span> <span class="nav-text">二．HTTP协议基础及发展历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三．HTTP各种特性总览"><span class="nav-number">2.</span> <span class="nav-text">三．HTTP各种特性总览</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一．课程导学"><span class="nav-number">1.</span> <span class="nav-text">一．课程导学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二．HTTP协议基础及发展历史"><span class="nav-number">2.</span> <span class="nav-text">二．HTTP协议基础及发展历史</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-5层网络模型介绍"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 5层网络模型介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-HTTP协议的发展历史"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 HTTP协议的发展历史</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-HTTP的三次握手"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 HTTP的三次握手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-URI-URL和URN"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 URI-URL和URN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-HTTP报文格式"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 HTTP报文格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-创建一个最简单的web服务"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 创建一个最简单的web服务</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三．HTTP各种特性总览"><span class="nav-number">3.</span> <span class="nav-text">三．HTTP各种特性总览</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-认识HTTP客户端"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 认识HTTP客户端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-CORS跨域请求的限制与解决"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 CORS跨域请求的限制与解决</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-CORS跨域限制以及预请求验证"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 CORS跨域限制以及预请求验证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-缓存头Cache-Control的含义和使用"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 缓存头Cache-Control的含义和使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-缓存验证Last-Modified和Etag的使用"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 缓存验证Last-Modified和Etag的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-cookie和session"><span class="nav-number">3.6.</span> <span class="nav-text">3.6 cookie和session</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-HTTP长连接"><span class="nav-number">3.7.</span> <span class="nav-text">3.7 HTTP长连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-数据协商"><span class="nav-number">3.8.</span> <span class="nav-text">3.8 数据协商</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-9-Redirect"><span class="nav-number">3.9.</span> <span class="nav-text">3.9 Redirect</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-10-CSP-content-security-policy-内容安全策略"><span class="nav-number">3.10.</span> <span class="nav-text">3.10 CSP=content-security-policy(内容安全策略)</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -635,7 +651,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.2k字</span>
+  <span class="post-count">博客全站共38.2k字</span>
 </div>
         
 

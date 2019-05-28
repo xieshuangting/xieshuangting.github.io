@@ -352,19 +352,14 @@
 
       
         
-          
-            <a id="more"></a>
-<h3 id="二．HTTP协议基础及发展历史"><a href="#二．HTTP协议基础及发展历史" class="headerlink" title="二．HTTP协议基础及发展历史"></a>二．HTTP协议基础及发展历史</h3><p>2.1 5层网络模型介绍<br><img src="/images/http协议原理+实践 笔记/1.png"><br><img src="/images/http协议原理+实践 笔记/2.png"><br><img src="/images/http协议原理+实践 笔记/3.png"><br><img src="/images/http协议原理+实践 笔记/4.png"><br>2.2 HTTP协议的发展历史<br><img src="/images/http协议原理+实践 笔记/5.png"><br><img src="/images/http协议原理+实践 笔记/6.png"><br><img src="/images/http协议原理+实践 笔记/7.png"><br><img src="/images/http协议原理+实践 笔记/8.png"><br>2.3 HTTP的三次握手<br><img src="/images/http协议原理+实践 笔记/9.png"><br>三次握手是为了防止服务端开启一些无用的连接，可以及时的察觉到因为网络的原因导致端口关闭<br><img src="/images/http协议原理+实践 笔记/10.png"></p>
-<p>2.4 URI-URL和URN<br><img src="/images/http协议原理+实践 笔记/11.png"><br><img src="/images/http协议原理+实践 笔记/12.png"><br><img src="/images/http协议原理+实践 笔记/13.png"><br>2.5 HTTP报文格式<br><img src="/images/http协议原理+实践 笔记/14.png"><br><img src="/images/http协议原理+实践 笔记/15.png"><br>2.6 创建一个最简单的web服务<br><img src="/images/http协议原理+实践 笔记/16.png"></p>
-<h3 id="三．HTTP各种特性总览"><a href="#三．HTTP各种特性总览" class="headerlink" title="三．HTTP各种特性总览"></a>三．HTTP各种特性总览</h3><p>3.1 认识HTTP客户端<br><img src="/images/http协议原理+实践 笔记/17.png"><br><img src="/images/http协议原理+实践 笔记/18.png"><br>3.2 CORS跨域请求的限制与解决<br><img src="/images/http协议原理+实践 笔记/19.png"><br><img src="/images/http协议原理+实践 笔记/20.png"><br><img src="/images/http协议原理+实践 笔记/21.png"><br>3.3 CORS跨域限制以及预请求验证<br>在跨域的时候允许的请求只有get，head，post，因为只有这三种方法不用预请求<br><img src="/images/http协议原理+实践 笔记/22.png"><br><img src="/images/http协议原理+实践 笔记/23.png"><br>后面两个很少用到(没见过)<br><img src="/images/http协议原理+实践 笔记/24.png"><br>3.4 缓存头Cache-Control的含义和使用<br><img src="/images/http协议原理+实践 笔记/25.png"><br>Public：html返回的经过的所有路径都会缓存该html<br>Private：只有发起请求的浏览器才可以进行缓存<br>no-cache：要经过服务器端的验证才可以使用缓存<br>no-store:不管什么时候都不可以经行缓存</p>
-<p>缓存的到期时间<br>在代理服务器种s-maxage会代替max-age，浏览器还是按照max-age的过期时间<br><img src="/images/http协议原理+实践 笔记/26.png"><br>must-revalidate：要是过期了只有从原服务器重新发送请求获取数据<br>proxy-revalidate：缓存服务器必须在过期的时候去原服务器重新请求一遍，不能使用本地的缓存</p>
-<p>no-transform：告诉服务器不能随意改动缓存<br><img src="/images/http协议原理+实践 笔记/27.png"><br>多个值可以使用逗号分隔。若有相同属性设置则后面的覆盖前面的<br>有时候客户端的缓存还没到过期时间，但是服务器的文件改变了，这时候浏览器并不会重新下载缓存文件。解决办法：hash编码文件名</p>
-<p>3.5 缓存验证Last-Modified和Etag的使用<br><img src="/images/http协议原理+实践 笔记/28.png"><br><img src="/images/http协议原理+实践 笔记/29.png"><br><img src="/images/http协议原理+实践 笔记/30.png"><br><img src="/images/http协议原理+实践 笔记/31.png"><br><img src="/images/http协议原理+实践 笔记/32.png"><br>第一次请求<br><img src="/images/http协议原理+实践 笔记/33.png"><br>第二次访问<br><img src="/images/http协议原理+实践 笔记/34.png"></p>
-<p>3.6 cookie和session<br><img src="/images/http协议原理+实践 笔记/35.png"><br><img src="/images/http协议原理+实践 笔记/36.png"><br>3.7 HTTP长连接<br><img src="/images/http协议原理+实践 笔记/37.png"><br>Connnection ID: TCP连接的id，可以区分使用的是否是同个链接<br>谷歌可以同时创建7个tcp连接，所以一次性可以请求7个链接，剩余的请求将等待之前的tcp传输完才可以请求</p>
-<p>3.8 数据协商<br><img src="/images/http协议原理+实践 笔记/38.png"><br><img src="/images/http协议原理+实践 笔记/39.png"><br><img src="/images/http协议原理+实践 笔记/40.png"><br>服务端的content对应客户端的accept<br><img src="/images/http协议原理+实践 笔记/41.png"><br><img src="/images/http协议原理+实践 笔记/42.png"><br>压缩会减少网络传输的开销<br>3.9 Redirect<br><img src="/images/http协议原理+实践 笔记/43.png"><br>301转向(或叫301重定向，301跳转)是当用户或搜索引擎向网站服务器发出浏览请求时，服务器返回的HTTP数据流中头信息(header)中的状态码的一种，表示本网页永久性转移到另一个地址。<br>302重定向又称之为302代表暂时性转移(Temporarily Moved )，英文名称：302 redirect。</p>
-<p>3.10 CSP=content-security-policy(内容安全策略)<br><img src="/images/http协议原理+实践 笔记/44.png"><br><img src="/images/http协议原理+实践 笔记/45.png"><br><img src="/images/http协议原理+实践 笔记/46.png"><br><img src="/images/http协议原理+实践 笔记/47.png"><br><img src="/images/http协议原理+实践 笔记/48.png"><br><img src="/images/http协议原理+实践 笔记/49.png"></p>
-
-          
+          <p>本文是在观看了慕课网的《http协议原理+实践》之后笔记。<br>by 2019.02.20
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/05/27/http协议原理+实践 笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -503,7 +498,7 @@
 
       
         
-          <p>这篇文章我好像是在2018.08.24号收藏的。留到现在才开始看真的是对自己太无语了。总结起来就是一句话，对知识没有渴望的程度==太懒了<br>参考：<a href="http://csscoke.com/2018/08/21/css-vertical-align/" target="_blank" rel="noopener">http://csscoke.com/2018/08/21/css-vertical-align/</a><br>
+          <p>这篇文章我好像是在2018.08.24号收藏的。留到现在才认真看  哭唧唧<br>参考：<a href="http://csscoke.com/2018/08/21/css-vertical-align/" target="_blank" rel="noopener">http://csscoke.com/2018/08/21/css-vertical-align/</a><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/05/27/CSS垂直居中技巧/#more" rel="contents">
@@ -649,54 +644,14 @@
 
       
         
-          
-            <a id="more"></a>
-<h3 id="1-ajax的jsonp"><a href="#1-ajax的jsonp" class="headerlink" title="1.ajax的jsonp"></a>1.ajax的jsonp</h3><p>by 2018-07-26 22:11:36<br>若ajax上的dataType写为”jsonp”，则后台返回的数据要是jsonp格式的才行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">json格式：</span><br><span class="line">&#123;</span><br><span class="line">    &quot;message&quot;:&quot;获取成功&quot;,</span><br><span class="line">    &quot;state&quot;:&quot;1&quot;,</span><br><span class="line">    &quot;result&quot;:&#123;&quot;name&quot;:&quot;工作组1&quot;,&quot;id&quot;:1,&quot;description&quot;:&quot;11&quot;&#125;</span><br><span class="line">&#125;</span><br><span class="line">jsonp格式：</span><br><span class="line">callback(&#123;</span><br><span class="line">    &quot;message&quot;:&quot;获取成功&quot;,</span><br><span class="line">    &quot;state&quot;:&quot;1&quot;,</span><br><span class="line">    &quot;result&quot;:&#123;&quot;name&quot;:&quot;工作组1&quot;,&quot;id&quot;:1,&quot;description&quot;:&quot;11&quot;&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<h3 id="2-谷歌浏览器跨域"><a href="#2-谷歌浏览器跨域" class="headerlink" title="2.谷歌浏览器跨域"></a>2.谷歌浏览器跨域</h3><p>by 2018-07-26 22:11:36<br>在桌面的谷歌快捷方式上右键，选择属性，在目标后加<code>--disable-web-security</code></p>
-<h3 id="3-jQuery-的attr（）与css（）的区别"><a href="#3-jQuery-的attr（）与css（）的区别" class="headerlink" title="3.jQuery 的attr（）与css（）的区别"></a>3.jQuery 的attr（）与css（）的区别</h3><p>by 2018-07-25 22:25:31<br><code>attr()</code>是用来获得或设置标签属性的（attribute的缩写）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#myId&quot;).attr(&quot;data-name&quot;, &quot;baidu&quot;);// 设置属性名data-name，值baidu  即&lt;div id=&quot;myId&quot; data-name=&quot;baidu&quot;&gt;&lt;/div&gt; </span><br><span class="line">var attr = $(&quot;#myId&quot;).attr(&quot;data-name&quot;); // 获取属性名data-name的值</span><br></pre></td></tr></table></figure></p>
-<p>使用js来实现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var myId = document.getElementById(&quot;myId&quot;);</span><br><span class="line">myId.setAttribute(&quot;data-name&quot;, &quot;baidu&quot;); // 设置属性</span><br><span class="line">myId.getAttribute(&quot;data-name&quot;); // 获取属性名data-name的值</span><br></pre></td></tr></table></figure></p>
-<p><code>css()</code>是设置元素的style样式的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#myId&quot;).css(&quot;background-color&quot;, &quot;red&quot;); // 设置背景颜色为红色</span><br><span class="line">var bg = $(&quot;#myId&quot;).css(&quot;background-color&quot;); // 获取背景颜色的值</span><br></pre></td></tr></table></figure></p>
-<p>使用js来实现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var myId = document.getElementById(&quot;myId&quot;);</span><br><span class="line">myId.style.backgroundColor = &quot;red&quot;; // 设置</span><br><span class="line">var bg = myId.style.backgroundColor; // 获取</span><br></pre></td></tr></table></figure></p>
-<h3 id="4-javascript中JSON对象与JSON字符串相互转换"><a href="#4-javascript中JSON对象与JSON字符串相互转换" class="headerlink" title="4.javascript中JSON对象与JSON字符串相互转换"></a>4.javascript中JSON对象与JSON字符串相互转换</h3><p>by 2018-07-25 22:25:31<br>jQuery插件支持的转换方式：<br><code>$.parseJSON( jsonstr ); //jQuery.parseJSON(jsonstr)</code>,可以将<font color="red">json字符串转换成json对象</font></p>
-<p>浏览器支持的转换方式(Firefox，chrome，opera，safari，ie9，ie8)等浏览器：<br><code>JSON.parse(jsonstr);</code>可以将<font color="red">json字符串转换成json对象</font><br><code>JSON.stringify(jsonobj);</code> 可以将<font color="red">json对象转换成json对符串</font></p>
-<p><font color="red"><strong>注：</strong></font>ie8(兼容模式),ie7和ie6没有JSON对象，推荐采用JSON官方的方式，引入json.js。(可见2018.09中的15)</p>
-<p>Javascript支持的转换方式：<br><code>eval(&#39;(&#39; + jsonstr + &#39;)&#39;);</code> 可以将json字符串转换成json对象,注意需要在json字符外包裹一对小括号<br>注：ie8(兼容模式),ie7和ie6也可以使用eval()将字符串转为JSON对象，但不推荐这些方式，这种方式不安全eval会执行json串中的表达式</p>
-<h3 id="5-jquery-after-append-appendTo三个函数的区别"><a href="#5-jquery-after-append-appendTo三个函数的区别" class="headerlink" title="5.jquery after append appendTo三个函数的区别"></a>5.jquery after append appendTo三个函数的区别</h3><p>by 2018-07-25 22:25:31<br><code>after()</code> 方法在被选<font color="red">元素后</font>插入指定的内容。<br>语法：<code>$(selector).after(content)</code><br>实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">    $(&quot;span&quot;).after(&quot;&lt;a href=&quot;#&quot;&gt;ddddd&lt;/a&gt;&quot;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;span&gt;aaaaaaaaaaaaaaa&lt;/span&gt;</span><br><span class="line">&lt;button&gt;after函数&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-<p>结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;span&gt;aaaaaaaaaaaaaaa&lt;/span&gt;</span><br><span class="line">&lt;a href=&quot;#&quot;&gt;ddddd&lt;/a&gt;\\span标签后面多了一个a标签</span><br></pre></td></tr></table></figure></p>
-<p><code>append()</code> 方法在被选<font color="red">元素的结尾（仍然在内部）</font>插入指定内容。<br>语法：<code>$(selector).append(content)</code><br>实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">    $(&quot;span&quot;).append(&quot;&lt;a href=&quot;#&quot;&gt;ddddd&lt;/a&gt;&quot;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;span&gt;aaaaaaaaaaaaaaa&lt;/span&gt;</span><br><span class="line">&lt;button&gt;after函数&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-<p>结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span&gt;aaaaaaaaaaaaaaa&lt;a href=&quot;#&quot;&gt;ddddd&lt;/a&gt;&lt;/span&gt;//span标签里面多了一个a标签</span><br></pre></td></tr></table></figure></p>
-<p><code>appendTo()</code> 方法在被选元素的结尾<font color="red">（仍然在内部）</font>插入指定内容。<br>和append()只是语法不同<br>语法：<code>$(content).appendTo(selector)</code><br>实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">	$(&quot;&lt;a href=&quot;#&quot;&gt;ddddd&lt;/a&gt;&quot;).appendTo(&quot;span&quot;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;span&gt;aaaaaaaaaaaaaaa&lt;/span&gt;</span><br><span class="line">&lt;button&gt;after函数&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-<p>结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span&gt;aaaaaaaaaaaaaaa&lt;a href=&quot;#&quot;&gt;ddddd&lt;/a&gt;&lt;/span&gt;//span标签里面多了一个a标签</span><br></pre></td></tr></table></figure></p>
-<p><font color="red">备注：</font>before函数与after函数相反，表示是元素的前面加入指定元素</p>
-<h3 id="6-js常见报错之Unexpected-token-in-JSON-at-position"><a href="#6-js常见报错之Unexpected-token-in-JSON-at-position" class="headerlink" title="6.js常见报错之Unexpected token in JSON at position"></a>6.js常见报错之Unexpected token in JSON at position</h3><p>by 2018-07-25 22:25:31<br>出现这个报错提示，根本原因只有一个–json解析异常，所以请大家直接去关注自己json的返回数据注意检查其返回内容和内容的格式是否正确。</p>
-<h3 id="7-哪些操作会引起内存泄露"><a href="#7-哪些操作会引起内存泄露" class="headerlink" title="7.哪些操作会引起内存泄露"></a>7.哪些操作会引起内存泄露</h3><p><a href="https://blog.csdn.net/kk211814/article/details/88323872" target="_blank" rel="noopener">https://blog.csdn.net/kk211814/article/details/88323872</a><br>by 2018-07-25 22:25:52</p>
-<ol>
-<li>setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。</li>
-<li>闭包</li>
-<li>控制台日志</li>
-<li>循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）<br>待完善</li>
-</ol>
-<h3 id="8-拼接字符串的问题-lt"><a href="#8-拼接字符串的问题-lt" class="headerlink" title="8.拼接字符串的问题&lt;"></a>8.拼接字符串的问题&lt;</h3><p>by 2018-07-26 21:30:09<br>问题：访问表单时样式和js文件没有加载出来<br>是因为url拼接错误<br>str.substr(start,length)截取字符串</p>
-<h3 id="9-远程访问"><a href="#9-远程访问" class="headerlink" title="9.远程访问"></a>9.远程访问</h3><p>by 2018-07-26 21:30:09<br>在文件夹的链接地址里输入//+ip地址，之后输入账号和密码即可</p>
-<h3 id="10-导航栏设置为同步访问才能访问二级菜单"><a href="#10-导航栏设置为同步访问才能访问二级菜单" class="headerlink" title="10.导航栏设置为同步访问才能访问二级菜单"></a>10.导航栏设置为同步访问才能访问二级菜单</h3><p>by 2018-07-26 21:30:09<br>若数据的加载依赖于前面请求返回的结果的话。就要把前面的请求设置为同步</p>
-<h3 id="11-二次链接发送ajax—函数返回的数据"><a href="#11-二次链接发送ajax—函数返回的数据" class="headerlink" title="11. 二次链接发送ajax—函数返回的数据"></a>11. 二次链接发送ajax—函数返回的数据</h3><p>by 2018-07-26 21:30:09<br>遇到的场景：得到一个链接之后，访问请求回来的是一个真实的链接。<br>所以需要将第一次请求回来的结果拼接之后再次发送请求，得打的才是真实的结果。</p>
-<h3 id="12-相对连接-w"><a href="#12-相对连接-w" class="headerlink" title="12.相对连接.w"></a>12.相对连接.w</h3><p>by 2018-07-26 21:30:09<br>前期写代码的时候使用相对连接，之后好部署到服务器上。</p>
-<h3 id="13-金额加逗号"><a href="#13-金额加逗号" class="headerlink" title="13.金额加逗号"></a>13.金额加逗号</h3><p>by 2018-07-26 21:30:09<br>待完善</p>
-<h3 id="14-小数截取两位"><a href="#14-小数截取两位" class="headerlink" title="14.小数截取两位"></a>14.小数截取两位</h3><p>by 2018-07-26 21:30:09<br>Math.floor(num*100)/100</p>
-<h3 id="15-今天同事遇到了模态框的不能渲染数据的问题，但是我回来试了下是可以的，不知道为什么。"><a href="#15-今天同事遇到了模态框的不能渲染数据的问题，但是我回来试了下是可以的，不知道为什么。" class="headerlink" title="15.今天同事遇到了模态框的不能渲染数据的问题，但是我回来试了下是可以的，不知道为什么。"></a>15.今天同事遇到了模态框的不能渲染数据的问题，但是我回来试了下是可以的，不知道为什么。</h3><p>by 2018-07-31 20:38:48</p>
-<h3 id="16-function-的解析"><a href="#16-function-的解析" class="headerlink" title="16.$(function(){})的解析"></a>16.$(function(){})的解析</h3><p>by 2018-07-31 20:38:48<br>$(function(){})是$(document).ready()的缩写<br>当 DOM（文档对象模型）已经加载，并且页面（包括图像）已经完全呈现时，会发生 ready 事件。<br>由于该事件在文档就绪后发生，因此把所有其他的 jQuery 事件和函数置于该事件中是非常好的做法。</p>
-<p>页面加载完成有两种事件:<br>$(document).ready(function(){}) : 表示文档结构已经加载完成（不包含图片等非文字媒体文件）<br>window.onload: 表示页面包含图片等文件在内的所有元素都加载完成后执行。<br><em>可以理解为：ready 在onload 前加载！！</em><br>一般样式控制的，比如图片大小控制放在onload 里面加载;<br>而jS事件触发的方法，可以在ready 里面加载。</p>
-<h3 id="17-vue的生命周期"><a href="#17-vue的生命周期" class="headerlink" title="17.vue的生命周期"></a>17.vue的生命周期</h3><p>by 2018-07-31 20:38:48<br><img src="/images/7.30小结/1.png"><br>参考：<a href="https://segmentfault.com/a/1190000008010666" target="_blank" rel="noopener">https://segmentfault.com/a/1190000008010666</a><br><code>beforecreated</code>：el 和 data 并未初始化<br><code>created</code>:完成了 data 数据的初始化，el没有<br><code>beforeMount</code>：完成了 el 和 data 初始化<br><code>mounted</code> ：完成挂载</p>
-<h3 id="18-echarts的china-js"><a href="#18-echarts的china-js" class="headerlink" title="18.echarts的china.js"></a>18.echarts的china.js</h3><p>by 2018-07-31 21:00:08</p>
-<h3 id="19-获取option的选中项目"><a href="#19-获取option的选中项目" class="headerlink" title="19.获取option的选中项目"></a>19.获取option的选中项目</h3><p>by 2018-07-31 21:00:08</p>
-<h3 id="20-页面跳转-toPage（）"><a href="#20-页面跳转-toPage（）" class="headerlink" title="20.页面跳转 toPage（）"></a>20.页面跳转 toPage（）</h3><p>by 2018-07-31 21:00:08</p>
-<hr>
-<p><strong>日常小叨：</strong>07.24：在工作中遇到a标签href突然之间不太清楚怎么设置了，和css()方法混在一起。<br>利用AJAX在获取后台的JSON数据时，取不到属性值。原因是不知道什么原因返回的JSON是字符串的格式，就是整个JSON对象外包裹了一层双引号。所以要将得到的响应数据JSON化。</p>
-
-          
+          <p>2019.05.25整理2018.07的工作笔记<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/05/25/2018-07工作日小结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -835,7 +790,7 @@
 
       
         
-          <h3 id="1-jquery的动画animate"><a href="#1-jquery的动画animate" class="headerlink" title="1.jquery的动画animate()"></a>1.jquery的动画animate()
+          <p>2019.05.25整理的2018.08的工作笔记<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/05/25/2018-08工作日小结/#more" rel="contents">
@@ -1430,12 +1385,14 @@
 
       
         
-          
-            <h3 id="一-vue-js介绍"><a href="#一-vue-js介绍" class="headerlink" title="一.vue.js介绍"></a>一.vue.js介绍</h3><p><img src="/images/vue.js实战饿了吗(1)/1.png"><br><img src="/images/vue.js实战饿了吗(1)/2.png"><br><img src="/images/vue.js实战饿了吗(1)/3.png"><br><img src="/images/vue.js实战饿了吗(1)/6.png" width="70%"><br><img src="/images/vue.js实战饿了吗(1)/7.png" width="70%"><br><img src="/images/vue.js实战饿了吗(1)/4.png"></p>
-<h3 id="二-vue-cli开启Vuejs项目"><a href="#二-vue-cli开启Vuejs项目" class="headerlink" title="二.vue-cli开启Vuejs项目"></a>二.vue-cli开启Vuejs项目</h3><p><img src="/images/vue.js实战饿了吗(1)/5.png"></p>
-<p><font color="red">.gitkeep文件</font><br>git是不允许提交一个空的目录到版本库上的,可以在空的文件夹里面建立一个.gitkeep文件，然后提交去即可。<br>其实在git中 .gitkeep 就是一个占位符。可以用其他 比如 .nofile等文件作为占位符。</p>
-
-          
+          <p>之前看过一整遍慕课网的课程《vue.js实战饿了吗》，也跟着将这个app做了出来。但是时隔太久了一些点忘记了。所以再有时间的时候把他重新看一遍，并且整理出来。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/09/vue-js实战饿了吗-1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1536,7 +1493,18 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MUI仿豆瓣电影APP跨平台混编框架/" itemprop="url" rel="index">
+                  <a href="/categories/MUI/" itemprop="url" rel="index">
+                    <span itemprop="name">MUI</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MUI/MUI仿豆瓣电影APP跨平台混编框架/" itemprop="url" rel="index">
                     <span itemprop="name">MUI仿豆瓣电影APP跨平台混编框架</span>
                   </a>
                 </span>
@@ -1574,10 +1542,14 @@
 
       
         
-          
-            <p><img src="/images/MUI仿豆瓣电影APP跨平台混编框架/1.png" width="50%"><br><img src="/images/MUI仿豆瓣电影APP跨平台混编框架/2.png" width="50%"><br><img src="/images/MUI仿豆瓣电影APP跨平台混编框架/3.png" width="50%"><br><img src="/images/MUI仿豆瓣电影APP跨平台混编框架/4.png" width="80%"><br><img src="/images/MUI仿豆瓣电影APP跨平台混编框架/4.png"></p>
-
-          
+          <p>一边学一边记录笔记。慕课网的课程《MUI仿豆瓣电影APP跨平台混编框架》。时间隔了这么久也还没学完。。。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/23/MUI仿豆瓣电影APP跨平台混编框架/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1716,10 +1688,14 @@
 
       
         
-          
-            <p><img src="/images/第九章.如何打包发布/1.png" width="40%"><br>在线压缩文件：<br><img src="/images/第九章.如何打包发布/2.png" width="40%"><br><img src="/images/第九章.如何打包发布/3.png" width="40%"></p>
-
-          
+          <p>慕课网视频《所向披靡的响应式开发》第九章的笔记。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/23/第九章-如何打包发布/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1904,7 +1880,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.2k字</span>
+  <span class="post-count">博客全站共38.2k字</span>
 </div>
         
 
