@@ -105,7 +105,7 @@
 <meta property="og:image" content="http://yoursite.com/images/第四章.如何实现PC端的样式/11.png">
 <meta property="og:image" content="http://yoursite.com/images/第四章.如何实现PC端的样式/12.png">
 <meta property="og:image" content="http://yoursite.com/images/第四章.如何实现PC端的样式/13.png">
-<meta property="og:updated_time" content="2019-05-28T13:37:07.819Z">
+<meta property="og:updated_time" content="2019-05-29T15:01:09.213Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第四章.如何实现PC端的样式">
 <meta name="twitter:description" content="慕课网视频《所向披靡的响应式开发》第四章的笔记。">
@@ -326,7 +326,18 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/所向披靡的响应式开发/" itemprop="url" rel="index">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css/所向披靡的响应式开发/" itemprop="url" rel="index">
                     <span itemprop="name">所向披靡的响应式开发</span>
                   </a>
                 </span>
@@ -363,26 +374,27 @@
       
 
       
-        <p>慕课网视频《所向披靡的响应式开发》第四章的笔记。<br><a id="more"></a><br>1.normalize.css消除浏览器之间默认样式的差异<br>2.em和rem<br>rem在iE8和以下的版本是不支持的<br><img src="/images/第四章.如何实现PC端的样式/1.png" width="80%"><br><img src="/images/第四章.如何实现PC端的样式/2.png" width="80%"><br><img src="/images/第四章.如何实现PC端的样式/3.png" width="80%"><br>兼容低版本的ie<br><img src="/images/第四章.如何实现PC端的样式/4.png" width="40%"></p>
-<p>color：#222文本的这个黑色看起来比较舒服<br>::selection{}文本选中的样式<br>清除浮动：</p>
+        <p>慕课网视频《所向披靡的响应式开发》第四章的笔记。<br><a id="more"></a><br>1.<code>normalize.css</code>消除浏览器之间默认样式的差异<br>2.<code>em</code>和<code>rem</code></p>
+<p><font color="red">rem在iE8和以下的版本是不支持的</font><br><img src="/images/第四章.如何实现PC端的样式/1.png" width="60%"><br><img src="/images/第四章.如何实现PC端的样式/2.png" width="60%"><br><img src="/images/第四章.如何实现PC端的样式/3.png" width="60%"><br>兼容低版本的ie<br><img src="/images/第四章.如何实现PC端的样式/4.png" width="40%"></p>
+<p><code>color：#222;</code>文本的这个黑色看起来比较舒服<br><code>::selection{}</code>文本选中的样式<br>清除浮动：</p>
 <ul>
-<li>给浮动容器设置overflow：hidden或者auto</li>
+<li>给浮动容器设置<code>overflow：hidden</code>或者<code>overflow：auto</code></li>
 <li><code>&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;</code>,不好维护</li>
 <li>给浮动容器也增加浮动，但是影响下一个元素的布局</li>
-<li>跟添加标签是一个原理<br>zoom：1：为ie6，7设置，只有添加之后才能触发hash layout，才能清除浮动<br><img src="/images/第四章.如何实现PC端的样式/5.png" width="40%"></li>
-<li>触发BFC （overflow,float,display:table-cell,inline-block,table-caption,position:absolute,fixed）<br>before防止浏览器顶部的空白奔溃。自己的margin-top和下面元素margin-bottom的叠加<br><img src="/images/第四章.如何实现PC端的样式/6.png" width="40%"></li>
+<li>跟添加标签是一个原理<br><code>zoom：1</code>：为ie6，7设置，只有添加之后才能触发<code>hash layout</code>，才能清除浮动<br><img src="/images/第四章.如何实现PC端的样式/5.png" width="40%"></li>
+<li><font color="red">触发BFC </font><br><code>overflow,float,display:table-cell,inline-block,table-caption,position:absolute,fixed</code><br>before防止浏览器顶部的空白奔溃。自己的margin-top和下面元素margin-bottom的叠加<br><img src="/images/第四章.如何实现PC端的样式/6.png" width="40%"></li>
 </ul>
-<p>因为浏览器对中文字号的下限是12px。所以如果设置font-size：65.5%，之后设置的font-size：1rem。但是1rem不等于10px,等于12px。3rem=36px</p>
-<p>li+li：左右两端的导航栏目是没有边线的，不选择第一个元素<br>margin-left：-3px：去除3px的间距<br>还有其他的方法去除3px的边距</p>
+<p>因为浏览器对中文字号的下限是12px。所以如果设置<code>font-size：65.5%;</code>，之后设置的<code>font-size：1rem;</code>。但是1rem不等于10px,等于12px。<code>3rem=36px</code></p>
+<p><code>li+li</code>：左右两端的导航栏目是没有边线的，不选择第一个元素<br><code>margin-left:-3px;</code>：去除3px的间距<br>还有其他的方法去除3px的边距</p>
 <ul>
 <li>li标签不闭合</li>
-<li>font-size：0</li>
+<li><code>font-size:0;</code></li>
 <li>html代码中去除换行</li>
-<li>css4中有个white-space-collapsing</li>
+<li>css4中有个<code>white-space-collapsing</code></li>
 </ul>
 <p><img src="/images/第四章.如何实现PC端的样式/7.png" width="40%"><br><img src="/images/第四章.如何实现PC端的样式/8.png" width="40%"></p>
-<p>通过文字的缩进来隐藏文字<br><img src="/images/第四章.如何实现PC端的样式/9.png" width="40%"><br>inset内阴影<br><img src="/images/第四章.如何实现PC端的样式/10.png" width="40%"><br>opacity：0.8：会让容器内的所有元素都变成透明度为0.8<br>background-color：rgba():就是只设置背景颜色的不透明度</p>
-<p>calc():CSS3对长度的计算。<br>-3rem：2rem左右padding。各个块之间1.5rem的间距-&gt;1.5*2/3=1<br>.item+.item：只有后面两个item有padding-left<br><img src="/images/第四章.如何实现PC端的样式/11.png" width="60%"><br>将最新公告用伪元素插入，content中的空格是用<code>\00a0</code>表示<br><img src="/images/第四章.如何实现PC端的样式/12.png" width="60%"><br>增加灰色的滤镜<br><img src="/images/第四章.如何实现PC端的样式/13.png" width="60%"></p>
+<p>通过文字的缩进来隐藏文字<br><img src="/images/第四章.如何实现PC端的样式/9.png" width="40%"><br>inset内阴影<br><img src="/images/第四章.如何实现PC端的样式/10.png" width="50%"><br><code>opacity:0.8;</code>：会让容器内的所有元素都变成透明度为0.8<br><code>background-color:rgba()</code>:就是只设置背景颜色的不透明度</p>
+<p><code>calc()</code>:CSS3对长度的计算。<br><code>-3rem</code>：2rem左右padding。各个块之间1.5rem的间距-&gt;1.5*2/3=1<br>.item+.item：只有后面两个item有padding-left<br><img src="/images/第四章.如何实现PC端的样式/11.png" width="60%"><br>将最新公告用伪元素插入，content中的空格是用<code>\00a0</code>表示<br><img src="/images/第四章.如何实现PC端的样式/12.png" width="60%"><br>增加灰色的滤镜<br><img src="/images/第四章.如何实现PC端的样式/13.png" width="60%"></p>
 
       
     </div>
@@ -588,7 +600,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共38.2k字</span>
+  <span class="post-count">博客全站共38.5k字</span>
 </div>
         
 

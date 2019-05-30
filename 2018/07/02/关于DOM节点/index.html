@@ -85,17 +85,17 @@
 
 
 
-<meta name="description" content="DOM 节点根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：">
+<meta name="description" content="关于DOM节点by 2018-07-02 17:23:11">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于DOM节点">
 <meta property="og:url" content="http://yoursite.com/2018/07/02/关于DOM节点/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="DOM 节点根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：">
+<meta property="og:description" content="关于DOM节点by 2018-07-02 17:23:11">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-02T10:12:27.247Z">
+<meta property="og:updated_time" content="2019-05-29T07:36:34.100Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于DOM节点">
-<meta name="twitter:description" content="DOM 节点根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：">
+<meta name="twitter:description" content="关于DOM节点by 2018-07-02 17:23:11">
 
 
 
@@ -319,17 +319,6 @@
 
                 
                 
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/面试/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
-
-                
-                
               
             </span>
           
@@ -360,7 +349,8 @@
       
 
       
-        <h1 id="DOM-节点"><a href="#DOM-节点" class="headerlink" title="DOM 节点"></a>DOM 节点</h1><p>根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：<a id="more"></a></p>
+        <p>关于DOM节点<br>by 2018-07-02 17:23:11<br><a id="more"></a></p>
+<h1 id="DOM-节点"><a href="#DOM-节点" class="headerlink" title="DOM 节点"></a>DOM 节点</h1><p>根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：</p>
 <ul>
 <li>整个文档是一个文档节点</li>
 <li>每个 HTML 元素是元素节点</li>
@@ -368,14 +358,14 @@
 <li>每个 HTML 属性是属性节点</li>
 <li>注释是注释节点</li>
 </ul>
-<p>通过 HTML DOM，树中的所有节点均可通过 JavaScript 进行访问。所有 HTML 元素（节点）均可被修改，也可以创建或删除节点。</p>
+<p>通过 HTML DOM，树中的所有节点均可通过 JavaScript 进行访问。所有 HTML 元素（节点）均可被修改，也可以创建或删除节点。(应该是除了注释节点外，也没有访问注释节点的意义)</p>
 <h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">createDocumentFragment() //创建一个DOM片段</span><br><span class="line">createElement() //创建一个元素节点</span><br><span class="line">createTextNode() //创建一个文本节点</span><br></pre></td></tr></table></figure>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var element = document.createElement(&quot;div&quot;);</span><br><span class="line">var textNode = document.createTextNode(&quot;Hello world!&quot;);</span><br><span class="line">element.appendChild(textNode);</span><br></pre></td></tr></table></figure></p>
 <h2 id="添加、删除、替换、插入"><a href="#添加、删除、替换、插入" class="headerlink" title="添加、删除、替换、插入"></a>添加、删除、替换、插入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">appendChild() //插入新的子节点（元素）</span><br><span class="line">removeChild() //删除子节点（元素）</span><br><span class="line">replaceChild() //替换</span><br><span class="line">insertBefore() //插入</span><br></pre></td></tr></table></figure>
 <h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getElementsByTagName() //返回带有指定标签名的所有元素。</span><br><span class="line">getElementsByName() //返回相同类名的所有 HTML 元素</span><br><span class="line">getElementById() //方法返回带有指定 ID 的元素，唯一性</span><br></pre></td></tr></table></figure>
-<p><font color="red">混合使用</font>（不像jquery有.和#的概念）<br>返回包含文档中所有 &lt;p&gt; 元素的列表，并且这些 &lt;p&gt; 元素应该是 id=”main” 的元素的后代（子、孙等等）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;main&quot;).getElementsByTagName(&quot;p&quot;);</span><br></pre></td></tr></table></figure></p>
+<p><font color="red">混合使用</font>（不像jquery有.和#的概念）<br>返回包含文档中所有 &lt;p&gt; 元素的列表，并且这些 &lt;p&gt; 元素应该是 id=”main” 的元素的后代（子、孙等等）：<br><code>document.getElementById(&quot;main&quot;).getElementsByTagName(&quot;p&quot;);</code><br>效果等同于<code>$(&#39;#main p&#39;)</code></p>
 <hr>
-<p><strong>日常啰嗦</strong>：感觉总结的不够完美，日后再来填坑。</p>
+<p><strong>日常啰嗦</strong>：感觉总结的不够完美，日后再来填坑。<br>              2019.05.29来填过一次坑</p>
 
       
     </div>
@@ -606,7 +596,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共38.2k字</span>
+  <span class="post-count">博客全站共38.5k字</span>
 </div>
         
 
