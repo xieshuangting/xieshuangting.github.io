@@ -93,7 +93,7 @@
 <meta property="og:description" content="gulp中文官网：https://www.gulpjs.com.cn/  1. gulp介绍gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；她不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/gulp的使用/1.png">
-<meta property="og:updated_time" content="2018-06-29T10:18:24.518Z">
+<meta property="og:updated_time" content="2019-05-30T02:37:42.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gulp的使用">
 <meta name="twitter:description" content="gulp中文官网：https://www.gulpjs.com.cn/  1. gulp介绍gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；她不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成。">
@@ -353,14 +353,18 @@
       
         <p>gulp中文官网：<a href="https://www.gulpjs.com.cn/" target="_blank" rel="noopener">https://www.gulpjs.com.cn/</a></p>
 <hr>
-<font color="red">1. gulp介绍</font><br>gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；她不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成。<a id="more"></a><br><br>gulp是<font color="blue">基于Nodejs</font>的自动任务运行器， 她能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并<font color="blue">监听</font>文件在改动后重复指定的这些步骤。在实现上，她借鉴了Unix操作系统的<font color="blue">管道</font>（pipe）思想，前一级的输出，直接变成后一级的输入，使得在操作上非常简单。<br><br>gulp 和 grunt 非常类似，但相比于 grunt 的频繁 IO 操作，gulp 的<font color="blue">流操作</font>，能更快地更便捷地完成构建工作。<br><br>——–<br><font color="red">2. gulp的使用步骤</font><br>首先当然是安装nodejs，通过nodejs的npm全局安装和项目安装gulp（$ npm install gulp -g），其次在项目里安装所需要的gulp插件（$ npm install gulp –save-dev,$ npm install gulp-less –save-dev），然后新建gulp的配置文件gulpfile.js并写好配置信息（定义gulp任务），最后通过命令提示符运行gulp任务即可。<br><font color="blue">安装nodejs -&gt; 全局安装gulp -&gt; 项目安装gulp以及gulp插件 -&gt; 配置gulpfile.js -&gt; 运行任务</font>
+<h3 id="1-gulp介绍"><a href="#1-gulp介绍" class="headerlink" title="1. gulp介绍"></a><font color="red">1. gulp介绍</font></h3><p>gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；她不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成。<a id="more"></a></p>
+<p>gulp是<font color="blue">基于Nodejs</font>的自动任务运行器， 她能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并<font color="blue">监听</font>文件在改动后重复指定的这些步骤。在实现上，她借鉴了Unix操作系统的<font color="blue">管道</font>（pipe）思想，前一级的输出，直接变成后一级的输入，使得在操作上非常简单。</p>
+<p>gulp 和 grunt 非常类似，但相比于 grunt 的频繁 IO 操作，gulp 的<font color="blue">流操作</font>，能更快地更便捷地完成构建工作。</p>
+<hr>
+<h3 id="2-gulp的使用步骤"><a href="#2-gulp的使用步骤" class="headerlink" title="2. gulp的使用步骤"></a><font color="red">2. gulp的使用步骤</font></h3><p>首先当然是安装nodejs，通过nodejs的npm全局安装和项目安装gulp（$ <code>npm install gulp -g</code>），其次在项目里安装所需要的gulp插件（$ <code>npm install gulp --save-dev</code>,$ <code>npm install gulp-less --save-dev</code>），然后新建gulp的配置文件<font color="red">gulpfile.js</font>并写好配置信息（定义gulp任务），最后通过命令提示符运行gulp任务即可。</p>
+<font color="blue">安装nodejs -&gt; 全局安装gulp -&gt; 项目安装gulp以及gulp插件 -&gt; 配置gulpfile.js -&gt; 运行任务</font>
 
 <p>细心的你可能会发现，我们全局安装了gulp，项目也安装了gulp，全局安装gulp是为了执行gulp任务，本地安装gulp则是为了调用gulp插件的功能。</p>
 <hr>
-<p><font color="red">3. 新建gulpfile.js文件</font></p>
-<p><font color="blue">说明</font>：gulpfile.js是gulp项目的配置文件，是位于项目根目录的普通js文件（其实将gulpfile.js放入其他文件夹下亦可）。<br><img src="/images/gulp的使用/1.png" alt="gulp的使用"></p>
+<h3 id="3-新建gulpfile-js文件"><a href="#3-新建gulpfile-js文件" class="headerlink" title="3. 新建gulpfile.js文件"></a><font color="red">3. 新建gulpfile.js文件</font></h3><p><font color="blue">说明</font>：gulpfile.js是gulp项目的配置文件，是位于项目根目录的普通js文件（其实将gulpfile.js放入其他文件夹下亦可）。<br><img src="/images/gulp的使用/1.png" alt="gulp的使用"></p>
 <hr>
-<p><font color="red">4. 运行gulp</font><br>$ gulp 任务名称<br>例如编译less：$ gulp testLess（任务名称）<br>当执行$ gulp default或$ gulp 将会调用default任务里的所有任务[‘testLess’,’elseTask’]。</p>
+<h3 id="4-运行gulp"><a href="#4-运行gulp" class="headerlink" title="4. 运行gulp"></a><font color="red">4. 运行gulp</font></h3><p>$ gulp 任务名称<br>例如编译less：$ <code>gulp testLess</code>（任务名称）<br>当执行$ <code>gulp defaul</code>t或$ <code>gulp</code> 将会调用default任务里的所有任务[‘testLess’,’elseTask’]。</p>
 <hr>
 <p><strong>日常啰嗦</strong>：在极客学院的培训课上有一章节叫做‘任务10 掌握前端工业化框架(高级进阶)’，里面介绍了grunt，gulp，bower，yeoman，FIS,FIS3这些打包工具，还是当时学的时候有点懂，久了就忘记了，还是需要把有必要的工具总结下，以便得到巩固。</p>
 
@@ -451,8 +455,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -471,7 +484,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -482,7 +495,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -523,6 +536,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-gulp介绍"><span class="nav-number">1.</span> <span class="nav-text">1. gulp介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-gulp的使用步骤"><span class="nav-number">2.</span> <span class="nav-text">2. gulp的使用步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-新建gulpfile-js文件"><span class="nav-number">3.</span> <span class="nav-text">3. 新建gulpfile.js文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-运行gulp"><span class="nav-number">4.</span> <span class="nav-text">4. 运行gulp</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -568,7 +597,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共38.5k字</span>
+  <span class="post-count">博客全站共42.4k字</span>
 </div>
         
 

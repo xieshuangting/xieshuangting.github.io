@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="以前看过的视频，当时看的时候做了笔记，现在再整理一下。这个视频有讲到vue-ssr渲染，但是说的不是很清楚。等我试验了之后再写一篇关于vue-ssr的笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web前端性能优化 Web前端性能优化">
+<meta property="og:url" content="http://yoursite.com/2019/05/30/让你页面速度飞起来 Web前端性能优化/index.html">
+<meta property="og:site_name" content="RECODE TRACE">
+<meta property="og:description" content="以前看过的视频，当时看的时候做了笔记，现在再整理一下。这个视频有讲到vue-ssr渲染，但是说的不是很清楚。等我试验了之后再写一篇关于vue-ssr的笔记">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/1.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/2.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/3.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/4.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/5.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/9.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/10.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/11.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/12.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/14.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/15.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/6.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/17.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/19.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/21.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/22.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/25.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/26.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/27.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/28.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/29.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/30.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/31.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/32.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/33.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/34.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/35.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/36.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/37.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/38.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/39.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/40.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/41.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/42.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/43.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/45.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/44.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/46.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/47.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/48.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/49.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/50.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/51.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/52.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/53.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/54.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/55.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/56.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/57.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/58.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/59.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/60.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/61.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/62.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/63.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/66.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/69.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/70.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/71.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/72.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/73.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/74.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/75.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/76.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/77.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/78.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/79.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/80.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/81.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/82.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/84.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/85.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/83.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/86.png">
+<meta property="og:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/87.png">
+<meta property="og:updated_time" content="2019-06-01T02:58:14.128Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Web前端性能优化 Web前端性能优化">
+<meta name="twitter:description" content="以前看过的视频，当时看的时候做了笔记，现在再整理一下。这个视频有讲到vue-ssr渲染，但是说的不是很清楚。等我试验了之后再写一篇关于vue-ssr的笔记">
+<meta name="twitter:image" content="http://yoursite.com/images/让你页面速度飞起来%20Web前端性能优化/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/30/让你页面速度飞起来 Web前端性能优化/"/>
+
+
+
+
+
+  <title>Web前端性能优化 Web前端性能优化 | RECODE TRACE</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/xieshuangting" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">RECODE TRACE</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/30/让你页面速度飞起来 Web前端性能优化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xieshuangting">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RECODE TRACE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Web前端性能优化 Web前端性能优化</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-30T12:18:24+08:00">
+                2019-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/性能/" itemprop="url" rel="index">
+                    <span itemprop="name">性能</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>以前看过的视频，当时看的时候做了笔记，现在再整理一下。<br>这个视频有讲到vue-ssr渲染，但是说的不是很清楚。等我试验了之后再写一篇关于vue-ssr的笔记<br><a id="more"></a></p>
+<h3 id="第1章-课程简介"><a href="#第1章-课程简介" class="headerlink" title="第1章 课程简介"></a>第1章 课程简介</h3><p><img src="/images/让你页面速度飞起来 Web前端性能优化/1.png" width="40%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/2.png" width="20%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/3.png" width="50%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/4.png" width="50%"></p>
+<h3 id="第2章-资源合并与压缩"><a href="#第2章-资源合并与压缩" class="headerlink" title="第2章 资源合并与压缩"></a>第2章 资源合并与压缩</h3><h4 id="2-1-资源合并与压缩-http-请求的过程及潜在的性能优化点"><a href="#2-1-资源合并与压缩-http-请求的过程及潜在的性能优化点" class="headerlink" title="2-1 资源合并与压缩-http 请求的过程及潜在的性能优化点"></a>2-1 资源合并与压缩-http 请求的过程及潜在的性能优化点</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/5.png" width="70%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/9.png"><br>cdn是请求静态资源的时候用的，请求静态资源的时候携带的cookie是没有用的。 所以如果header里面有携带cookie的话尽量不要使用跟主站相同的域名，不然会造成网络无畏的损耗。<br><img src="/images/让你页面速度飞起来 Web前端性能优化/10.png" width="70%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/11.png" width="60%"></p>
+<h4 id="2-2-资源合并与压缩-html-压缩"><a href="#2-2-资源合并与压缩-html-压缩" class="headerlink" title="2-2 资源合并与压缩-html 压缩"></a>2-2 资源合并与压缩-html 压缩</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/12.png" width="50%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/14.png" width="80%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/15.png" width="80%"><br>开启gzip<br><img src="/images/让你页面速度飞起来 Web前端性能优化/6.png" width="50%"></p>
+<h4 id="2-3-资源合并与压缩-css-及-js压缩"><a href="#2-3-资源合并与压缩-css-及-js压缩" class="headerlink" title="2-3 资源合并与压缩-css 及 js压缩"></a>2-3 资源合并与压缩-css 及 js压缩</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/17.png" width="50%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/19.png" width="40%"></p>
+<h4 id="2-4-资源合并与压缩-文件合并"><a href="#2-4-资源合并与压缩-文件合并" class="headerlink" title="2-4 资源合并与压缩-文件合并"></a>2-4 资源合并与压缩-文件合并</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/21.png" width="80%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/22.png" width="70%"><br>a.js，b.js, c.js合并之后压缩成一个文件，若只有一个文件的改动会导致整体的文件的改动<br>每个浏览器对同个域名的并发数有限制，像谷歌对同个域名的并发数才7个</p>
+<h3 id="第3章-图片相关的优化"><a href="#第3章-图片相关的优化" class="headerlink" title="第3章 图片相关的优化"></a>第3章 图片相关的优化</h3><h4 id="3-1-图片相关的优化-一张JPG图片的解析过程"><a href="#3-1-图片相关的优化-一张JPG图片的解析过程" class="headerlink" title="3-1 图片相关的优化- 一张JPG图片的解析过程"></a>3-1 图片相关的优化- 一张JPG图片的解析过程</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/25.png"></p>
+<h4 id="3-2-图片相关的优化-png8、png24、png32之间的区别"><a href="#3-2-图片相关的优化-png8、png24、png32之间的区别" class="headerlink" title="3-2 图片相关的优化- png8、png24、png32之间的区别"></a>3-2 图片相关的优化- png8、png24、png32之间的区别</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/26.png" width="50%"></p>
+<h4 id="3-3-图片相关的优化-不同格式图片常用的业务场景"><a href="#3-3-图片相关的优化-不同格式图片常用的业务场景" class="headerlink" title="3-3 图片相关的优化- 不同格式图片常用的业务场景"></a>3-3 图片相关的优化- 不同格式图片常用的业务场景</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/27.png" width="80%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/28.png" width="50%"></p>
+<h4 id="3-4-图片相关的优化-图片压缩几种方法-雪碧图、Image-inline"><a href="#3-4-图片相关的优化-图片压缩几种方法-雪碧图、Image-inline" class="headerlink" title="3-4 图片相关的优化- 图片压缩几种方法-雪碧图、Image inline"></a>3-4 图片相关的优化- 图片压缩几种方法-雪碧图、Image inline</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/29.png" width="50%"></p>
+<p>使用base64压缩图片<br><img src="/images/让你页面速度飞起来 Web前端性能优化/30.png" width="50%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/31.png" width="40%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/32.png" width="70%"></p>
+<h4 id="3-5-图片相关的优化-图片压缩案例分析"><a href="#3-5-图片相关的优化-图片压缩案例分析" class="headerlink" title="3-5 图片相关的优化- 图片压缩案例分析"></a>3-5 图片相关的优化- 图片压缩案例分析</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/33.png"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/34.png"><br>图片转化成base64的网站 <a href="http://tool.chinaz.com/tools/imgtobase" target="_blank" rel="noopener">http://tool.chinaz.com/tools/imgtobase</a><br>转换webp图片的网站 <a href="https://zhitu.isux.us/" target="_blank" rel="noopener">https://zhitu.isux.us/</a><br>图片压缩网站 <a href="https://tinypng.com" target="_blank" rel="noopener">https://tinypng.com</a><br>生成雪碧图的样式：<a href="http://www.spritecow.com/（包括位置大小）" target="_blank" rel="noopener">http://www.spritecow.com/（包括位置大小）</a></p>
+<h3 id="第4章-css-和-js-的装载与执行"><a href="#第4章-css-和-js-的装载与执行" class="headerlink" title="第4章 css 和 js 的装载与执行"></a>第4章 css 和 js 的装载与执行</h3><h4 id="4-1-css和js的装载与执行-HTML-页面加载渲染的过程"><a href="#4-1-css和js的装载与执行-HTML-页面加载渲染的过程" class="headerlink" title="4-1 css和js的装载与执行-HTML 页面加载渲染的过程"></a>4-1 css和js的装载与执行-HTML 页面加载渲染的过程</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/35.png"><br>Html首先通过网址请求回来，然后html会由一个字节流转化一个字符流。浏览器端拿到的就是一个字符流，然后浏览器通过词法分析后，将相应的语法分析成相应的token，然后会将这些token添加到DOM树上。所以HTML解析会有一个特点，会从上到下对这个文档进行词法分析。所以DOM树是在浏览器对HTML从上到下进行词法分析的时候生成的。<br>若有link外部资源的话就会并发的请求，然后解析生成CSSOM。最后会和DOM结合生成渲染树（render tree）。<br>换一句话来说就是想要<font color="red">生成render tree的前提是生成了DOM和CSSOM，不然就算DOM生成好了render tree也不会生成</font></p>
+<h4 id="4-2-css和js的装载与执行-HTML-演染过程的一些特点"><a href="#4-2-css和js的装载与执行-HTML-演染过程的一些特点" class="headerlink" title="4-2 css和js的装载与执行-HTML 演染过程的一些特点"></a>4-2 css和js的装载与执行-HTML 演染过程的一些特点</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/36.png" width="70%"><br>对单个域名有并发限制</p>
+<h4 id="4-4-css和js的装载与执行-css-阻塞和-js-阻塞"><a href="#4-4-css和js的装载与执行-css-阻塞和-js-阻塞" class="headerlink" title="4-4 css和js的装载与执行-css 阻塞和 js 阻塞"></a>4-4 css和js的装载与执行-css 阻塞和 js 阻塞</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/37.png" width="50%"><br>避免页面的闪动，所以时推荐将css通过link的方式引入的，这样就可以渲染出带有样式的render tree<br>Webkit有html预先扫描器，可以预先扫描后面的词语。若是有需要发送请求的地方会通过预先扫描器来发送请求，请求后续相关的资源<br><img src="/images/让你页面速度飞起来 Web前端性能优化/38.png" width="50%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/39.png" width="50%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/40.png" width="30%"><br><code>&lt;script type=&quot;text/javascript&quot; defer=&quot;defer&quot;&gt;</code><br>defer 属性规定是否对脚本执行进行延迟，直到页面加载为止。<br>如果您的脚本不会改变文档的内容，可将 defer 属性加入到 <code>&lt;script&gt;</code>标签中，以便加快处理文档的速度。因为浏览器知道它将能够安全地读取文档的剩余部分而不用执行脚本，它将推迟对脚本的解释，直到文档已经显示给用户为止。<br>这就是有一些网站把脚本引入放在<code>head</code>里面<br><code>&lt;script type=&quot;text/javascript&quot; src=&quot;demo_async.js&quot; async=&quot;async&quot;&gt;&lt;/script&gt;</code><br>async 属性规定一旦脚本可用，则会异步执行。<br>注释：async 属性仅适用于外部脚本（只有在使用 src 属性时）。<br>注释：有多种执行外部脚本的方法：<br>如果 async=”async”：脚本相对于页面的其余部分异步地执行（当页面继续进行解析时，脚本将被执行）<br>如果不使用 async 且 defer=”defer”：脚本将在页面完成解析时执行<br>如果既不使用 async 也不使用 defer：在浏览器继续解析页面之前，立即读取并执行脚本<br><img src="/images/让你页面速度飞起来 Web前端性能优化/41.png" width="70%"></p>
+<h3 id="第5章-懒加载与预加载"><a href="#第5章-懒加载与预加载" class="headerlink" title="第5章 懒加载与预加载"></a>第5章 懒加载与预加载</h3><h4 id="5-1-懒加载原理"><a href="#5-1-懒加载原理" class="headerlink" title="5-1 懒加载原理"></a>5-1 懒加载原理</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/42.png" width="70%"></p>
+<h4 id="5-2-预加载原理"><a href="#5-2-预加载原理" class="headerlink" title="5-2 预加载原理"></a>5-2 预加载原理</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/43.png" width="60%"></p>
+<h4 id="5-3-懒加载、预加载使用场景"><a href="#5-3-懒加载、预加载使用场景" class="headerlink" title="5-3 懒加载、预加载使用场景"></a>5-3 懒加载、预加载使用场景</h4><p><code>lazyload=&#39;true&#39; data-image:&#39;真实路径&#39; class =&#39;lazy&#39;</code><br>将真实的图片路径存储在别的属性里，监听滚动事件</p>
+<h4 id="5-4-懒加载原生-js-和-zepto-lazyload"><a href="#5-4-懒加载原生-js-和-zepto-lazyload" class="headerlink" title="5-4 懒加载原生 js 和 zepto.lazyload"></a>5-4 懒加载原生 js 和 zepto.lazyload</h4><p>监听onscroll事件，在scroll事件的回调中去判断我们的懒加载的图片是否进入可视区域<br><img src="/images/让你页面速度飞起来 Web前端性能优化/45.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var viewHeight = document.documentElement.clientHeight;//可见区域高度</span><br><span class="line">function lazyload()&#123;</span><br><span class="line">	var eles = document.querySelectorAll(&apos;img[data-original][lazyload]&apos;)</span><br><span class="line">	Array.prototype.forEach.call(eles,function(item,index)&#123;</span><br><span class="line">		var rect;</span><br><span class="line">		if(item.dataset.original === &apos;&apos;) return</span><br><span class="line">		rect = item.getBoundingClientRect()</span><br><span class="line">		if(rect.bottom&gt;=0 &amp;&amp; rect.top&lt;viewHeight)&#123;</span><br><span class="line">			!function()&#123;</span><br><span class="line">				var img = new Image();</span><br><span class="line">				img.src = item.dataset.original;</span><br><span class="line">				img.onload = function()&#123;</span><br><span class="line">					item.src = img.src;</span><br><span class="line">				&#125;</span><br><span class="line">				item.removeAttribute(&apos;data-original&apos;);</span><br><span class="line">				item.removeAttribute(&apos;lazyload&apos;);</span><br><span class="line">			&#125;()</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line">lazyload();</span><br><span class="line">document.addEventListener(&apos;scroll&apos;,lazyload);</span><br></pre></td></tr></table></figure></p>
+<p><font color="red">注：要设置好每个图片的默认高度和宽度来占据位置，若没有设置高度的话图片会默认一个较低的高度，导致所有图片都在可视区域内，所以图片在初始化的时候会一次性把全部都加载出来</font><br>扩展：<br><code>getBoundingClientRect()</code> 用于获取某个元素相对于视窗的位置集合。集合中有<code>top, right, bottom, left</code>等属性。<br>返回值类型：<code>TextRectangle</code>对象，每个矩形具有四个整数性质（ 上， 右 ， 下，和左 ）表示的坐标的矩形，以像素为单位。<br><img src="/images/让你页面速度飞起来 Web前端性能优化/44.png"></p>
+<p>zepto插件实现懒加载<br><img src="/images/让你页面速度飞起来 Web前端性能优化/46.png"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/47.png"></p>
+<h4 id="5-5-预加载原生-js-和-PreloadJS-实现"><a href="#5-5-预加载原生-js-和-PreloadJS-实现" class="headerlink" title="5-5 预加载原生 js 和 PreloadJS 实现"></a>5-5 预加载原生 js 和 PreloadJS 实现</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/48.png"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/49.png"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/50.png"></p>
+<h3 id="第6章-重绘与回流"><a href="#第6章-重绘与回流" class="headerlink" title="第6章 重绘与回流"></a>第6章 重绘与回流</h3><h4 id="6-1-css-性能让-Javacript-变慢？"><a href="#6-1-css-性能让-Javacript-变慢？" class="headerlink" title="6-1 css 性能让 Javacript 变慢？"></a>6-1 css 性能让 Javacript 变慢？</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/51.png" width="50%"><br>因为js可能会操作css类，所以js会等css执行完才执行<br>所以在浏览器中规定两个线程是互斥的，当uI渲染时js线程时被冻结的，反之亦然<br><img src="/images/让你页面速度飞起来 Web前端性能优化/52.png" width="80%"></p>
+<h4 id="6-2-什么是重绘与回流"><a href="#6-2-什么是重绘与回流" class="headerlink" title="6-2 什么是重绘与回流"></a>6-2 什么是重绘与回流</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/53.png" width="80%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/54.png" width="80%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/55.png" width="50%"></p>
+<h4 id="6-3-避免重绘回流的两种方法"><a href="#6-3-避免重绘回流的两种方法" class="headerlink" title="6-3 避免重绘回流的两种方法"></a>6-3 避免重绘回流的两种方法</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/56.png" width="80%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/57.png" width="80%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/58.png" width="80%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/59.png" width="80%"><br>但是图层的合成也是需要时间的<br><img src="/images/让你页面速度飞起来 Web前端性能优化/60.png" width="80%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/61.png" width="50%"></p>
+<h4 id="6-6-重绘与回流-实战优化点总结"><a href="#6-6-重绘与回流-实战优化点总结" class="headerlink" title="6-6 重绘与回流- 实战优化点总结"></a>6-6 重绘与回流- 实战优化点总结</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/62.png" width="80%"></p>
+<h3 id="第7章-浏览器存储"><a href="#第7章-浏览器存储" class="headerlink" title="第7章 浏览器存储"></a>第7章 浏览器存储</h3><h4 id="7-1-cookies"><a href="#7-1-cookies" class="headerlink" title="7-1 cookies"></a>7-1 cookies</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/63.png" width="70%"></p>
+<p>用处：<br><img src="/images/让你页面速度飞起来 Web前端性能优化/66.png" width="50%"></p>
+<p><img src="/images/让你页面速度飞起来 Web前端性能优化/69.png" width="50%"><br>Httponly表明当前的cookie不支持读写,不能通过document.cookie得到，但是在控制台application那里还是可以看到的<br><img src="/images/让你页面速度飞起来 Web前端性能优化/70.png" width="50%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/71.png" width="80%"></p>
+<h4 id="7-2-LocalStorage、SessionStorage"><a href="#7-2-LocalStorage、SessionStorage" class="headerlink" title="7-2 LocalStorage、SessionStorage"></a>7-2 LocalStorage、SessionStorage</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/72.png" width="50%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/73.png" width="50%"></p>
+<h4 id="7-3-IndexedDB"><a href="#7-3-IndexedDB" class="headerlink" title="7-3 IndexedDB"></a>7-3 IndexedDB</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/74.png"></p>
+<h4 id="7-4-案例解析"><a href="#7-4-案例解析" class="headerlink" title="7-4 案例解析"></a>7-4 案例解析</h4><p>打勾的就是httponly<br><img src="/images/让你页面速度飞起来 Web前端性能优化/75.png"></p>
+<h4 id="7-6-PWA与Service-Workers"><a href="#7-6-PWA与Service-Workers" class="headerlink" title="7-6 PWA与Service Workers"></a>7-6 PWA与Service Workers</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/76.png"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/77.png"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/78.png" width="60%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/79.png"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/80.png" width="60%"></p>
+<h4 id="7-7-案例解析"><a href="#7-7-案例解析" class="headerlink" title="7-7 案例解析"></a>7-7 案例解析</h4><p><img src="/images/让你页面速度飞起来 Web前端性能优化/81.png" width="50%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/82.png" width="50%"><br>检查chrome<br>Chrome://serviceworker-internals/<br>Chrome://inspect/#service-workers</p>
+<h4 id="7-8-实战演练-cookie、localstorge、sessionStorge"><a href="#7-8-实战演练-cookie、localstorge、sessionStorge" class="headerlink" title="7-8 实战演练-cookie、localstorge、sessionStorge"></a>7-8 实战演练-cookie、localstorge、sessionStorge</h4><p>未完待续<br><!-- 
+<img src="/images/让你页面速度飞起来 Web前端性能优化/86.png" width="50%">
+<img src="/images/让你页面速度飞起来 Web前端性能优化/87.png" width="50%">
+<img src="/images/让你页面速度飞起来 Web前端性能优化/88.png" width="50%">
+<img src="/images/让你页面速度飞起来 Web前端性能优化/89.png" width="50%"> --></p>
+<h3 id="第9章-SSR（服务端渲染）"><a href="#第9章-SSR（服务端渲染）" class="headerlink" title="第9章 SSR（服务端渲染）"></a>第9章 SSR（服务端渲染）</h3><p><img src="/images/让你页面速度飞起来 Web前端性能优化/84.png" width="60%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/85.png" width="40%"><br>为什么要用vue-ssr?</p>
+<ul>
+<li>前端用的是vue, 后端渲染用vue-ssr,可以无缝的和前端连接起来</li>
+<li>使用vue-ssr可以把数据渲染成HTML, 并在首屏展示, 用户体验好</li>
+<li>传统的前端vue, 服务器第一次请求只返回#app的空DOM, 当js和ajax请求完成, 才会展示, 体验差</li>
+<li>利于SEO<br>vue首屏加载缓慢<br><img src="/images/让你页面速度飞起来 Web前端性能优化/83.png" width="40%"></li>
+</ul>
+<p><img src="/images/让你页面速度飞起来 Web前端性能优化/86.png" width="70%"><br><img src="/images/让你页面速度飞起来 Web前端性能优化/87.png"><br>可以参考：<a href="https://segmentfault.com/a/1190000009373793" target="_blank" rel="noopener">https://segmentfault.com/a/1190000009373793</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/27/http协议原理+实践 笔记/" rel="next" title="http协议原理+实践 笔记">
+                <i class="fa fa-chevron-left"></i> http协议原理+实践 笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/30/2019-05-30/" rel="prev" title="2019.05.30">
+                2019.05.30 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="xieshuangting" />
+            
+              <p class="site-author-name" itemprop="name">xieshuangting</p>
+              <p class="site-description motion-element" itemprop="description">当你发现自己的才华撑不起野心时，就请安静下来学习吧</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/xieshuangting" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:962367782@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第1章-课程简介"><span class="nav-number">1.</span> <span class="nav-text">第1章 课程简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第2章-资源合并与压缩"><span class="nav-number">2.</span> <span class="nav-text">第2章 资源合并与压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-资源合并与压缩-http-请求的过程及潜在的性能优化点"><span class="nav-number">2.1.</span> <span class="nav-text">2-1 资源合并与压缩-http 请求的过程及潜在的性能优化点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-资源合并与压缩-html-压缩"><span class="nav-number">2.2.</span> <span class="nav-text">2-2 资源合并与压缩-html 压缩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-资源合并与压缩-css-及-js压缩"><span class="nav-number">2.3.</span> <span class="nav-text">2-3 资源合并与压缩-css 及 js压缩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-资源合并与压缩-文件合并"><span class="nav-number">2.4.</span> <span class="nav-text">2-4 资源合并与压缩-文件合并</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第3章-图片相关的优化"><span class="nav-number">3.</span> <span class="nav-text">第3章 图片相关的优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-图片相关的优化-一张JPG图片的解析过程"><span class="nav-number">3.1.</span> <span class="nav-text">3-1 图片相关的优化- 一张JPG图片的解析过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-图片相关的优化-png8、png24、png32之间的区别"><span class="nav-number">3.2.</span> <span class="nav-text">3-2 图片相关的优化- png8、png24、png32之间的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-图片相关的优化-不同格式图片常用的业务场景"><span class="nav-number">3.3.</span> <span class="nav-text">3-3 图片相关的优化- 不同格式图片常用的业务场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-图片相关的优化-图片压缩几种方法-雪碧图、Image-inline"><span class="nav-number">3.4.</span> <span class="nav-text">3-4 图片相关的优化- 图片压缩几种方法-雪碧图、Image inline</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-图片相关的优化-图片压缩案例分析"><span class="nav-number">3.5.</span> <span class="nav-text">3-5 图片相关的优化- 图片压缩案例分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第4章-css-和-js-的装载与执行"><span class="nav-number">4.</span> <span class="nav-text">第4章 css 和 js 的装载与执行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-css和js的装载与执行-HTML-页面加载渲染的过程"><span class="nav-number">4.1.</span> <span class="nav-text">4-1 css和js的装载与执行-HTML 页面加载渲染的过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-css和js的装载与执行-HTML-演染过程的一些特点"><span class="nav-number">4.2.</span> <span class="nav-text">4-2 css和js的装载与执行-HTML 演染过程的一些特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-css和js的装载与执行-css-阻塞和-js-阻塞"><span class="nav-number">4.3.</span> <span class="nav-text">4-4 css和js的装载与执行-css 阻塞和 js 阻塞</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第5章-懒加载与预加载"><span class="nav-number">5.</span> <span class="nav-text">第5章 懒加载与预加载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-懒加载原理"><span class="nav-number">5.1.</span> <span class="nav-text">5-1 懒加载原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-预加载原理"><span class="nav-number">5.2.</span> <span class="nav-text">5-2 预加载原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-懒加载、预加载使用场景"><span class="nav-number">5.3.</span> <span class="nav-text">5-3 懒加载、预加载使用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-懒加载原生-js-和-zepto-lazyload"><span class="nav-number">5.4.</span> <span class="nav-text">5-4 懒加载原生 js 和 zepto.lazyload</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-5-预加载原生-js-和-PreloadJS-实现"><span class="nav-number">5.5.</span> <span class="nav-text">5-5 预加载原生 js 和 PreloadJS 实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第6章-重绘与回流"><span class="nav-number">6.</span> <span class="nav-text">第6章 重绘与回流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-css-性能让-Javacript-变慢？"><span class="nav-number">6.1.</span> <span class="nav-text">6-1 css 性能让 Javacript 变慢？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-什么是重绘与回流"><span class="nav-number">6.2.</span> <span class="nav-text">6-2 什么是重绘与回流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-避免重绘回流的两种方法"><span class="nav-number">6.3.</span> <span class="nav-text">6-3 避免重绘回流的两种方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-6-重绘与回流-实战优化点总结"><span class="nav-number">6.4.</span> <span class="nav-text">6-6 重绘与回流- 实战优化点总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第7章-浏览器存储"><span class="nav-number">7.</span> <span class="nav-text">第7章 浏览器存储</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-cookies"><span class="nav-number">7.1.</span> <span class="nav-text">7-1 cookies</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-LocalStorage、SessionStorage"><span class="nav-number">7.2.</span> <span class="nav-text">7-2 LocalStorage、SessionStorage</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-IndexedDB"><span class="nav-number">7.3.</span> <span class="nav-text">7-3 IndexedDB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-案例解析"><span class="nav-number">7.4.</span> <span class="nav-text">7-4 案例解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-6-PWA与Service-Workers"><span class="nav-number">7.5.</span> <span class="nav-text">7-6 PWA与Service Workers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-7-案例解析"><span class="nav-number">7.6.</span> <span class="nav-text">7-7 案例解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-8-实战演练-cookie、localstorge、sessionStorge"><span class="nav-number">7.7.</span> <span class="nav-text">7-8 实战演练-cookie、localstorge、sessionStorge</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第9章-SSR（服务端渲染）"><span class="nav-number">8.</span> <span class="nav-text">第9章 SSR（服务端渲染）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xieshuangting</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+  </div>
+  <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+ -->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共42.4k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

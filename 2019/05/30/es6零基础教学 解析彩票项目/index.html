@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="之前虽然有看过一些文档和视频来讲解es6的语法。但是在项目中一般都没有使用过。应该是还是不太熟悉，没有真实的感受到es6的好处和便利。看了一小部分本课程的第4章之后。觉得以前真的是太肤浅了。es6真的是超级便利的，对前端开发人员来说真的是太友好了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="es6零基础教学 解析彩票项目">
+<meta property="og:url" content="http://yoursite.com/2019/05/30/es6零基础教学 解析彩票项目/index.html">
+<meta property="og:site_name" content="RECODE TRACE">
+<meta property="og:description" content="之前虽然有看过一些文档和视频来讲解es6的语法。但是在项目中一般都没有使用过。应该是还是不太熟悉，没有真实的感受到es6的好处和便利。看了一小部分本课程的第4章之后。觉得以前真的是太肤浅了。es6真的是超级便利的，对前端开发人员来说真的是太友好了。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/1.png">
+<meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/2.png">
+<meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/3.png">
+<meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/7.png">
+<meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/4.png">
+<meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/5.png">
+<meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/6.png">
+<meta property="og:updated_time" content="2019-05-31T10:09:58.787Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="es6零基础教学 解析彩票项目">
+<meta name="twitter:description" content="之前虽然有看过一些文档和视频来讲解es6的语法。但是在项目中一般都没有使用过。应该是还是不太熟悉，没有真实的感受到es6的好处和便利。看了一小部分本课程的第4章之后。觉得以前真的是太肤浅了。es6真的是超级便利的，对前端开发人员来说真的是太友好了。">
+<meta name="twitter:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/30/es6零基础教学 解析彩票项目/"/>
+
+
+
+
+
+  <title>es6零基础教学 解析彩票项目 | RECODE TRACE</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/xieshuangting" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">RECODE TRACE</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/30/es6零基础教学 解析彩票项目/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xieshuangting">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RECODE TRACE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">es6零基础教学 解析彩票项目</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-30T22:31:03+08:00">
+                2019-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/es6/" itemprop="url" rel="index">
+                    <span itemprop="name">es6</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>之前虽然有看过一些文档和视频来讲解es6的语法。但是在项目中一般都没有使用过。应该是还是不太熟悉，没有真实的感受到es6的好处和便利。看了一小部分本课程的第4章之后。觉得以前真的是太肤浅了。es6真的是超级便利的，对前端开发人员来说真的是太友好了。<br><a id="more"></a></p>
+<h3 id="一-课程介绍"><a href="#一-课程介绍" class="headerlink" title="一.课程介绍"></a>一.课程介绍</h3><p><img src="/images/es6零基础教学 解析彩票项目/1.png"><br><img src="/images/es6零基础教学 解析彩票项目/2.png" width="70%"><br><img src="/images/es6零基础教学 解析彩票项目/3.png" width="70%"><br>es6的兼容性：<br><img src="/images/es6零基础教学 解析彩票项目/7.png"><br>所以需要使用构建工具来进行转码</p>
+<h3 id="二-项目构建"><a href="#二-项目构建" class="headerlink" title="二.项目构建"></a>二.项目构建</h3><h4 id="2-1-项目构建介绍"><a href="#2-1-项目构建介绍" class="headerlink" title="2-1 项目构建介绍"></a>2-1 项目构建介绍</h4><p><img src="/images/es6零基础教学 解析彩票项目/4.png" width="50%"><br>待完善</p>
+<h3 id="四-项目实战"><a href="#四-项目实战" class="headerlink" title="四.项目实战"></a>四.项目实战</h3><h4 id="4-1-需求分解和目录创建时"><a href="#4-1-需求分解和目录创建时" class="headerlink" title="4-1 需求分解和目录创建时"></a>4-1 需求分解和目录创建时</h4><p><img src="/images/es6零基础教学 解析彩票项目/5.png"><br><img src="/images/es6零基础教学 解析彩票项目/6.png"><br>结构是面向对象，es6是倡导模块化的。<br>模块化要实现的目标：功能单一。每一个模块提供的功能就是单一的功能<br><code>app/js/lottery/timer.js</code> 倒计时模块<br><code>app/js/lottery/interface.js</code> 接口模块-负责跟彩票中心（相当于后台）交互的模块<br><code>app/js/lottery/calculate.js</code> 计算模块-负责彩票投注数和奖金数运算的<br><code>app/js/lottery/base.js</code> 基础模块-跟彩票本身相关的基础信息的模块<br><code>app/js/lottery.js</code> 整合模块-特殊模块2，负责整合被分散的模块<br><code>app/js/index.js</code> 入口模块-特殊模块1，负责处理整个应用的入口管理</p>
+<h4 id="4-2-创建倒计时模块timer-js"><a href="#4-2-创建倒计时模块timer-js" class="headerlink" title="4-2 创建倒计时模块timer.js"></a>4-2 创建倒计时模块timer.js</h4><p>倒计时模块是使用 class 的方式写的。<br>支持2个回调函数传入，一个是倒计时更新的回调函数，一个是倒计时结束的回调函数。<br>这里注意到回调函数都使用 <font color="red">call 的方式来使用，目的是为了保证 this 指向保持不变，所以使用 call 并且传入 self。</font><br>这里的倒计时主要逻辑在于 setTimeout 部分，通过 setTimeout 不断调用自身 countdown 函数来实现了倒计时的效果。</p>
+<h4 id="4-3-创建接口模块"><a href="#4-3-创建接口模块" class="headerlink" title="4-3 创建接口模块"></a>4-3 创建接口模块</h4><!-- 该模块主要为了获取期数，倒计时的时间戳，销售状态。
+遗漏：这个号码有多少期没有出现中奖过了。 -->
+<ul>
+<li>导入了 jquery 模块来使用，导入的目的是因为这个接口模块里面使用了其他模块的函数，例如<code>self.setOmit(res.data);</code>，因为这个函数里面涉及了 jquery 的相关使用，所以如果在这里需要使用的话，就要引入 jquery</li>
+<li>使用<code>let self = this</code>来保存this对象是因为箭头函数的this指向是在定义的时候，而不是运行的时候</li>
+<li>promise进行异步操作，promise可以代替 es5的无限回调问题。</li>
+<li>这里 resolve 使用 call 的意思也是保持 this 指向不被改变。</li>
+<li>类里面的方法之间并没有使用逗号来分隔，每一个都是独立的。</li>
+<li>我的理解。promise就是为了方便模块化。通过模块化统一请求链接，然后针对不同的业务执行不同的回调</li>
+<li>在promise方法内部调用对象的其他方法来传递数据，避免了回调</li>
+</ul>
+<h4 id="4-4-创建数据计算模块（上）"><a href="#4-4-创建数据计算模块（上）" class="headerlink" title="4-4 创建数据计算模块（上）"></a>4-4 创建数据计算模块（上）</h4><p><code>has(key)</code>方法返回一个布尔值，表示某个键是否在<font color="red"> 当前Map对象之中</font>。</p>
+<p><code>fill()</code> 使用自己想要的参数替换原数组内容，但是会改变原来的数组。可以接受第二个和第三个参数，用于指定填充的起始位置和结束位置<br><code>new Array(active).fill(&#39;0&#39;);</code> 指定长度并且每一项填充为’0’的数组<br>若是使用es5的话需要将数组先循环，然后将每一项赋值之后push进数组</p>
+<p><code>Calculate.combine()</code> es6支持 static 静态方法，所以可以实现调用静态方法的处理，由于是静态方法，所以需要使用class 来调用。</p>
+<p><code>.at(0)</code> 来指定第一位<br>ES5 对字符串对象提供 <code>charAt()</code>，返回字符串给定位置的字符。该方法不能识别码点大于 0xFFFF 的字符。（不能正确返回中文）<br>es6 字符串实例的 <code>at()</code>，可以识别 Unicode 编号大于 0xFFFF 的字符，返回正确的字符。(能正确返回中文)</p>
+<!-- #### 4-5 创建数据计算模块（下）
+最小命中数：比如选择了任八，一注就要选择8个号码。开奖号码是5个。所以最少可以命中2个数字 -->
+<h4 id="4-6-创建彩票基础模块"><a href="#4-6-创建彩票基础模块" class="headerlink" title="4-6 创建彩票基础模块"></a>4-6 创建彩票基础模块</h4><p>导入 jquery，因为需要操作 dom 数据。<br><code>padStart(2,&#39;0&#39;)</code> 用于头部补全；让每个字符串保持两位的长度，如果长度不够则在起始位置加上0</p>
+<p>map 结构的应用：<br>清空数据 clear() <code>self.open_code.clear();</code><br>添加数据 set()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">this.play_list.set(&apos;r2&apos;,&#123;</span><br><span class="line">  bonus:6,</span><br><span class="line">  tip:&apos;...&apos;,</span><br><span class="line">  name:&apos;...&apos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>获取数据 get() <code>self.play_list.get(self.cur_play).tip</code><br>遍历数据可以使用 for…of 的方式，使用omit 的 entries()获取到所有值，然后遍历<br><code>entries()</code> 返回键值对的遍历器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(let [index,item] of omit.entries())&#123;</span><br><span class="line">  self.omit.set(index,item)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>es6的字符串模板，代替了以往的+的方式，非常直观并且简单。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tpl=`您选了 &lt;b&gt;$&#123;count&#125;&lt;/b&gt; 注，共 &lt;b&gt;$&#123;count*2&#125;&lt;/b&gt; 元  &lt;em&gt;若中奖，奖金：</span><br><span class="line">  &lt;strong class=&quot;red&quot;&gt;$&#123;range[0]&#125;&lt;/strong&gt; 至 &lt;strong class=&quot;red&quot;&gt;$&#123;range[1]&#125;&lt;/strong&gt; 元，</span><br><span class="line">  您将$&#123;(win1&lt;0&amp;&amp;win2&lt;0)?&apos;亏损&apos;:&apos;盈利&apos;&#125;</span><br><span class="line">  &lt;strong class=&quot;$&#123;win1&gt;=0?&apos;red&apos;:&apos;green&apos;&#125;&quot;&gt;$&#123;c1&#125; &lt;/strong&gt;</span><br><span class="line">  至 &lt;strong class=&quot;$&#123;win2&gt;=0?&apos;red&apos;:&apos;green&apos;&#125;&quot;&gt; $&#123;c2&#125; &lt;/strong&gt;</span><br><span class="line">  元&lt;/em&gt;`</span><br></pre></td></tr></table></figure></p>
+<p>set数据结构不允许里面的元素是重复的</p>
+<p><code>Array.from(this.number);</code> ES6为Array增加了from函数用来将其他对象转换成数组。<br>当然，其他对象也是有要求，也不是所有的，可以将两种对象转换成数组。<br>1.部署了Iterator接口的对象，比如：Set，Map，Array。<br>2.类数组对象，什么叫类数组对象，就是一个对象必须有length属性，没有length，转出来的就是空数组。</p>
+<h4 id="4-9-创建彩票业务模块"><a href="#4-9-创建彩票业务模块" class="headerlink" title="4-9 创建彩票业务模块"></a>4-9 创建彩票业务模块</h4><h4 id="4-10-创建服务接口和模拟数据"><a href="#4-10-创建服务接口和模拟数据" class="headerlink" title="4-10 创建服务接口和模拟数据"></a>4-10 创建服务接口和模拟数据</h4><h4 id="4-11-前后端联调"><a href="#4-11-前后端联调" class="headerlink" title="4-11 前后端联调"></a>4-11 前后端联调</h4>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/30/2019-05-30/" rel="next" title="2019.05.30">
+                <i class="fa fa-chevron-left"></i> 2019.05.30
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="xieshuangting" />
+            
+              <p class="site-author-name" itemprop="name">xieshuangting</p>
+              <p class="site-description motion-element" itemprop="description">当你发现自己的才华撑不起野心时，就请安静下来学习吧</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/xieshuangting" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:962367782@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-课程介绍"><span class="nav-number">1.</span> <span class="nav-text">一.课程介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-项目构建"><span class="nav-number">2.</span> <span class="nav-text">二.项目构建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-项目构建介绍"><span class="nav-number">2.1.</span> <span class="nav-text">2-1 项目构建介绍</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-项目实战"><span class="nav-number">3.</span> <span class="nav-text">四.项目实战</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-需求分解和目录创建时"><span class="nav-number">3.1.</span> <span class="nav-text">4-1 需求分解和目录创建时</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-创建倒计时模块timer-js"><span class="nav-number">3.2.</span> <span class="nav-text">4-2 创建倒计时模块timer.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-创建接口模块"><span class="nav-number">3.3.</span> <span class="nav-text">4-3 创建接口模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-创建数据计算模块（上）"><span class="nav-number">3.4.</span> <span class="nav-text">4-4 创建数据计算模块（上）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-创建彩票基础模块"><span class="nav-number">3.5.</span> <span class="nav-text">4-6 创建彩票基础模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-9-创建彩票业务模块"><span class="nav-number">3.6.</span> <span class="nav-text">4-9 创建彩票业务模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-10-创建服务接口和模拟数据"><span class="nav-number">3.7.</span> <span class="nav-text">4-10 创建服务接口和模拟数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-11-前后端联调"><span class="nav-number">3.8.</span> <span class="nav-text">4-11 前后端联调</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xieshuangting</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+  </div>
+  <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+ -->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共42.4k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
