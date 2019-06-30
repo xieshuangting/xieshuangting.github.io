@@ -95,7 +95,9 @@
 <meta property="og:image" content="http://yoursite.com/images/2019.05.30/2.png">
 <meta property="og:image" content="http://yoursite.com/images/2019.05.30/1.png">
 <meta property="og:image" content="http://yoursite.com/images/2019.05.30/3.png">
-<meta property="og:updated_time" content="2019-05-31T04:01:20.250Z">
+<meta property="og:image" content="http://yoursite.com/images/2019.05.30/4.png">
+<meta property="og:image" content="http://yoursite.com/images/2019.05.30/5.png">
+<meta property="og:updated_time" content="2019-06-13T02:53:29.350Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019.05.30">
 <meta name="twitter:description" content="今日份快乐">
@@ -341,12 +343,14 @@
 <li>该函数返回值将作为结果数组中的一个元素，<font color="red">如果返回值为null或undefined，则不会被添加到结果数组中。</font></li>
 </ol>
 <h3 id="4-立即执行函数"><a href="#4-立即执行函数" class="headerlink" title="4.立即执行函数"></a>4.立即执行函数</h3><p><img src="/images/2019.05.30/3.png"><br>可参考<a href="https://www.cnblogs.com/cnfxx/p/7337889.html" target="_blank" rel="noopener">https://www.cnblogs.com/cnfxx/p/7337889.html</a></p>
-<h3 id="5-用es6的api找出数组里面的对象符合条件的某个对象"><a href="#5-用es6的api找出数组里面的对象符合条件的某个对象" class="headerlink" title="5.用es6的api找出数组里面的对象符合条件的某个对象"></a>5.用es6的api找出数组里面的对象符合条件的某个对象</h3><p><a href="https://segmentfault.com/a/1190000010827833" target="_blank" rel="noopener">https://segmentfault.com/a/1190000010827833</a></p>
-<h3 id="6-用es6给每一个数组里面的对象值加上一个字符串"><a href="#6-用es6给每一个数组里面的对象值加上一个字符串" class="headerlink" title="6.用es6给每一个数组里面的对象值加上一个字符串"></a>6.用es6给每一个数组里面的对象值加上一个字符串</h3><h3 id="7"><a href="#7" class="headerlink" title="7."></a>7.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function ex(x,...xx)&#123;</span><br><span class="line">	console.log(this.x,x,xx.join(&apos;,&apos;))</span><br><span class="line">&#125;</span><br><span class="line">ex(1,2,3,4)</span><br><span class="line">输出：undefined 1 &quot;2,3,4&quot;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function ex(x,...xx)&#123;</span><br><span class="line">	console.log(this.x,x,xx.join(&apos;,&apos;))</span><br><span class="line">&#125;</span><br><span class="line">ex.call(1,2,3,4,5)</span><br><span class="line">输出：undefined 2 &quot;3,4,5&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="8-vue监测路由的变化"><a href="#8-vue监测路由的变化" class="headerlink" title="8.vue监测路由的变化"></a>8.vue监测路由的变化</h3><p>watch</p>
+<h3 id="5-用es6的api找出数组里面的对象符合条件的某个对象"><a href="#5-用es6的api找出数组里面的对象符合条件的某个对象" class="headerlink" title="5.用es6的api找出数组里面的对象符合条件的某个对象"></a>5.用es6的api找出数组里面的对象符合条件的某个对象</h3><p><a href="https://segmentfault.com/a/1190000010827833" target="_blank" rel="noopener">https://segmentfault.com/a/1190000010827833</a><br>some()方法用于测试数组中是否至少有一项元素通过了指定函数的测试.返回<code>true/false</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&#123;age:34,name:&apos;ann&apos;&#125;,&#123;age:90,name:&apos;bee&apos;&#125;,&#123;age:21,name:&apos;ann&apos;&#125;,&#123;age:90,name:&apos;lily&apos;&#125;];</span><br><span class="line">var bb = arr.some((item) =&gt; &#123;</span><br><span class="line">	return item.name == &apos;ann&apos;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="6-用es6给每一个数组里面的对象值加上一个字符串"><a href="#6-用es6给每一个数组里面的对象值加上一个字符串" class="headerlink" title="6.用es6给每一个数组里面的对象值加上一个字符串"></a>6.用es6给每一个数组里面的对象值加上一个字符串</h3><p><img src="/images/2019.05.30/4.png"><br><img src="/images/2019.05.30/5.png"></p>
+<h3 id="7-解构赋值"><a href="#7-解构赋值" class="headerlink" title="7.解构赋值"></a>7.解构赋值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function ex(x,...xx)&#123;</span><br><span class="line">	console.log(this.x,x,xx.join(&apos;,&apos;))</span><br><span class="line">&#125;</span><br><span class="line">ex(1,2,3,4)</span><br><span class="line">输出：undefined 1 &quot;2,3,4&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ex.call(1,2,3,4,5)</span><br><span class="line">输出：undefined 2 &quot;3,4,5&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="8-vue监测路由的变化"><a href="#8-vue监测路由的变化" class="headerlink" title="8.vue监测路由的变化"></a>8.vue监测路由的变化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">	$route: function (val, oldVal) &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="9-使用的vue版本"><a href="#9-使用的vue版本" class="headerlink" title="9.使用的vue版本"></a>9.使用的vue版本</h3><p><code>&quot;vue&quot;: &quot;^2.5.2&quot;</code></p>
-<h3 id="10-跨域"><a href="#10-跨域" class="headerlink" title="10.跨域"></a>10.跨域</h3><h3 id="11"><a href="#11" class="headerlink" title="11."></a>11.</h3>
+<h3 id="10-对vue底层的理解"><a href="#10-对vue底层的理解" class="headerlink" title="10.对vue底层的理解"></a>10.对vue底层的理解</h3><p>参考：<a href="https://www.sogou.com/link?url=DOb0bgH2eKh1ibpaMGjuy50T2OE6mY02MBrbA4Nj9VFRa6NQaxCrEt49GN82A5C7xjqV2qT3O0g" target="_blank" rel="noopener">https://www.sogou.com/link?url=DOb0bgH2eKh1ibpaMGjuy50T2OE6mY02MBrbA4Nj9VFRa6NQaxCrEt49GN82A5C7xjqV2qT3O0g</a>.<br>把一个普通对象传给 Vue 实例作为它的 data 选项，Vue.js 将遍历它的属性，用 <code>Object.defineProperty</code> 将它们转为 <code>getter/setter</code>。这是 ES5 特性，不能打补丁实现，这便是为什么 Vue.js 不支持 IE8 及更低版本。<br>待完善</p>
+
       
     </div>
     
@@ -380,8 +384,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/30/es6零基础教学 解析彩票项目/" rel="prev" title="es6零基础教学 解析彩票项目">
-                es6零基础教学 解析彩票项目 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/30/es6从入门到实战视频/" rel="prev" title="es6从入门到实战视频">
+                es6从入门到实战视频 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -463,7 +467,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -474,7 +478,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -525,7 +529,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-字符串和数字相加减"><span class="nav-number">1.</span> <span class="nav-text">1.字符串和数字相加减</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-typeof-null-object"><span class="nav-number">2.</span> <span class="nav-text">2.typeof(null) = object</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-将数组里面的某个字段进行从小到大排序"><span class="nav-number">3.</span> <span class="nav-text">3.将数组里面的某个字段进行从小到大排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-立即执行函数"><span class="nav-number">4.</span> <span class="nav-text">4.立即执行函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-用es6的api找出数组里面的对象符合条件的某个对象"><span class="nav-number">5.</span> <span class="nav-text">5.用es6的api找出数组里面的对象符合条件的某个对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-用es6给每一个数组里面的对象值加上一个字符串"><span class="nav-number">6.</span> <span class="nav-text">6.用es6给每一个数组里面的对象值加上一个字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7"><span class="nav-number">7.</span> <span class="nav-text">7.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-vue监测路由的变化"><span class="nav-number">8.</span> <span class="nav-text">8.vue监测路由的变化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-使用的vue版本"><span class="nav-number">9.</span> <span class="nav-text">9.使用的vue版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-跨域"><span class="nav-number">10.</span> <span class="nav-text">10.跨域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11"><span class="nav-number">11.</span> <span class="nav-text">11.</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-字符串和数字相加减"><span class="nav-number">1.</span> <span class="nav-text">1.字符串和数字相加减</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-typeof-null-object"><span class="nav-number">2.</span> <span class="nav-text">2.typeof(null) = object</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-将数组里面的某个字段进行从小到大排序"><span class="nav-number">3.</span> <span class="nav-text">3.将数组里面的某个字段进行从小到大排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-立即执行函数"><span class="nav-number">4.</span> <span class="nav-text">4.立即执行函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-用es6的api找出数组里面的对象符合条件的某个对象"><span class="nav-number">5.</span> <span class="nav-text">5.用es6的api找出数组里面的对象符合条件的某个对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-用es6给每一个数组里面的对象值加上一个字符串"><span class="nav-number">6.</span> <span class="nav-text">6.用es6给每一个数组里面的对象值加上一个字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-解构赋值"><span class="nav-number">7.</span> <span class="nav-text">7.解构赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-vue监测路由的变化"><span class="nav-number">8.</span> <span class="nav-text">8.vue监测路由的变化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-使用的vue版本"><span class="nav-number">9.</span> <span class="nav-text">9.使用的vue版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-对vue底层的理解"><span class="nav-number">10.</span> <span class="nav-text">10.对vue底层的理解</span></a></li></ol></div>
             
 
           </div>
@@ -576,7 +580,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共42.4k字</span>
+  <span class="post-count">博客全站共51.6k字</span>
 </div>
         
 

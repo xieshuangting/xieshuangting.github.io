@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1.浮动元素垂直居中若只是一行元素之间的垂直居中可以设置该元素height: 100%;line-height: 200px; 2.flex布局中的元素自适应并且省略多余的文字1234flex: 1;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; 3.svg图片参考：https://blog.csdn.net/yoyful">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019.06工作日小结">
+<meta property="og:url" content="http://yoursite.com/2019/06/30/2019-06工作日小结/index.html">
+<meta property="og:site_name" content="RECODE TRACE">
+<meta property="og:description" content="1.浮动元素垂直居中若只是一行元素之间的垂直居中可以设置该元素height: 100%;line-height: 200px; 2.flex布局中的元素自适应并且省略多余的文字1234flex: 1;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; 3.svg图片参考：https://blog.csdn.net/yoyful">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/1.png">
+<meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/3.png">
+<meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/2.png">
+<meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/8.png">
+<meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/4.png">
+<meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/5.png">
+<meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/6.png">
+<meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/7.png">
+<meta property="og:updated_time" content="2019-06-30T11:56:24.815Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019.06工作日小结">
+<meta name="twitter:description" content="1.浮动元素垂直居中若只是一行元素之间的垂直居中可以设置该元素height: 100%;line-height: 200px; 2.flex布局中的元素自适应并且省略多余的文字1234flex: 1;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; 3.svg图片参考：https://blog.csdn.net/yoyful">
+<meta name="twitter:image" content="http://yoursite.com/images/2019.06工作日小结/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/30/2019-06工作日小结/"/>
+
+
+
+
+
+  <title>2019.06工作日小结 | RECODE TRACE</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/xieshuangting" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">RECODE TRACE</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/30/2019-06工作日小结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xieshuangting">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RECODE TRACE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2019.06工作日小结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-30T11:40:09+08:00">
+                2019-06-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工作笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">工作笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1-浮动元素垂直居中"><a href="#1-浮动元素垂直居中" class="headerlink" title="1.浮动元素垂直居中"></a>1.浮动元素垂直居中</h3><p>若只是一行元素之间的垂直居中可以设置该元素<code>height: 100%;line-height: 200px;</code></p>
+<h3 id="2-flex布局中的元素自适应并且省略多余的文字"><a href="#2-flex布局中的元素自适应并且省略多余的文字" class="headerlink" title="2.flex布局中的元素自适应并且省略多余的文字"></a>2.flex布局中的元素自适应并且省略多余的文字</h3><p><img src="/images/2019.06工作日小结/1.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flex: 1;</span><br><span class="line">overflow: hidden;</span><br><span class="line">text-overflow: ellipsis;</span><br><span class="line">white-space: nowrap;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-svg图片"><a href="#3-svg图片" class="headerlink" title="3.svg图片"></a>3.svg图片</h3><p>参考：<a href="https://blog.csdn.net/yoyful/article/details/85812776" target="_blank" rel="noopener">https://blog.csdn.net/yoyful/article/details/85812776</a><br>SVG 代码可以用<code>&lt;img&gt;、&lt;object&gt;、&lt;embed&gt;、&lt;iframe&gt;</code>等标签插入网页。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;search.svg&quot;&gt;</span><br><span class="line">&lt;object id=&quot;object&quot; data=&quot;search.svg&quot; type=&quot;image/svg+xml&quot;&gt;&lt;/object&gt;</span><br><span class="line">&lt;embed id=&quot;embed&quot; src=&quot;search.svg&quot; type=&quot;image/svg+xml&quot;&gt;</span><br><span class="line">&lt;iframe id=&quot;iframe&quot; src=&quot;search.svg&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
+<p>CSS背景属性中也可以使用svg<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.logo &#123;</span><br><span class="line">  background: url(logo.svg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>SVG 文件还可以转为 BASE64 编码，然后作为 Data URI 写入网页。<br><code>&lt;img src=&quot;data:image/svg+xml;base64,[data]&quot;&gt;</code></p>
+<h3 id="4-align-items-center-flex子元素垂直居中对齐"><a href="#4-align-items-center-flex子元素垂直居中对齐" class="headerlink" title="4.align-items:center;flex子元素垂直居中对齐"></a>4.<code>align-items:center;</code>flex子元素垂直居中对齐</h3><p><img src="/images/2019.06工作日小结/3.png"><br><img src="/images/2019.06工作日小结/2.png"><br><code>align-items</code> 属性定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。<br>使用每个弹性对象元素的 <code>align-self</code> 属性可重写 <code>align-items</code> 属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">display: flex;</span><br><span class="line">align-items: center;</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-导航栏左右移动"><a href="#5-导航栏左右移动" class="headerlink" title="5.导航栏左右移动"></a>5.导航栏左右移动</h3><p><a href="https://blog.csdn.net/kincaid_z/article/details/77893102" target="_blank" rel="noopener">https://blog.csdn.net/kincaid_z/article/details/77893102</a><br><img src="/images/2019.06工作日小结/8.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">.hide-scrollbar &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 44px;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line">.scrollbar &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line">.scrollbar ul &#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    background: #fff;</span><br><span class="line">    color: #70747A;</span><br><span class="line">    display: flex;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: calc(100% + 18px);</span><br><span class="line">    overflow-y: hidden;</span><br><span class="line">    overflow-x: auto;</span><br><span class="line">    white-space: nowrap;</span><br><span class="line">&#125;</span><br><span class="line">.scrollbar ul li &#123;</span><br><span class="line">	height: 44px;</span><br><span class="line">    line-height: 44px;</span><br><span class="line">    padding-left: 15px;</span><br><span class="line">    flex: 1;</span><br><span class="line">    text-align: center;</span><br><span class="line">    cursor: pointer;</span><br><span class="line">    border-bottom: 0.5px solid #ECECEB;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;scrollbar row&quot; id=&quot;innerTabLists&quot;&gt;</span><br><span class="line">    &lt;ul id=&quot;tabLists&quot;&gt;</span><br><span class="line">        &lt;li class=&quot;&quot; data-class=&quot;pro_info&quot;&gt;&lt;span&gt;项目信息&lt;/span&gt;&lt;/li&gt;</span><br><span class="line">		&lt;li data-class=&quot;contract&quot;&gt;&lt;span&gt;尽调合同&lt;/span&gt;&lt;/li&gt;</span><br><span class="line">		&lt;li data-class=&quot;invest&quot; class=&quot;tab_active&quot;&gt;&lt;span&gt;投资信息&lt;/span&gt;&lt;/li&gt;</span><br><span class="line">		&lt;li data-class=&quot;contract&quot; class=&quot;&quot;&gt;&lt;span&gt;附件信息&lt;/span&gt;&lt;/li&gt;</span><br><span class="line">		&lt;li data-class=&quot;flow&quot; class=&quot;&quot;&gt;&lt;span&gt;流程信息&lt;/span&gt;&lt;/li&gt;</span><br><span class="line">		&lt;li data-class=&quot;contract&quot; class=&quot;&quot;&gt;&lt;span&gt;尽调合同&lt;/span&gt;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="6-background属性中的url-有空格"><a href="#6-background属性中的url-有空格" class="headerlink" title="6.background属性中的url 有空格"></a>6.<code>background</code>属性中的url 有空格</h3><p>若background中的图片路径有空格，需要将路径用引号括起来<br><img src="/images/2019.06工作日小结/4.png"></p>
+<h3 id="7-justify-content属性"><a href="#7-justify-content属性" class="headerlink" title="7.justify-content属性"></a>7.<code>justify-content</code>属性</h3><p><code>justify-content</code> 用于设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。<br><code>justify-content: space-between;</code><br><img src="/images/2019.06工作日小结/5.png"><br><code>justify-content: space-around;</code><br><img src="/images/2019.06工作日小结/6.png"></p>
+<h3 id="8-水平居中"><a href="#8-水平居中" class="headerlink" title="8.水平居中"></a>8.水平居中</h3><p><img src="/images/2019.06工作日小结/7.png"><br><code>flex</code>中的子元素文字水平居中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.btn_group div&#123;</span><br><span class="line">	flex: 1;</span><br><span class="line">	text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="9-pdf文件查看"><a href="#9-pdf文件查看" class="headerlink" title="9.pdf文件查看"></a>9.pdf文件查看</h3><p>修改pdf.js的相对路径为绝对路径</p>
+<h3 id="10-webkit-tap-highlight-color-rgba-0-0-0-0-去掉点击高光-移动端"><a href="#10-webkit-tap-highlight-color-rgba-0-0-0-0-去掉点击高光-移动端" class="headerlink" title="10.-webkit-tap-highlight-color: rgba(0,0,0,0);去掉点击高光(移动端)"></a>10.-webkit-tap-highlight-color: rgba(0,0,0,0);去掉点击高光(移动端)</h3><p>这个属性只用于iOS (iPhone和iPad)。当你点击一个链接或者通过Javascript定义的可点击元素的时候，它就会出现一个半透明的灰色背景。要重设这个表现，你可以设置-webkit-tap-highlight-color为任何颜色。<br>想要禁用这个高亮，设置颜色的alpha值为0即可。</p>
+<h3 id="11-基于vue与vux做的可滑动tab组件"><a href="#11-基于vue与vux做的可滑动tab组件" class="headerlink" title="11.基于vue与vux做的可滑动tab组件"></a>11.基于vue与vux做的可滑动tab组件</h3><p>参考：<a href="https://www.cnblogs.com/pengshengguang/p/8034255.html" target="_blank" rel="noopener">https://www.cnblogs.com/pengshengguang/p/8034255.html</a></p>
+<h3 id="12-css3移动端switch按钮"><a href="#12-css3移动端switch按钮" class="headerlink" title="12.css3移动端switch按钮"></a>12.css3移动端switch按钮</h3><p>参考：<a href="https://blog.csdn.net/a772116804/article/details/79445504" target="_blank" rel="noopener">https://blog.csdn.net/a772116804/article/details/79445504</a></p>
+<ul>
+<li><p>1.使用input的type=”checkbox”来制作是否选择的效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.mui-switch &#123;</span><br><span class="line">  width: 52px;</span><br><span class="line">  height: 31px;</span><br><span class="line">  position: relative;</span><br><span class="line">  border: 1px solid #dfdfdf;</span><br><span class="line">  background-color: #fdfdfd;</span><br><span class="line">  box-shadow: #dfdfdf 0 0 0 0 inset;</span><br><span class="line">  border-radius: 20px;</span><br><span class="line">  background-clip: content-box;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  -webkit-appearance: none;</span><br><span class="line">  user-select: none;</span><br><span class="line">  outline: none; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.使用:checked来制作选中的效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.mui-switch:checked &#123;</span><br><span class="line">    border-color: #fd5454;/*颜色修改*/</span><br><span class="line">    box-shadow: #fd5454 0 0 0 16px inset;/*颜色修改*/</span><br><span class="line">    background-color: #fd5454; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3.使用:before来完成圆圈控制柄的效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.mui-switch:before &#123;</span><br><span class="line">    content: &apos;&apos;;</span><br><span class="line">    width: 29px;</span><br><span class="line">    height: 29px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0px;</span><br><span class="line">    left: 0;</span><br><span class="line">    border-radius: 20px;</span><br><span class="line">    background-color: #fff;</span><br><span class="line">    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>4.使用:checked:before来完成圆圈控制柄的选中移动效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.mui-switch:checked:before &#123;</span><br><span class="line">    left: 21px; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>使用transition制作动画效果<br><code>transition: background-color ease 0.4s;</code></p>
+<h3 id="13-移动端-滑动删除-swipeDelete"><a href="#13-移动端-滑动删除-swipeDelete" class="headerlink" title="13.移动端 滑动删除 swipeDelete"></a>13.移动端 滑动删除 swipeDelete</h3><p>参考：<a href="https://www.cnblogs.com/surfaces/p/8426056.html" target="_blank" rel="noopener">https://www.cnblogs.com/surfaces/p/8426056.html</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/20/2019-06-19/" rel="next" title="2019.06.19">
+                <i class="fa fa-chevron-left"></i> 2019.06.19
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="xieshuangting" />
+            
+              <p class="site-author-name" itemprop="name">xieshuangting</p>
+              <p class="site-description motion-element" itemprop="description">当你发现自己的才华撑不起野心时，就请安静下来学习吧</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">75</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/xieshuangting" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:962367782@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-浮动元素垂直居中"><span class="nav-number">1.</span> <span class="nav-text">1.浮动元素垂直居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-flex布局中的元素自适应并且省略多余的文字"><span class="nav-number">2.</span> <span class="nav-text">2.flex布局中的元素自适应并且省略多余的文字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-svg图片"><span class="nav-number">3.</span> <span class="nav-text">3.svg图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-align-items-center-flex子元素垂直居中对齐"><span class="nav-number">4.</span> <span class="nav-text">4.align-items:center;flex子元素垂直居中对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-导航栏左右移动"><span class="nav-number">5.</span> <span class="nav-text">5.导航栏左右移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-background属性中的url-有空格"><span class="nav-number">6.</span> <span class="nav-text">6.background属性中的url 有空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-justify-content属性"><span class="nav-number">7.</span> <span class="nav-text">7.justify-content属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-水平居中"><span class="nav-number">8.</span> <span class="nav-text">8.水平居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-pdf文件查看"><span class="nav-number">9.</span> <span class="nav-text">9.pdf文件查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-webkit-tap-highlight-color-rgba-0-0-0-0-去掉点击高光-移动端"><span class="nav-number">10.</span> <span class="nav-text">10.-webkit-tap-highlight-color: rgba(0,0,0,0);去掉点击高光(移动端)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-基于vue与vux做的可滑动tab组件"><span class="nav-number">11.</span> <span class="nav-text">11.基于vue与vux做的可滑动tab组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-css3移动端switch按钮"><span class="nav-number">12.</span> <span class="nav-text">12.css3移动端switch按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-移动端-滑动删除-swipeDelete"><span class="nav-number">13.</span> <span class="nav-text">13.移动端 滑动删除 swipeDelete</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xieshuangting</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+  </div>
+  <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+ -->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共51.6k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

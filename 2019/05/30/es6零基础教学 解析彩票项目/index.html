@@ -97,9 +97,12 @@
 <meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/3.png">
 <meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/7.png">
 <meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/4.png">
+<meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/8.png">
+<meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/9.png">
+<meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/10.png">
 <meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/5.png">
 <meta property="og:image" content="http://yoursite.com/images/es6零基础教学%20解析彩票项目/6.png">
-<meta property="og:updated_time" content="2019-05-31T10:09:58.787Z">
+<meta property="og:updated_time" content="2019-06-13T02:53:30.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="es6零基础教学 解析彩票项目">
 <meta name="twitter:description" content="之前虽然有看过一些文档和视频来讲解es6的语法。但是在项目中一般都没有使用过。应该是还是不太熟悉，没有真实的感受到es6的好处和便利。看了一小部分本课程的第4章之后。觉得以前真的是太肤浅了。es6真的是超级便利的，对前端开发人员来说真的是太友好了。">
@@ -359,7 +362,11 @@
       
         <p>之前虽然有看过一些文档和视频来讲解es6的语法。但是在项目中一般都没有使用过。应该是还是不太熟悉，没有真实的感受到es6的好处和便利。看了一小部分本课程的第4章之后。觉得以前真的是太肤浅了。es6真的是超级便利的，对前端开发人员来说真的是太友好了。<br><a id="more"></a></p>
 <h3 id="一-课程介绍"><a href="#一-课程介绍" class="headerlink" title="一.课程介绍"></a>一.课程介绍</h3><p><img src="/images/es6零基础教学 解析彩票项目/1.png"><br><img src="/images/es6零基础教学 解析彩票项目/2.png" width="70%"><br><img src="/images/es6零基础教学 解析彩票项目/3.png" width="70%"><br>es6的兼容性：<br><img src="/images/es6零基础教学 解析彩票项目/7.png"><br>所以需要使用构建工具来进行转码</p>
-<h3 id="二-项目构建"><a href="#二-项目构建" class="headerlink" title="二.项目构建"></a>二.项目构建</h3><h4 id="2-1-项目构建介绍"><a href="#2-1-项目构建介绍" class="headerlink" title="2-1 项目构建介绍"></a>2-1 项目构建介绍</h4><p><img src="/images/es6零基础教学 解析彩票项目/4.png" width="50%"><br>待完善</p>
+<h3 id="二-项目构建"><a href="#二-项目构建" class="headerlink" title="二.项目构建"></a>二.项目构建</h3><h4 id="2-1-项目构建介绍"><a href="#2-1-项目构建介绍" class="headerlink" title="2-1 项目构建介绍"></a>2-1 项目构建介绍</h4><p><img src="/images/es6零基础教学 解析彩票项目/4.png" width="50%"><br><img src="/images/es6零基础教学 解析彩票项目/8.png" width="50%"><br><img src="/images/es6零基础教学 解析彩票项目/9.png" width="50%"><br>webpack-stream是对gulp的支持，gulp是通过stream的方式做的，二进制的流。<br><img src="/images/es6零基础教学 解析彩票项目/10.png" width="50%"></p>
+<h4 id="2-2-项目目录创建"><a href="#2-2-项目目录创建" class="headerlink" title="2-2 项目目录创建"></a>2-2 项目目录创建</h4><p>在server目录下执行<code>express -e .</code>-&gt;<code>npm install</code><br>在根目录下创建package.json文件 <code>npm init</code><br>创建babel编译的文件 <code>.babelrc</code><br>创建glupfile.babel.js文件 ，为什么不是glupfile.js文件，因为写的构建脚本都是使用es6的语法，如果不是glupfile.babel.js的话在执行时会报错</p>
+<p>创建args.js文件<br>创建script.js文件</p>
+<p>安装<code>npm install gulp gulp-if gulp-concat webpack webpack-stream vinyl-named ulp-livereload gulp=plumber gulp-rename gulp-uglify gulp-util yargs</code></p>
+<h4 id="2-3-命令行处理，创建JS编译任务脚本"><a href="#2-3-命令行处理，创建JS编译任务脚本" class="headerlink" title="2-3 命令行处理，创建JS编译任务脚本"></a>2-3 命令行处理，创建JS编译任务脚本</h4><h4 id="2-4-创建模板、服务任务脚本"><a href="#2-4-创建模板、服务任务脚本" class="headerlink" title="2-4 创建模板、服务任务脚本"></a>2-4 创建模板、服务任务脚本</h4><h4 id="2-5-文件自动监听，项目构建测试"><a href="#2-5-文件自动监听，项目构建测试" class="headerlink" title="2-5 文件自动监听，项目构建测试"></a>2-5 文件自动监听，项目构建测试</h4><p>待完善</p>
 <h3 id="四-项目实战"><a href="#四-项目实战" class="headerlink" title="四.项目实战"></a>四.项目实战</h3><h4 id="4-1-需求分解和目录创建时"><a href="#4-1-需求分解和目录创建时" class="headerlink" title="4-1 需求分解和目录创建时"></a>4-1 需求分解和目录创建时</h4><p><img src="/images/es6零基础教学 解析彩票项目/5.png"><br><img src="/images/es6零基础教学 解析彩票项目/6.png"><br>结构是面向对象，es6是倡导模块化的。<br>模块化要实现的目标：功能单一。每一个模块提供的功能就是单一的功能<br><code>app/js/lottery/timer.js</code> 倒计时模块<br><code>app/js/lottery/interface.js</code> 接口模块-负责跟彩票中心（相当于后台）交互的模块<br><code>app/js/lottery/calculate.js</code> 计算模块-负责彩票投注数和奖金数运算的<br><code>app/js/lottery/base.js</code> 基础模块-跟彩票本身相关的基础信息的模块<br><code>app/js/lottery.js</code> 整合模块-特殊模块2，负责整合被分散的模块<br><code>app/js/index.js</code> 入口模块-特殊模块1，负责处理整个应用的入口管理</p>
 <h4 id="4-2-创建倒计时模块timer-js"><a href="#4-2-创建倒计时模块timer-js" class="headerlink" title="4-2 创建倒计时模块timer.js"></a>4-2 创建倒计时模块timer.js</h4><p>倒计时模块是使用 class 的方式写的。<br>支持2个回调函数传入，一个是倒计时更新的回调函数，一个是倒计时结束的回调函数。<br>这里注意到回调函数都使用 <font color="red">call 的方式来使用，目的是为了保证 this 指向保持不变，所以使用 call 并且传入 self。</font><br>这里的倒计时主要逻辑在于 setTimeout 部分，通过 setTimeout 不断调用自身 countdown 函数来实现了倒计时的效果。</p>
 <h4 id="4-3-创建接口模块"><a href="#4-3-创建接口模块" class="headerlink" title="4-3 创建接口模块"></a>4-3 创建接口模块</h4><!-- 该模块主要为了获取期数，倒计时的时间戳，销售状态。
@@ -385,7 +392,10 @@
 <p>es6的字符串模板，代替了以往的+的方式，非常直观并且简单。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tpl=`您选了 &lt;b&gt;$&#123;count&#125;&lt;/b&gt; 注，共 &lt;b&gt;$&#123;count*2&#125;&lt;/b&gt; 元  &lt;em&gt;若中奖，奖金：</span><br><span class="line">  &lt;strong class=&quot;red&quot;&gt;$&#123;range[0]&#125;&lt;/strong&gt; 至 &lt;strong class=&quot;red&quot;&gt;$&#123;range[1]&#125;&lt;/strong&gt; 元，</span><br><span class="line">  您将$&#123;(win1&lt;0&amp;&amp;win2&lt;0)?&apos;亏损&apos;:&apos;盈利&apos;&#125;</span><br><span class="line">  &lt;strong class=&quot;$&#123;win1&gt;=0?&apos;red&apos;:&apos;green&apos;&#125;&quot;&gt;$&#123;c1&#125; &lt;/strong&gt;</span><br><span class="line">  至 &lt;strong class=&quot;$&#123;win2&gt;=0?&apos;red&apos;:&apos;green&apos;&#125;&quot;&gt; $&#123;c2&#125; &lt;/strong&gt;</span><br><span class="line">  元&lt;/em&gt;`</span><br></pre></td></tr></table></figure></p>
 <p>set数据结构不允许里面的元素是重复的</p>
 <p><code>Array.from(this.number);</code> ES6为Array增加了from函数用来将其他对象转换成数组。<br>当然，其他对象也是有要求，也不是所有的，可以将两种对象转换成数组。<br>1.部署了Iterator接口的对象，比如：Set，Map，Array。<br>2.类数组对象，什么叫类数组对象，就是一个对象必须有length属性，没有length，转出来的就是空数组。</p>
-<h4 id="4-9-创建彩票业务模块"><a href="#4-9-创建彩票业务模块" class="headerlink" title="4-9 创建彩票业务模块"></a>4-9 创建彩票业务模块</h4><h4 id="4-10-创建服务接口和模拟数据"><a href="#4-10-创建服务接口和模拟数据" class="headerlink" title="4-10 创建服务接口和模拟数据"></a>4-10 创建服务接口和模拟数据</h4><h4 id="4-11-前后端联调"><a href="#4-11-前后端联调" class="headerlink" title="4-11 前后端联调"></a>4-11 前后端联调</h4>
+<h4 id="4-9-创建彩票业务模块"><a href="#4-9-创建彩票业务模块" class="headerlink" title="4-9 创建彩票业务模块"></a>4-9 创建彩票业务模块</h4><p>导入模块：导入所有需要的模块，因为这个是整合模块，所以需要导入所有之前写的模块。路径是从当前模块文件的路径开始计算。<br>因为有些语法需要使用babel-polyfill来处理，所以需要先导入它。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import &apos;babel-polyfill&apos;;</span><br><span class="line">import Base from &apos;./lottery/base.js&apos;;</span><br><span class="line">import Timer from &apos;./lottery/timer.js&apos;;</span><br><span class="line">import Calculate from &apos;./lottery/calculate.js&apos;;</span><br><span class="line">import Interface from &apos;./lottery/interface.js&apos;;</span><br><span class="line">import $ from &apos;jquery&apos;;</span><br></pre></td></tr></table></figure></p>
+<p>深度拷贝：这里使用深度拷贝的原因是因为复制的是对象，并且使用es6的方式进行深度拷贝。<br>es6里面Reflect.ownKeys可以拿到原对象的所有属性。参考Reflect<br>构造函数，原型，name 这3个属性不需要拷贝，所以要排除。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const copyProperties = function (target, source) &#123;</span><br><span class="line">    for (let key of Reflect.ownKeys(source)) &#123;  //拿到源对象上的所有属性</span><br><span class="line">        if (key !== &apos;constructor&apos; &amp;&amp; key !== &apos;prototype&apos; &amp;&amp; key !== &apos;name&apos;) &#123;  //过滤</span><br><span class="line">            let desc = Object.getOwnPropertyDescriptor(source, key); // 获取指定对象的自身属性描述符</span><br><span class="line">            Object.defineProperty(target, key, desc);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注：关于Object.defineProperty和Object.getOwnPropertyDescriptor<br>前者就是为了给对象定义或修改属性的，如果配合后者来使用的话，那么就会变成直接给目标对象定义一个真实可用的属性（因为后者可以获取源对象的真实属性）<br>通过遍历使用，就相当于能够复制了一个新对象了。<br><a href="https://blog.csdn.net/weixin_34015336/article/details/87948426" target="_blank" rel="noopener">https://blog.csdn.net/weixin_34015336/article/details/87948426</a></p>
+<h4 id="4-10-创建服务接口和模拟数据"><a href="#4-10-创建服务接口和模拟数据" class="headerlink" title="4-10 创建服务接口和模拟数据"></a>4-10 创建服务接口和模拟数据</h4><h4 id="4-11-前后端联调"><a href="#4-11-前后端联调" class="headerlink" title="4-11 前后端联调"></a>4-11 前后端联调</h4>
       
     </div>
     
@@ -409,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/30/2019-05-30/" rel="next" title="2019.05.30">
-                <i class="fa fa-chevron-left"></i> 2019.05.30
+              <a href="/2019/05/30/es6从入门到实战视频/" rel="next" title="es6从入门到实战视频">
+                <i class="fa fa-chevron-left"></i> es6从入门到实战视频
               </a>
             
           </div>
@@ -418,6 +428,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/01/vue-ssr/" rel="prev" title="vue-ssr">
+                vue-ssr <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -498,7 +512,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -509,7 +523,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -560,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-课程介绍"><span class="nav-number">1.</span> <span class="nav-text">一.课程介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-项目构建"><span class="nav-number">2.</span> <span class="nav-text">二.项目构建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-项目构建介绍"><span class="nav-number">2.1.</span> <span class="nav-text">2-1 项目构建介绍</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-项目实战"><span class="nav-number">3.</span> <span class="nav-text">四.项目实战</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-需求分解和目录创建时"><span class="nav-number">3.1.</span> <span class="nav-text">4-1 需求分解和目录创建时</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-创建倒计时模块timer-js"><span class="nav-number">3.2.</span> <span class="nav-text">4-2 创建倒计时模块timer.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-创建接口模块"><span class="nav-number">3.3.</span> <span class="nav-text">4-3 创建接口模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-创建数据计算模块（上）"><span class="nav-number">3.4.</span> <span class="nav-text">4-4 创建数据计算模块（上）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-创建彩票基础模块"><span class="nav-number">3.5.</span> <span class="nav-text">4-6 创建彩票基础模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-9-创建彩票业务模块"><span class="nav-number">3.6.</span> <span class="nav-text">4-9 创建彩票业务模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-10-创建服务接口和模拟数据"><span class="nav-number">3.7.</span> <span class="nav-text">4-10 创建服务接口和模拟数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-11-前后端联调"><span class="nav-number">3.8.</span> <span class="nav-text">4-11 前后端联调</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-课程介绍"><span class="nav-number">1.</span> <span class="nav-text">一.课程介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-项目构建"><span class="nav-number">2.</span> <span class="nav-text">二.项目构建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-项目构建介绍"><span class="nav-number">2.1.</span> <span class="nav-text">2-1 项目构建介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-项目目录创建"><span class="nav-number">2.2.</span> <span class="nav-text">2-2 项目目录创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-命令行处理，创建JS编译任务脚本"><span class="nav-number">2.3.</span> <span class="nav-text">2-3 命令行处理，创建JS编译任务脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-创建模板、服务任务脚本"><span class="nav-number">2.4.</span> <span class="nav-text">2-4 创建模板、服务任务脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-文件自动监听，项目构建测试"><span class="nav-number">2.5.</span> <span class="nav-text">2-5 文件自动监听，项目构建测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-项目实战"><span class="nav-number">3.</span> <span class="nav-text">四.项目实战</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-需求分解和目录创建时"><span class="nav-number">3.1.</span> <span class="nav-text">4-1 需求分解和目录创建时</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-创建倒计时模块timer-js"><span class="nav-number">3.2.</span> <span class="nav-text">4-2 创建倒计时模块timer.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-创建接口模块"><span class="nav-number">3.3.</span> <span class="nav-text">4-3 创建接口模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-创建数据计算模块（上）"><span class="nav-number">3.4.</span> <span class="nav-text">4-4 创建数据计算模块（上）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-创建彩票基础模块"><span class="nav-number">3.5.</span> <span class="nav-text">4-6 创建彩票基础模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-9-创建彩票业务模块"><span class="nav-number">3.6.</span> <span class="nav-text">4-9 创建彩票业务模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-10-创建服务接口和模拟数据"><span class="nav-number">3.7.</span> <span class="nav-text">4-10 创建服务接口和模拟数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-11-前后端联调"><span class="nav-number">3.8.</span> <span class="nav-text">4-11 前后端联调</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -611,7 +625,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共42.4k字</span>
+  <span class="post-count">博客全站共51.6k字</span>
 </div>
         
 
