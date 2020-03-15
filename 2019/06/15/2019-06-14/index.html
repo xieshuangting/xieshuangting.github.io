@@ -85,17 +85,17 @@
 
 
 
-<meta name="description" content="1.对mvvm的M的理解2.link和@important引用CSS的区别页面中使用CSS的方式主要有3种：  1.行内添加定义style属性值 2.页面头部内嵌调用 3.外面链接调用  其中外面引用有两种：link和@import12345&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; rev=&amp;quot;stylesheet&amp;quot; href=&amp;quot;CSS文件">
+<meta name="description" content="1.对mvvm的M的理解2.link和@important引用CSS的区别以下内容参考：https://www.sogou.com/link?url=DOb0bgH2eKh1ibpaMGjuy7jPiIewxFlR-ku0DrhsFatw7KPKo-CjB6edN_ZsL43tzZWe6IpXgdk.页面中使用CSS的方式主要有3种：  1.行内添加定义style属性值 2.页面头部内嵌调用 3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019.06.14">
 <meta property="og:url" content="http://yoursite.com/2019/06/15/2019-06-14/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="1.对mvvm的M的理解2.link和@important引用CSS的区别页面中使用CSS的方式主要有3种：  1.行内添加定义style属性值 2.页面头部内嵌调用 3.外面链接调用  其中外面引用有两种：link和@import12345&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; rev=&amp;quot;stylesheet&amp;quot; href=&amp;quot;CSS文件">
+<meta property="og:description" content="1.对mvvm的M的理解2.link和@important引用CSS的区别以下内容参考：https://www.sogou.com/link?url=DOb0bgH2eKh1ibpaMGjuy7jPiIewxFlR-ku0DrhsFatw7KPKo-CjB6edN_ZsL43tzZWe6IpXgdk.页面中使用CSS的方式主要有3种：  1.行内添加定义style属性值 2.页面头部内嵌调用 3">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-15T08:51:25.303Z">
+<meta property="og:updated_time" content="2020-03-15T11:30:54.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019.06.14">
-<meta name="twitter:description" content="1.对mvvm的M的理解2.link和@important引用CSS的区别页面中使用CSS的方式主要有3种：  1.行内添加定义style属性值 2.页面头部内嵌调用 3.外面链接调用  其中外面引用有两种：link和@import12345&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; rev=&amp;quot;stylesheet&amp;quot; href=&amp;quot;CSS文件">
+<meta name="twitter:description" content="1.对mvvm的M的理解2.link和@important引用CSS的区别以下内容参考：https://www.sogou.com/link?url=DOb0bgH2eKh1ibpaMGjuy7jPiIewxFlR-ku0DrhsFatw7KPKo-CjB6edN_ZsL43tzZWe6IpXgdk.页面中使用CSS的方式主要有3种：  1.行内添加定义style属性值 2.页面头部内嵌调用 3">
 
 
 
@@ -327,7 +327,8 @@
       
 
       
-        <h3 id="1-对mvvm的M的理解"><a href="#1-对mvvm的M的理解" class="headerlink" title="1.对mvvm的M的理解"></a>1.对mvvm的M的理解</h3><h3 id="2-link和-important引用CSS的区别"><a href="#2-link和-important引用CSS的区别" class="headerlink" title="2.link和@important引用CSS的区别"></a>2.link和@important引用CSS的区别</h3><p>页面中使用CSS的方式主要有3种：</p>
+        <a id="more"></a>
+<h3 id="1-对mvvm的M的理解"><a href="#1-对mvvm的M的理解" class="headerlink" title="1.对mvvm的M的理解"></a>1.对mvvm的M的理解</h3><h3 id="2-link和-important引用CSS的区别"><a href="#2-link和-important引用CSS的区别" class="headerlink" title="2.link和@important引用CSS的区别"></a>2.link和@important引用CSS的区别</h3><p>以下内容参考：<a href="https://www.sogou.com/link?url=DOb0bgH2eKh1ibpaMGjuy7jPiIewxFlR-ku0DrhsFatw7KPKo-CjB6edN_ZsL43tzZWe6IpXgdk" target="_blank" rel="noopener">https://www.sogou.com/link?url=DOb0bgH2eKh1ibpaMGjuy7jPiIewxFlR-ku0DrhsFatw7KPKo-CjB6edN_ZsL43tzZWe6IpXgdk</a>.<br>页面中使用CSS的方式主要有3种：</p>
 <ul>
 <li>1.行内添加定义style属性值</li>
 <li>2.页面头部内嵌调用</li>
@@ -342,8 +343,19 @@
 <li>4.link支持使用Javascript控制DOM去改变样式；<br>@import不支持。</li>
 </ul>
 <h4 id="补充：-import最优写法"><a href="#补充：-import最优写法" class="headerlink" title="补充：@import最优写法"></a>补充：@import最优写法</h4><p>@import url(style.css) 和@import url(“style.css”)是最优的选择，兼容的浏览器最多。</p>
-<h3 id="3-innerhtml和document-write的理解"><a href="#3-innerhtml和document-write的理解" class="headerlink" title="3.innerhtml和document.write的理解"></a>3.innerhtml和document.write的理解</h3><p>Javascript 中只能在 HTML 输出流中使用 document.write，在文档已加载后使用它（比如在函数中），会<font color="red">覆盖整个文档</font>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt; </span><br><span class="line">    &lt;title&gt;无标题&lt;/title&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    	window.onload = function() &#123;</span><br><span class="line">		    document.write(&quot;现有内容&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p&gt;原有内容&lt;/p&gt;</span><br><span class="line">&lt;div&gt;原有内容&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="4-axios成功和失败返回什么，有什么参数"><a href="#4-axios成功和失败返回什么，有什么参数" class="headerlink" title="4.axios成功和失败返回什么，有什么参数"></a>4.axios成功和失败返回什么，有什么参数</h3><h3 id="5-抓包工具"><a href="#5-抓包工具" class="headerlink" title="5.抓包工具"></a>5.抓包工具</h3><h3 id="6-模拟数据的工具"><a href="#6-模拟数据的工具" class="headerlink" title="6.模拟数据的工具"></a>6.模拟数据的工具</h3><h3 id="7"><a href="#7" class="headerlink" title="7."></a>7.</h3><h3 id="doctype的理解，混合模式和严格模式，有什么意义"><a href="#doctype的理解，混合模式和严格模式，有什么意义" class="headerlink" title="doctype的理解，混合模式和严格模式，有什么意义"></a>doctype的理解，混合模式和严格模式，有什么意义</h3><h3 id="浮动元素居中"><a href="#浮动元素居中" class="headerlink" title="浮动元素居中"></a>浮动元素居中</h3><h3 id="选择器的权重，继承"><a href="#选择器的权重，继承" class="headerlink" title="选择器的权重，继承"></a>选择器的权重，继承</h3>
+<h3 id="3-innerhtml和document-write的理解"><a href="#3-innerhtml和document-write的理解" class="headerlink" title="3.innerhtml和document.write的理解"></a>3.innerhtml和document.write的理解</h3><p>Javascript 中只能在 HTML 输出流中使用 document.write，在文档已加载后使用它（比如在函数中），会<font color="red">覆盖整个文档</font>。<br>一下内容参考：<a href="https://blog.csdn.net/u012309349/article/details/47946869" target="_blank" rel="noopener">https://blog.csdn.net/u012309349/article/details/47946869</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt; </span><br><span class="line">    &lt;title&gt;无标题&lt;/title&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    	window.onload = function() &#123;</span><br><span class="line">		    document.write(&quot;现有内容&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p&gt;原有内容&lt;/p&gt;</span><br><span class="line">&lt;div&gt;原有内容&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>document.write会将页面上的所有内容清除包括标题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt; </span><br><span class="line">    &lt;title&gt;无标题&lt;/title&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    	window.onload = function() &#123;</span><br><span class="line">		    var testdiv=document.getElementById(&apos;testdiv&apos;);</span><br><span class="line">		    testdiv.innerHTML = &quot;&lt;p&gt;I love &lt;em&gt;JavaScript&lt;/em&gt;!&lt;/p&gt;&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p&gt;原有内容&lt;/p&gt;</span><br><span class="line">&lt;div id=&quot;testdiv&quot;&gt;原有内容&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>innerHTML只会重写所属元素的内容，即<code>&lt;div&gt;</code>元素中的内容。</p>
+<h3 id="4-axios成功和失败返回什么，有什么参数"><a href="#4-axios成功和失败返回什么，有什么参数" class="headerlink" title="4.axios成功和失败返回什么，有什么参数"></a>4.axios成功和失败返回什么，有什么参数</h3><h3 id="5-抓包工具"><a href="#5-抓包工具" class="headerlink" title="5.抓包工具"></a>5.抓包工具</h3><h3 id="6-模拟数据的工具"><a href="#6-模拟数据的工具" class="headerlink" title="6.模拟数据的工具"></a>6.模拟数据的工具</h3><h3 id="7"><a href="#7" class="headerlink" title="7."></a>7.</h3><h3 id="Doctype的作用-严格模式与混合模式-如何触发者这两种模式-区分它们有何意义"><a href="#Doctype的作用-严格模式与混合模式-如何触发者这两种模式-区分它们有何意义" class="headerlink" title="Doctype的作用?严格模式与混合模式,如何触发者这两种模式,区分它们有何意义?"></a>Doctype的作用?严格模式与混合模式,如何触发者这两种模式,区分它们有何意义?</h3><p>1.Doctype作用<br><code>&lt;!DOCTYPE&gt;</code>声明叫做文件类型定义（DTD），<font color="red">声明的作用为了告诉浏览器该文件的类型。让浏览器解析器知道应该用哪个规范来解析文档。</font><code>&lt;!DOCTYPE&gt;</code>声明必须在 HTML 文档的第一行，这并不是一个 HTML 标签。<br>2.严格模式:又称标准模式，是指浏览器按照 W3C 标准解析代码。<br>3.混合模式:又称怪异模式或兼容模式，是指浏览器用自己的方式解析代码。</p>
+<p>4.如何区分：浏览器解析时到底使用严格模式还是混杂模式，与网页中的 DTD 直接相关。</p>
+<ul>
+<li>1、如果文档包含严格的 DOCTYPE ，那么它一般以严格模式呈现。（严格 DTD ——严格模式）</li>
+<li>2、包含过渡 DTD 和 URI 的 DOCTYPE ，也以严格模式呈现，但有过渡 DTD 而没有 URI （统一资源标识符，就是声明最后的地址）会导致页面以混杂模式呈现。（有 URI 的过渡 DTD ——严格模式；没有 URI 的过渡 DTD ——混杂模式）</li>
+<li>3、DOCTYPE 不存在或形式不正确会导致文档以混杂模式呈现。（DTD不存在或者格式不正确——混杂模式）</li>
+<li>4、HTML5 没有 DTD ，因此也就没有严格模式与混杂模式的区别，HTML5 有相对宽松的语法，实现时，已经尽可能大的实现了向后兼容。（ HTML5 没有严格和混杂之分）</li>
+</ul>
+<p>意义:严格模式与混杂模式存在的意义与其来源密切相关，如果说只存在严格模式，那么许多旧网站必然受到影响，如果只存在混杂模式，那么会回到当时浏览器大战时的混乱，每个浏览器都有自己的解析模式。</p>
+<h3 id="浮动元素居中"><a href="#浮动元素居中" class="headerlink" title="浮动元素居中"></a>浮动元素居中</h3><h3 id="选择器的权重，继承"><a href="#选择器的权重，继承" class="headerlink" title="选择器的权重，继承"></a>选择器的权重，继承</h3><h3 id="浏览器内核"><a href="#浏览器内核" class="headerlink" title="浏览器内核"></a>浏览器内核</h3>
       
     </div>
     
@@ -460,7 +472,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">75</span>
+                  <span class="site-state-item-count">76</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -522,7 +534,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-对mvvm的M的理解"><span class="nav-number">1.</span> <span class="nav-text">1.对mvvm的M的理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-link和-important引用CSS的区别"><span class="nav-number">2.</span> <span class="nav-text">2.link和@important引用CSS的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#补充：-import最优写法"><span class="nav-number">2.1.</span> <span class="nav-text">补充：@import最优写法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-innerhtml和document-write的理解"><span class="nav-number">3.</span> <span class="nav-text">3.innerhtml和document.write的理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-axios成功和失败返回什么，有什么参数"><span class="nav-number">4.</span> <span class="nav-text">4.axios成功和失败返回什么，有什么参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-抓包工具"><span class="nav-number">5.</span> <span class="nav-text">5.抓包工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-模拟数据的工具"><span class="nav-number">6.</span> <span class="nav-text">6.模拟数据的工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7"><span class="nav-number">7.</span> <span class="nav-text">7.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#doctype的理解，混合模式和严格模式，有什么意义"><span class="nav-number">8.</span> <span class="nav-text">doctype的理解，混合模式和严格模式，有什么意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮动元素居中"><span class="nav-number">9.</span> <span class="nav-text">浮动元素居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择器的权重，继承"><span class="nav-number">10.</span> <span class="nav-text">选择器的权重，继承</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-对mvvm的M的理解"><span class="nav-number">1.</span> <span class="nav-text">1.对mvvm的M的理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-link和-important引用CSS的区别"><span class="nav-number">2.</span> <span class="nav-text">2.link和@important引用CSS的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#补充：-import最优写法"><span class="nav-number">2.1.</span> <span class="nav-text">补充：@import最优写法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-innerhtml和document-write的理解"><span class="nav-number">3.</span> <span class="nav-text">3.innerhtml和document.write的理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-axios成功和失败返回什么，有什么参数"><span class="nav-number">4.</span> <span class="nav-text">4.axios成功和失败返回什么，有什么参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-抓包工具"><span class="nav-number">5.</span> <span class="nav-text">5.抓包工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-模拟数据的工具"><span class="nav-number">6.</span> <span class="nav-text">6.模拟数据的工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7"><span class="nav-number">7.</span> <span class="nav-text">7.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Doctype的作用-严格模式与混合模式-如何触发者这两种模式-区分它们有何意义"><span class="nav-number">8.</span> <span class="nav-text">Doctype的作用?严格模式与混合模式,如何触发者这两种模式,区分它们有何意义?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮动元素居中"><span class="nav-number">9.</span> <span class="nav-text">浮动元素居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择器的权重，继承"><span class="nav-number">10.</span> <span class="nav-text">选择器的权重，继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器内核"><span class="nav-number">11.</span> <span class="nav-text">浏览器内核</span></a></li></ol></div>
             
 
           </div>
@@ -543,7 +555,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -573,7 +585,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共51.6k字</span>
+  <span class="post-count">博客全站共52.2k字</span>
 </div>
         
 

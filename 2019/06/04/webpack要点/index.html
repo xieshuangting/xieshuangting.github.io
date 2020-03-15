@@ -85,17 +85,17 @@
 
 
 
-<meta name="description" content="1.webpack打包原理把所有依赖打包成一个 bundle.js 文件，通过代码分割成单元片段并按需加载。 2.webpack的优势（1）webpack 是以 commonJS 的形式来书写脚本滴，但对 AMD/CMD 的支持也很全面，方便旧项目进行代码迁移。（2）能被模块化的不仅仅是 JS 了。（3）开发便捷，能替代部分 grunt/gulp 的工作，比如打包、压缩混淆、图片转base64等。">
+<meta name="description" content="1.webpack打包原理把所有依赖打包成一个 bundle.js 文件，通过代码分割成单元片段并按需加载。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack要点">
 <meta property="og:url" content="http://yoursite.com/2019/06/04/webpack要点/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="1.webpack打包原理把所有依赖打包成一个 bundle.js 文件，通过代码分割成单元片段并按需加载。 2.webpack的优势（1）webpack 是以 commonJS 的形式来书写脚本滴，但对 AMD/CMD 的支持也很全面，方便旧项目进行代码迁移。（2）能被模块化的不仅仅是 JS 了。（3）开发便捷，能替代部分 grunt/gulp 的工作，比如打包、压缩混淆、图片转base64等。">
+<meta property="og:description" content="1.webpack打包原理把所有依赖打包成一个 bundle.js 文件，通过代码分割成单元片段并按需加载。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-04T02:18:03.709Z">
+<meta property="og:updated_time" content="2020-03-15T11:30:39.931Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack要点">
-<meta name="twitter:description" content="1.webpack打包原理把所有依赖打包成一个 bundle.js 文件，通过代码分割成单元片段并按需加载。 2.webpack的优势（1）webpack 是以 commonJS 的形式来书写脚本滴，但对 AMD/CMD 的支持也很全面，方便旧项目进行代码迁移。（2）能被模块化的不仅仅是 JS 了。（3）开发便捷，能替代部分 grunt/gulp 的工作，比如打包、压缩混淆、图片转base64等。">
+<meta name="twitter:description" content="1.webpack打包原理把所有依赖打包成一个 bundle.js 文件，通过代码分割成单元片段并按需加载。">
 
 
 
@@ -349,7 +349,7 @@
       
 
       
-        <h3 id="1-webpack打包原理"><a href="#1-webpack打包原理" class="headerlink" title="1.webpack打包原理"></a>1.webpack打包原理</h3><p>把所有依赖打包成一个 bundle.js 文件，通过代码分割成单元片段并按需加载。</p>
+        <h3 id="1-webpack打包原理"><a href="#1-webpack打包原理" class="headerlink" title="1.webpack打包原理"></a>1.webpack打包原理</h3><p>把所有依赖打包成一个 bundle.js 文件，通过代码分割成单元片段并按需加载。<a id="more"></a></p>
 <h3 id="2-webpack的优势"><a href="#2-webpack的优势" class="headerlink" title="2.webpack的优势"></a>2.webpack的优势</h3><p>（1）webpack 是以 commonJS 的形式来书写脚本滴，但对 AMD/CMD 的支持也很全面，方便旧项目进行代码迁移。<br>（2）能被模块化的不仅仅是 JS 了。<br>（3）开发便捷，能替代部分 grunt/gulp 的工作，比如打包、压缩混淆、图片转base64等。<br>（4）扩展性强，插件机制完善</p>
 <h3 id="3-什么是loader，什么是plugin"><a href="#3-什么是loader，什么是plugin" class="headerlink" title="3.什么是loader，什么是plugin"></a>3.什么是loader，什么是plugin</h3><p>loader用于加载某些资源文件。因为webpack本身只能打包common.js规范的js文件，对于其他资源如css，img等，是没有办法加载的，这时就需要对应的loader将资源转化，从而进行加载。<br>plugin用于扩展webpack的功能。不同于loader，plugin的功能更加丰富，比如压缩打包，优化，不只局限于资源的加载。</p>
 <h3 id="4-什么是bundle，什么是chunk，什么是module"><a href="#4-什么是bundle，什么是chunk，什么是module" class="headerlink" title="4.什么是bundle，什么是chunk，什么是module"></a>4.什么是bundle，什么是chunk，什么是module</h3><p>bundle：是由webpack打包出来的文件<br>chunk：是指webpack在进行模块依赖分析的时候，代码分割出来的代码块<br>module：是开发中的单个模块</p>
@@ -478,7 +478,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">75</span>
+                  <span class="site-state-item-count">76</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -561,7 +561,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -591,7 +591,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共51.6k字</span>
+  <span class="post-count">博客全站共52.2k字</span>
 </div>
         
 

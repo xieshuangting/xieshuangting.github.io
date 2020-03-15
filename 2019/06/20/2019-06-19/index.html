@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="今日份快乐 1.promise构造函数是同步执行的，then是异步执行 2.基于css3设计一个圆环进度条https://www.cnblogs.com/dom-liu/p/6004375.html 3.实现模糊搜索结果的关键词高亮显示参考：https://blog.csdn.net/carolcoral/article/details/8093055212345678910//获取输入的内容作为">
+<meta name="description" content="今日份快乐">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019.06.19">
 <meta property="og:url" content="http://yoursite.com/2019/06/20/2019-06-19/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="今日份快乐 1.promise构造函数是同步执行的，then是异步执行 2.基于css3设计一个圆环进度条https://www.cnblogs.com/dom-liu/p/6004375.html 3.实现模糊搜索结果的关键词高亮显示参考：https://blog.csdn.net/carolcoral/article/details/8093055212345678910//获取输入的内容作为">
+<meta property="og:description" content="今日份快乐">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/2019.06.19/1.png">
-<meta property="og:updated_time" content="2019-06-30T15:17:13.018Z">
+<meta property="og:updated_time" content="2020-03-15T11:30:52.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019.06.19">
-<meta name="twitter:description" content="今日份快乐 1.promise构造函数是同步执行的，then是异步执行 2.基于css3设计一个圆环进度条https://www.cnblogs.com/dom-liu/p/6004375.html 3.实现模糊搜索结果的关键词高亮显示参考：https://blog.csdn.net/carolcoral/article/details/8093055212345678910//获取输入的内容作为">
+<meta name="twitter:description" content="今日份快乐">
 <meta name="twitter:image" content="http://yoursite.com/images/2019.06.19/1.png">
 
 
@@ -329,7 +329,7 @@
       
 
       
-        <p>今日份快乐</p>
+        <p>今日份快乐<br><a id="more"></a></p>
 <h3 id="1-promise构造函数是同步执行的，then是异步执行"><a href="#1-promise构造函数是同步执行的，then是异步执行" class="headerlink" title="1.promise构造函数是同步执行的，then是异步执行"></a>1.promise构造函数是同步执行的，then是异步执行</h3><p><img src="/images/2019.06.19/1.png"></p>
 <h3 id="2-基于css3设计一个圆环进度条"><a href="#2-基于css3设计一个圆环进度条" class="headerlink" title="2.基于css3设计一个圆环进度条"></a>2.基于css3设计一个圆环进度条</h3><p><a href="https://www.cnblogs.com/dom-liu/p/6004375.html" target="_blank" rel="noopener">https://www.cnblogs.com/dom-liu/p/6004375.html</a></p>
 <h3 id="3-实现模糊搜索结果的关键词高亮显示"><a href="#3-实现模糊搜索结果的关键词高亮显示" class="headerlink" title="3.实现模糊搜索结果的关键词高亮显示"></a>3.实现模糊搜索结果的关键词高亮显示</h3><p>参考：<a href="https://blog.csdn.net/carolcoral/article/details/80930552" target="_blank" rel="noopener">https://blog.csdn.net/carolcoral/article/details/80930552</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//获取输入的内容作为高亮关键词</span><br><span class="line">var input_data = $(&quot;#fuzzy_search&quot;).val()</span><br><span class="line">//i 忽略大小写 g 全局 m 多行，切记不能加“/”，使用RegExp或自动加上</span><br><span class="line">var rexq = new RegExp(input_data,&quot;igm&quot;)</span><br><span class="line">$.each(data, function (i, data) &#123;</span><br><span class="line">	var data_complte = data[&quot;template_rule_name&quot;] + &quot;,&quot; + data[&quot;template_name&quot;] + &quot;,&quot; + data[&quot;template_desc&quot;]</span><br><span class="line">	data_complte = data_complte.replace(rexq,&quot;&lt;font size=&apos;+1&apos; color=&apos;#dc143c&apos;&gt;&quot;+input_data+&quot;&lt;/font&gt;&quot;)</span><br><span class="line">	var html_style = &quot;&lt;a href=&apos;javascript:&apos;&gt;&lt;li class=&apos;list-group-item&apos; &apos;choise_one_template(this)&apos;&gt;&quot; + data_complte + &quot;&lt;/li&gt;&lt;/a&gt;&quot;</span><br><span class="line">	$(&quot;.list-group&quot;).append(html_style)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
@@ -451,7 +451,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">75</span>
+                  <span class="site-state-item-count">76</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -534,7 +534,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -564,7 +564,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共51.6k字</span>
+  <span class="post-count">博客全站共52.2k字</span>
 </div>
         
 
