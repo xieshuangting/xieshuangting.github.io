@@ -85,17 +85,19 @@
 
 
 
-<meta name="description" content="position 属性规定元素的定位类型。inherit:规定应该从父元素继承 position 属性的值。">
+<meta name="description" content="1.position 属性规定元素的定位类型。inherit:规定应该从父元素继承 position 属性的值。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="position">
 <meta property="og:url" content="http://yoursite.com/2018/06/29/position/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="position 属性规定元素的定位类型。inherit:规定应该从父元素继承 position 属性的值。">
+<meta property="og:description" content="1.position 属性规定元素的定位类型。inherit:规定应该从父元素继承 position 属性的值。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-13T02:53:37.978Z">
+<meta property="og:image" content="http://yoursite.com/images/position/2.jpg">
+<meta property="og:updated_time" content="2020-04-16T02:56:19.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="position">
-<meta name="twitter:description" content="position 属性规定元素的定位类型。inherit:规定应该从父元素继承 position 属性的值。">
+<meta name="twitter:description" content="1.position 属性规定元素的定位类型。inherit:规定应该从父元素继承 position 属性的值。">
+<meta name="twitter:image" content="http://yoursite.com/images/position/2.jpg">
 
 
 
@@ -349,9 +351,13 @@
       
 
       
-        <h1 id="position-属性规定元素的定位类型。"><a href="#position-属性规定元素的定位类型。" class="headerlink" title="position 属性规定元素的定位类型。"></a>position 属性规定元素的定位类型。</h1><p><code>inherit</code>:规定应该从父元素继承 position 属性的值。<a id="more"></a><br><code>absolute</code>:元素设置成absolute后会脱离文档流，并且不占有原本的空间，后面的元素会顶替上去，而且不论元素是行内元素还是块级元素，都会生成一个<font color="blue">块级框</font>，也就是例如行内元素span设置了absolute后就可以设置height和width属性了。<br><code>fixed</code>:（IE6不支持）生成绝对定位的元素，通常相对于<font color="blue">浏览器窗口或 frame 进行定位。<br><code>relative</code> :翻译成中文称相对定位，设置了这个属性后，元素会根据top，left，bottom，right进行偏移，关键点是它原本的空间仍然保留。<br><code>static</code>:position属性的默认值，默认情况下，块级元素和行内元素按照各自的特性进行显示<br><code>sticky</code> :生成粘性定位的元素，容器的位置根据正常文档流计算得出。(详情见<a href="https://xieshuangting.github.io/2018/06/29/粘性固定position-sticky" target="_blank" rel="noopener">https://xieshuangting.github.io/2018/06/29/粘性固定position-sticky</a>)</font></p>
-<hr>
-<p><strong>日常啰嗦</strong>:这篇文最大的收获就是absolute之后的元素变成了块级元素，可以设置width和height。还有知道了sticky这个属性。</p>
+        <h1 id="1-position-属性规定元素的定位类型。"><a href="#1-position-属性规定元素的定位类型。" class="headerlink" title="1.position 属性规定元素的定位类型。"></a>1.position 属性规定元素的定位类型。</h1><p><code>inherit</code>:规定应该从父元素继承 position 属性的值。<a id="more"></a><br><code>absolute</code>:元素设置成absolute后会脱离文档流，并且不占有原本的空间，后面的元素会顶替上去，而且不论元素是行内元素还是块级元素，都会生成一个<font color="blue">块级框</font>，也就是例如行内元素span设置了absolute后就可以设置height和width属性了。<br><code>fixed</code>:（IE6不支持）生成绝对定位的元素，通常相对于<font color="blue">浏览器窗口或 frame 进行定位。<br><code>relative</code> :翻译成中文称相对定位，设置了这个属性后，元素会根据top，left，bottom，right进行偏移，关键点是它原本的空间仍然保留。<br><code>static</code>:position属性的默认值，默认情况下，块级元素和行内元素按照各自的特性进行显示<br><code>sticky</code> :生成粘性定位的元素，容器的位置根据正常文档流计算得出。</font></p>
+<h1 id="2-粘性定位position-sticky"><a href="#2-粘性定位position-sticky" class="headerlink" title="2.粘性定位position:sticky"></a>2.粘性定位position:sticky</h1><p>感觉用起来跟fixed差不多效果，就是sticky属性在<code>$(window).scrollTop()</code>小于top值的时候，不会脱离文档流（表现的跟relative属性差不多）。</p>
+<p><font color="red">粘性定位</font>是相对定位和固定定位的混合。元素在跨越特定阈值前为相对定位，之后为固定定位。<br><code>#one { position: sticky; top: 10px; }</code><br>在 viewport 视口滚动到元素 top 距离小于 10px 之前，元素为相对定位。之后，元素将固定在与顶部距离 10px 的位置，直到 viewport 视口回滚到阈值以下。<br>使用它，我们不再用监听scroll事件，即可实现导航栏滚动绝对定位的效果。</p>
+<p><font color="red">生效条件</font><br>1.需要注意的是，使用该属性有几个必要条件，否则会失效：<br>2.父元素不能<code>overflow:hidden</code>或者<code>overflow:auto</code>属性。(不能设置为hidden可以理解，因为没有滚动的话该属性就没有意义了)<br>3.必须指定top、bottom、left、right4个值之一，否则只会处于相对定位<br>4.父元素的高度不能低于sticky元素的高度<br>5.sticky元素仅在其父元素内生效</p>
+<p><font color="red">兼容</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">position: -webkit-sticky;</span><br><span class="line">position: sticky;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/position/2.jpg" width="50%"><br>效果如下：</p>
+<p><video width="375" controls="controls"><br>  <source src="/images/position/1.mp4" type="video/mp4"><br></video><br>可以使用jq来实现该效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var showHeight = 236;</span><br><span class="line">$(window).scroll(function()&#123;</span><br><span class="line">	if($(window).scrollTop() &gt; showHeight)&#123;</span><br><span class="line">		$(&apos;.search_float_wrap&apos;).slideDown();</span><br><span class="line">	&#125;else if($(window).scrollTop() &lt; showHeight)&#123;</span><br><span class="line">		$(&apos;.search_float_wrap&apos;).slideUp(100);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -469,7 +475,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">77</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -531,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#position-属性规定元素的定位类型。"><span class="nav-number">1.</span> <span class="nav-text">position 属性规定元素的定位类型。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-position-属性规定元素的定位类型。"><span class="nav-number">1.</span> <span class="nav-text">1.position 属性规定元素的定位类型。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-粘性定位position-sticky"><span class="nav-number">2.</span> <span class="nav-text">2.粘性定位position:sticky</span></a></li></ol></div>
             
 
           </div>
@@ -582,7 +588,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共52.2k字</span>
+  <span class="post-count">博客全站共52.3k字</span>
 </div>
         
 
