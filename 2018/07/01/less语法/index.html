@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="RECODE TRACE">
 <meta property="og:description" content="1. 变量可以将属性的值赋值给一个变量，变量为完全的 “常量” ，所以只能定义一次例如：1234@nice-blue: #5B83AD;@light-blue: @nice-blue + #111;#header &amp;#123; color: @light-blue; &amp;#125;结果 #header &amp;#123; color: #6c94be; &amp;#125;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-02T02:34:43.202Z">
+<meta property="og:updated_time" content="2020-04-16T08:15:35.705Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="less语法">
 <meta name="twitter:description" content="1. 变量可以将属性的值赋值给一个变量，变量为完全的 “常量” ，所以只能定义一次例如：1234@nice-blue: #5B83AD;@light-blue: @nice-blue + #111;#header &amp;#123; color: @light-blue; &amp;#125;结果 #header &amp;#123; color: #6c94be; &amp;#125;">
@@ -360,7 +360,7 @@
 <p>结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.class &#123;</span><br><span class="line">color: #a2a2a2;</span><br><span class="line">display: block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>mixin就会得到传入颜色的浅色。如果@switch设为dark，就会得到深色。<br>具体实现如下：<br>第一个混合定义并未被匹配，因为它只接受dark做为首参<br>第二个混合定义被成功匹配，因为它只接受light<br>第三个混合定义被成功匹配，因为它接受任意值<br>只有被匹配的混合才会被使用。变量可以匹配任意的传入值，而变量以外的固定值就仅仅匹配与其相等的传入值。</p>
 <h1 id="4-命名空间"><a href="#4-命名空间" class="headerlink" title="4. 命名空间"></a><font color="red">4. 命名空间</font></h1><p>为了更好组织CSS或者单纯是为了更好的封装，将一些变量或者混合模块打包起来<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#bundle &#123;</span><br><span class="line">  .button () &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    border: 1px solid black;</span><br><span class="line">    background-color: grey;</span><br><span class="line">    &amp;:hover &#123; background-color: white &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  .tab &#123; ... &#125;</span><br><span class="line">  .citation &#123; ... &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#header a &#123;</span><br><span class="line">  color: orange;</span><br><span class="line">  &lt;font color=&quot;red&quot;&gt;#bundle &gt; .button;&lt;/font&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#header a &#123;</span><br><span class="line">  color: orange;</span><br><span class="line">  #bundle &gt; .button;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h1 id="5-作用域"><a href="#5-作用域" class="headerlink" title="5. 作用域"></a><font color="red">5. 作用域</font></h1><p>less中的作用域跟其他编程语言非常类似，首先会从本地查找变量或者混合模块，如果没找到的话会去父级作用域中查找，直到找到为止<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@var: red;</span><br><span class="line">#page &#123;</span><br><span class="line">  @var: white;</span><br><span class="line">  #header &#123;</span><br><span class="line">    color: @var; // white</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">#footer &#123;</span><br><span class="line">  color: @var; // red  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h1 id="6-注释"><a href="#6-注释" class="headerlink" title="6. 注释"></a><font color="red">6. 注释</font></h1><p>CSS形式的注释在less中是依然保留，less同样也支持双斜线的注释, 但是编译成 CSS 的时候<font color="blue">自动过滤掉</font></p>
 <h1 id="7-引用-import"><a href="#7-引用-import" class="headerlink" title="7. 引用@import"></a><font color="red">7. 引用@import</font></h1><ul>
@@ -383,7 +383,7 @@
 </li>
 </ul>
 <hr>
-<p><strong>日常啰嗦</strong>：之前理解了那个mixin又忘记了，哭唧唧。现在重拾一下。。不知道为什么有时候的分割线显示不出来。应该是文章中间出现了<code>&lt;font&gt;&lt;/font&gt;</code>标签而没有换行引起的。</p>
+<p>less的使用：见<a href="https://xieshuangting.github.io/2018/07/01/less的使用/" target="_blank" rel="noopener">https://xieshuangting.github.io/2018/07/01/less的使用/</a></p>
 
       
     </div>
@@ -501,7 +501,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -512,7 +512,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

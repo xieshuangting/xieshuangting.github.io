@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="RECODE TRACE">
 <meta property="og:description" content="1. 变量sass通过$声明变量，例如：12345$headline-ff:Arial;$main-sec-ff:Tahoma;h1&amp;#123;	font-family: $headline-ff;&amp;#125;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-02T06:16:34.862Z">
+<meta property="og:updated_time" content="2020-04-16T08:15:14.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sass语法">
 <meta name="twitter:description" content="1. 变量sass通过$声明变量，例如：12345$headline-ff:Arial;$main-sec-ff:Tahoma;h1&amp;#123;	font-family: $headline-ff;&amp;#125;">
@@ -357,7 +357,7 @@
 <p>经过编译后的screen.css代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;</span><br><span class="line">  font-family: Arial;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><font color="red">原生css中@import与scss中@import的区别：</font><br>原生css@import的缺点：<br>1、需要放到代码最前端才生效<br>2、当浏览器读到这条@import指令时才会加载对应的@import的文件。性能差<br>scss中@import特点：<br>1、可以放到scss文件的任意位置，scss在编译后会将 宿主文件和 变量文件 合并到一个css文件<br>2、宿主文件中可以任意引用变量文件中的 变量和mixin函数。<br>3、可以一次@import多个文件，利用逗号分隔:<br>@import “_variables.scss”,”compass/reset”;</p>
 <hr>
-<h1 id="3-注释："><a href="#3-注释：" class="headerlink" title="3. 注释："></a><font color="red">3. 注释：</font></h1><p>1、支持// 和/<strong>/<br>2、在编译后的css文件中，以//注释的内容不会被输出，以/</strong>/注释的内容会被输出。<br>3、编译后的css文件中会有自动生成的注释信息，方便我们定位相应的.scss文件，方便样式调试。</p>
+<h1 id="3-注释："><a href="#3-注释：" class="headerlink" title="3. 注释："></a><font color="red">3. 注释：</font></h1><p>1、支持<code>//</code>和<code>/**/</code><br>2、在编译后的css文件中，以<code>//</code>注释的内容不会被输出，以<code>/**/</code>注释的内容会被输出。<br>3、编译后的css文件中会有自动生成的注释信息，方便我们定位相应的.scss文件，方便样式调试。</p>
 <hr>
 <h1 id="4-嵌套语法："><a href="#4-嵌套语法：" class="headerlink" title="4. 嵌套语法："></a><font color="red">4. 嵌套语法：</font></h1><p>选择器嵌套：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$headline-ff:Arial;</span><br><span class="line">$main-sec-ff:Tahoma;</span><br><span class="line">div&#123;</span><br><span class="line">	font-family: $main-sec-ff;</span><br><span class="line">	h1&#123;</span><br><span class="line">		font-family: $headline-ff;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>编译后的css文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">  font-family: Tahoma;</span><br><span class="line">&#125;</span><br><span class="line">div h1 &#123;</span><br><span class="line">  font-family: Arial;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -367,6 +367,7 @@
 <p>编译后的css文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a :hover &#123;</span><br><span class="line">  color: #c50000;</span><br><span class="line">&#125;</span><br><span class="line">a:hover &#123;</span><br><span class="line">  color: #c50000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>两者区别见<a href="https://xieshuangting.github.io/2018/07/02/a-hover-和a-hover-区别/" target="_blank" rel="noopener">https://xieshuangting.github.io/2018/07/02/a-hover-和a-hover-区别/</a></p>
 <hr>
+<p>sass的使用见<a href="https://xieshuangting.github.io/2018/07/01/sass的使用/" target="_blank" rel="noopener">https://xieshuangting.github.io/2018/07/01/sass的使用/</a></p>
 
       
     </div>
@@ -484,7 +485,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -495,7 +496,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

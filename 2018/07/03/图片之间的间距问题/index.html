@@ -94,7 +94,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/图片之间的间距问题/1.png">
 <meta property="og:image" content="http://yoursite.com/images/图片之间的间距问题/2.jpg">
-<meta property="og:updated_time" content="2018-07-03T03:26:53.251Z">
+<meta property="og:updated_time" content="2020-04-21T07:42:50.788Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图片之间的间距问题">
 <meta name="twitter:description" content="多个img图片并排显示，中间总是有间隔。间距分为水平方向上的和垂直方向上的间距。">
@@ -353,7 +353,7 @@
 
       
         <p>多个img图片并排显示，中间总是有间隔。间距分为水平方向上的和垂直方向上的间距。<a id="more"></a><br><img src="/images/图片之间的间距问题/1.png" alt="图片之间的间距问题"></p>
-<h2 id="水平方向上的间距"><a href="#水平方向上的间距" class="headerlink" title="水平方向上的间距"></a>水平方向上的间距</h2><p>因为是img标签的显示是inline-block的原因，你换行在父级元素看来，是有一个空格的字符的，所以存在8个像素，这个因浏览器不同，像素也不一样。根本原因在于父级元素把空格当做一个字符处理。</p>
+<h2 id="水平方向上的间距"><a href="#水平方向上的间距" class="headerlink" title="水平方向上的间距"></a>水平方向上的间距</h2><p>因为是img标签的显示是<font color="red">inline-block</font>的原因，你换行在父级元素看来，是有一个空格的字符的，所以存在8个像素，这个因浏览器不同，像素也不一样。<font color="red">根本原因在于父级元素把空格当做一个字符处理。</font></p>
 <h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>1.使用float属性为img布局<br>2.源码之间不留空隙<br>3.设置字符间距letter-spacing:-800px;<br>letter-spacing的值无论是负多少都不会产生重叠(大于8就可以了)。<br><em>扩展</em>：<br>letter-spacing属性增加或减少字符间的空白（字符间距）。定义了在文本字符框之间插入多少空间。由于字符字形通常比其字符框要窄，指定长度值时，会调整字母之间通常的间隔。因此，normal 就相当于值为 0。</p>
 <hr>
 <h2 id="垂直方向上的间距"><a href="#垂直方向上的间距" class="headerlink" title="垂直方向上的间距"></a>垂直方向上的间距</h2><p>默认基线是baseline，因为图片底部是相对于基线对齐的，所以图片下面还留出一些空间<br><img src="/images/图片之间的间距问题/2.jpg" alt="图片之间的间距问题"></p>
@@ -477,7 +477,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -488,7 +488,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

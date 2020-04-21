@@ -99,7 +99,7 @@
 <meta property="og:image" content="http://yoursite.com/images/2018.12工作日总结/5.png">
 <meta property="og:image" content="http://yoursite.com/images/2018.12工作日总结/6.png">
 <meta property="og:image" content="http://yoursite.com/images/2018.12工作日总结/7.png">
-<meta property="og:updated_time" content="2019-05-24T07:44:48.097Z">
+<meta property="og:updated_time" content="2020-04-21T06:25:37.459Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2018.12工作日总结">
 <meta name="twitter:description" content="以下内容都是在工作中遇到然后发现自己不是很理解或者是觉得很有意思的点。">
@@ -368,7 +368,7 @@ $(event.currentTarget).parent(&#39;.bottom-describe&#39;).siblings(el).hide(500)
 <p><font color="red">上下滑动</font>：slideDown/slideUp<br>slideUp和slideDown可以控制向上滑动或者向下滑动。根据<code>.css(&#39;display&#39;) == &#39;none&#39;;</code>来判断当前是否隐藏<br>默认从上到下滑动显示。想要从下向上显示可以让该元素的<code>bottom:0;</code></p>
 <p><font color="red">左右滑动</font>：<code>animate({width:XX})</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var width = $(&apos;.info-wrapper&apos;).width();</span><br><span class="line">if(width == 0)&#123;</span><br><span class="line">    $(&apos;.info-wrapper&apos;).animate(&#123;width:&quot;268&quot;&#125;,300);</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    $(&apos;.info-wrapper&apos;).animate(&#123;width:&quot;0&quot;&#125;,300);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="6-key值不唯一报错"><a href="#6-key值不唯一报错" class="headerlink" title="6.key值不唯一报错"></a>6.key值不唯一报错</h3><p>by 2018-12-17<br><img src="/images/2018.12工作日总结/1.png"><br><img src="/images/2018.12工作日总结/2.png"></p>
-<h3 id="7-vue中给data对象-包括数组-新增属性，并不会主动触发视图更新"><a href="#7-vue中给data对象-包括数组-新增属性，并不会主动触发视图更新" class="headerlink" title="7.vue中给data对象(包括数组)新增属性，并不会主动触发视图更新"></a>7.vue中给data对象(包括数组)新增属性，并不会主动触发视图更新</h3><p>by 2018-12-18<br>数组更新了数据，view层未渲染，但通过console这个数组可以发现数据确实更新了。<br>原因是：受 ES5 的限制，Vue.js 不能检测到对象属性的添加或删除。因为 Vue.js 在初始化实例时将属性转为 getter/setter，所以属性必须在 data 对象上才能让 Vue.js 转换它，才能让它是响应的。(新增加的属性不在data)<br><img src="/images/2018.12工作日总结/4.png"><br>使用$set()方法，既可以新增属性,又可以触发视图更新。<br>使用方法：<code>this.$set(this.data,&#39;key&#39;,&#39;value&#39;)；</code><br>实际使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if (this.isClickList[index]) &#123;</span><br><span class="line">	this.$set(this.isClickList, index, false);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">	this.$set(this.isClickList, index, true);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="7-vue中给data对象-包括数组-新增属性，并不会主动触发视图更新"><a href="#7-vue中给data对象-包括数组-新增属性，并不会主动触发视图更新" class="headerlink" title="7.vue中给data对象(包括数组)新增属性，并不会主动触发视图更新"></a>7.vue中给data对象(包括数组)新增属性，并不会主动触发视图更新</h3><p>by 2018-12-18<br>数组更新了数据，view层未渲染，但通过console这个数组可以发现数据确实更新了。<br>原因是：受 ES5 definedProperty的限制，Vue.js 不能检测到对象属性的添加或删除。因为 Vue.js 在初始化实例时将属性转为 getter/setter，所以属性必须在 data 对象上才能让 Vue.js 转换它，才能让它是响应的。(新增加的属性不在data)<br><img src="/images/2018.12工作日总结/4.png"><br>使用$set()方法，既可以新增属性,又可以触发视图更新。<br>使用方法：<code>this.$set(this.data,&#39;key&#39;,&#39;value&#39;)；</code><br>实际使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if (this.isClickList[index]) &#123;</span><br><span class="line">	this.$set(this.isClickList, index, false);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">	this.$set(this.isClickList, index, true);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><font color="red">扩展：</font>尽管 Vue.js 提供了 API 动态地添加响应属性，还是推荐在 data 对象上声明所有的响应属性。<br>这么做有两个原因：<br>1.data 对象就像组件状态的模式（schema）。在它上面声明所有的属性让组件代码更易于理解。<br>2.<b>添加一个顶级响应属性会强制所有的 watcher 重新计算</b>，因为它之前不存在，没有 watcher 追踪它。这么做性能通常是可以接受的，但是可以在初始化时避免。</p>
 <h3 id="8-苹果手机使用浏览器在点击了select之后，页面会出现扩大现象，要用户主动缩小才能回到原始的页面大小。"><a href="#8-苹果手机使用浏览器在点击了select之后，页面会出现扩大现象，要用户主动缩小才能回到原始的页面大小。" class="headerlink" title="8.苹果手机使用浏览器在点击了select之后，页面会出现扩大现象，要用户主动缩小才能回到原始的页面大小。"></a>8.苹果手机使用浏览器在点击了select之后，页面会出现扩大现象，要用户主动缩小才能回到原始的页面大小。</h3><p>by 2018-12-18<br>在meta中添加<code>user-scalable=no</code>，禁止页面缩放</p>
 <h3 id="9-ios设备表单按钮自带样式问题"><a href="#9-ios设备表单按钮自带样式问题" class="headerlink" title="9.ios设备表单按钮自带样式问题"></a>9.ios设备表单按钮自带样式问题</h3><p>by 2018-12-18</p>
@@ -525,7 +525,7 @@ $(event.currentTarget).parent(&#39;.bottom-describe&#39;).siblings(el).hide(500)
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -536,7 +536,7 @@ $(event.currentTarget).parent(&#39;.bottom-describe&#39;).siblings(el).hide(500)
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
