@@ -85,12 +85,12 @@
 
 
 
-<meta name="description" content="1.浮动元素垂直居中">
+<meta name="description" content="2.flex布局中的元素自适应并且省略多余的文字">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019.06工作日小结">
 <meta property="og:url" content="http://yoursite.com/2019/06/30/2019-06工作日小结/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="1.浮动元素垂直居中">
+<meta property="og:description" content="2.flex布局中的元素自适应并且省略多余的文字">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/1.png">
 <meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/3.png">
@@ -100,10 +100,10 @@
 <meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/5.png">
 <meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/6.png">
 <meta property="og:image" content="http://yoursite.com/images/2019.06工作日小结/7.png">
-<meta property="og:updated_time" content="2020-04-21T10:54:48.028Z">
+<meta property="og:updated_time" content="2020-04-23T12:38:41.432Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019.06工作日小结">
-<meta name="twitter:description" content="1.浮动元素垂直居中">
+<meta name="twitter:description" content="2.flex布局中的元素自适应并且省略多余的文字">
 <meta name="twitter:image" content="http://yoursite.com/images/2019.06工作日小结/1.png">
 
 
@@ -358,8 +358,7 @@
       
 
       
-        <h3 id="1-浮动元素垂直居中"><a href="#1-浮动元素垂直居中" class="headerlink" title="1.浮动元素垂直居中"></a>1.浮动元素垂直居中<a id="more"></a></h3><p>若只是一行元素之间的垂直居中可以设置该元素<code>height: 100%;line-height: 200px;</code></p>
-<h3 id="2-flex布局中的元素自适应并且省略多余的文字"><a href="#2-flex布局中的元素自适应并且省略多余的文字" class="headerlink" title="2.flex布局中的元素自适应并且省略多余的文字"></a>2.flex布局中的元素自适应并且省略多余的文字</h3><p><img src="/images/2019.06工作日小结/1.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flex: 1;</span><br><span class="line">overflow: hidden;</span><br><span class="line">text-overflow: ellipsis;</span><br><span class="line">white-space: nowrap;</span><br></pre></td></tr></table></figure></p>
+        <h3 id="2-flex布局中的元素自适应并且省略多余的文字"><a href="#2-flex布局中的元素自适应并且省略多余的文字" class="headerlink" title="2.flex布局中的元素自适应并且省略多余的文字"></a>2.flex布局中的元素自适应并且省略多余的文字<a id="more"></a></h3><p><img src="/images/2019.06工作日小结/1.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flex: 1;//flex: 1 1 0%;</span><br><span class="line">overflow: hidden;</span><br><span class="line">text-overflow: ellipsis;</span><br><span class="line">white-space: nowrap;</span><br></pre></td></tr></table></figure></p>
 <h3 id="3-svg图片"><a href="#3-svg图片" class="headerlink" title="3.svg图片"></a>3.svg图片</h3><p>参考：<a href="https://blog.csdn.net/yoyful/article/details/85812776" target="_blank" rel="noopener">https://blog.csdn.net/yoyful/article/details/85812776</a><br>SVG 代码可以用<code>&lt;img&gt;、&lt;object&gt;、&lt;embed&gt;、&lt;iframe&gt;</code>等标签插入网页。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;search.svg&quot;&gt;</span><br><span class="line">&lt;object id=&quot;object&quot; data=&quot;search.svg&quot; type=&quot;image/svg+xml&quot;&gt;&lt;/object&gt;</span><br><span class="line">&lt;embed id=&quot;embed&quot; src=&quot;search.svg&quot; type=&quot;image/svg+xml&quot;&gt;</span><br><span class="line">&lt;iframe id=&quot;iframe&quot; src=&quot;search.svg&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
 <p>CSS背景属性中也可以使用svg<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.logo &#123;</span><br><span class="line">  background: url(logo.svg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>SVG 文件还可以转为 BASE64 编码，然后作为 Data URI 写入网页。<br><code>&lt;img src=&quot;data:image/svg+xml;base64,[data]&quot;&gt;</code></p>
@@ -506,7 +505,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-count">76</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -517,7 +516,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -568,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-浮动元素垂直居中"><span class="nav-number">1.</span> <span class="nav-text">1.浮动元素垂直居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-flex布局中的元素自适应并且省略多余的文字"><span class="nav-number">2.</span> <span class="nav-text">2.flex布局中的元素自适应并且省略多余的文字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-svg图片"><span class="nav-number">3.</span> <span class="nav-text">3.svg图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-align-items-center-flex子元素垂直居中对齐"><span class="nav-number">4.</span> <span class="nav-text">4.align-items:center;flex子元素垂直居中对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-导航栏左右移动"><span class="nav-number">5.</span> <span class="nav-text">5.导航栏左右移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-background属性中的url-有空格"><span class="nav-number">6.</span> <span class="nav-text">6.background属性中的url 有空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-justify-content属性"><span class="nav-number">7.</span> <span class="nav-text">7.justify-content属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-水平居中"><span class="nav-number">8.</span> <span class="nav-text">8.水平居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-pdf文件查看"><span class="nav-number">9.</span> <span class="nav-text">9.pdf文件查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-webkit-tap-highlight-color-rgba-0-0-0-0-去掉点击高光-移动端"><span class="nav-number">10.</span> <span class="nav-text">10.-webkit-tap-highlight-color: rgba(0,0,0,0);去掉点击高光(移动端)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-基于vue与vux做的可滑动tab组件"><span class="nav-number">11.</span> <span class="nav-text">11.基于vue与vux做的可滑动tab组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-css3移动端switch按钮"><span class="nav-number">12.</span> <span class="nav-text">12.css3移动端switch按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-移动端-滑动删除-swipeDelete"><span class="nav-number">13.</span> <span class="nav-text">13.移动端 滑动删除 swipeDelete</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-flex布局中的元素自适应并且省略多余的文字"><span class="nav-number">1.</span> <span class="nav-text">2.flex布局中的元素自适应并且省略多余的文字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-svg图片"><span class="nav-number">2.</span> <span class="nav-text">3.svg图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-align-items-center-flex子元素垂直居中对齐"><span class="nav-number">3.</span> <span class="nav-text">4.align-items:center;flex子元素垂直居中对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-导航栏左右移动"><span class="nav-number">4.</span> <span class="nav-text">5.导航栏左右移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-background属性中的url-有空格"><span class="nav-number">5.</span> <span class="nav-text">6.background属性中的url 有空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-justify-content属性"><span class="nav-number">6.</span> <span class="nav-text">7.justify-content属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-水平居中"><span class="nav-number">7.</span> <span class="nav-text">8.水平居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-pdf文件查看"><span class="nav-number">8.</span> <span class="nav-text">9.pdf文件查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-webkit-tap-highlight-color-rgba-0-0-0-0-去掉点击高光-移动端"><span class="nav-number">9.</span> <span class="nav-text">10.-webkit-tap-highlight-color: rgba(0,0,0,0);去掉点击高光(移动端)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-基于vue与vux做的可滑动tab组件"><span class="nav-number">10.</span> <span class="nav-text">11.基于vue与vux做的可滑动tab组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-css3移动端switch按钮"><span class="nav-number">11.</span> <span class="nav-text">12.css3移动端switch按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-移动端-滑动删除-swipeDelete"><span class="nav-number">12.</span> <span class="nav-text">13.移动端 滑动删除 swipeDelete</span></a></li></ol></div>
             
 
           </div>
