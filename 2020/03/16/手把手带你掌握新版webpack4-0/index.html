@@ -85,17 +85,17 @@
 
 
 
-<meta name="description" content="项目地址：https://github.com/xieshuangting/webpack-test笔记具体内容见有道云：http://note.youdao.com/noteshare?id=76f51803cf398ef5b6d627d2b3813222">
+<meta name="description" content="项目地址：https://github.com/xieshuangting/webpack-test笔记具体内容见有道云：http://note.youdao.com/noteshare?id=76f51803cf398ef5b6d627d2b3813222 webpack的作用：1.（babel-loader）转化语法，将es6以上的语法转化成es5.例如es module。2.利用loader">
 <meta property="og:type" content="article">
 <meta property="og:title" content="手把手带你掌握新版webpack4.0">
 <meta property="og:url" content="http://yoursite.com/2020/03/16/手把手带你掌握新版webpack4-0/index.html">
 <meta property="og:site_name" content="RECODE TRACE">
-<meta property="og:description" content="项目地址：https://github.com/xieshuangting/webpack-test笔记具体内容见有道云：http://note.youdao.com/noteshare?id=76f51803cf398ef5b6d627d2b3813222">
+<meta property="og:description" content="项目地址：https://github.com/xieshuangting/webpack-test笔记具体内容见有道云：http://note.youdao.com/noteshare?id=76f51803cf398ef5b6d627d2b3813222 webpack的作用：1.（babel-loader）转化语法，将es6以上的语法转化成es5.例如es module。2.利用loader">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-19T13:06:41.520Z">
+<meta property="og:updated_time" content="2020-05-20T02:25:26.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手把手带你掌握新版webpack4.0">
-<meta name="twitter:description" content="项目地址：https://github.com/xieshuangting/webpack-test笔记具体内容见有道云：http://note.youdao.com/noteshare?id=76f51803cf398ef5b6d627d2b3813222">
+<meta name="twitter:description" content="项目地址：https://github.com/xieshuangting/webpack-test笔记具体内容见有道云：http://note.youdao.com/noteshare?id=76f51803cf398ef5b6d627d2b3813222 webpack的作用：1.（babel-loader）转化语法，将es6以上的语法转化成es5.例如es module。2.利用loader">
 
 
 
@@ -350,6 +350,17 @@
 
       
         <p>项目地址：<a href="https://github.com/xieshuangting/webpack-test" target="_blank" rel="noopener">https://github.com/xieshuangting/webpack-test</a><br>笔记具体内容见有道云：<a href="http://note.youdao.com/noteshare?id=76f51803cf398ef5b6d627d2b3813222" target="_blank" rel="noopener">http://note.youdao.com/noteshare?id=76f51803cf398ef5b6d627d2b3813222</a></p>
+<h2 id="webpack的作用："><a href="#webpack的作用：" class="headerlink" title="webpack的作用："></a>webpack的作用：</h2><p>1.（babel-loader）转化语法，将es6以上的语法转化成es5.例如es module。<br>2.利用loader补全css样式厂商前缀（autoprefixer）。<br>3.（css-loader，style-loader）压缩合并css，js。<br>4.（url-loader）将图片转化成base64</p>
+<h2 id="webpack默认配置文件是webpack-config-js"><a href="#webpack默认配置文件是webpack-config-js" class="headerlink" title="webpack默认配置文件是webpack.config.js"></a>webpack默认配置文件是webpack.config.js</h2><h2 id="loader："><a href="#loader：" class="headerlink" title="loader："></a>loader：</h2><p>loader 让 webpack 能够去处理那些非 JavaScript 文件（webpack 自身只理解 JavaScript）。loader 可以将所有类型的文件转换为 webpack 能够处理的有效模块，然后你就可以利用 webpack 的打包能力，对它们进行处理。<br>例如：url-loader将图片转换成一个base64位的字符串</p>
+<h2 id="plugins："><a href="#plugins：" class="headerlink" title="plugins："></a>plugins：</h2><p>使用 plugins 让打包更便捷<br>例如：html-webpack-plugin会在打包结束后，自动生成一个html文件，并把打包生成的js自动引入到这个html文件中</p>
+<h2 id="Source-map"><a href="#Source-map" class="headerlink" title="Source-map"></a>Source-map</h2><p>一个映射关系，他知道dist目录下js文件中的错误代码对应的是src目录下相应文件的错误代码的位置</p>
+<h2 id="Hot-Module-Replacement"><a href="#Hot-Module-Replacement" class="headerlink" title="Hot Module Replacement"></a>Hot Module Replacement</h2><p>热模块更新。运行代码打开浏览器，改变代码更新页面</p>
+<h2 id="tree-shaking"><a href="#tree-shaking" class="headerlink" title="tree-shaking"></a>tree-shaking</h2><p>虽然依赖了某个模块，但其实只使用其中的某些功能。通过 tree-shaking，将没有使用的模块摇掉，这样来达到删除无用代码的目的。</p>
+<h2 id="Develoment-和-Production-模式的区分"><a href="#Develoment-和-Production-模式的区分" class="headerlink" title="Develoment 和 Production 模式的区分"></a>Develoment 和 Production 模式的区分</h2><p>打包dev：webpack-dev-server，pro：webpack</p>
+<h2 id="Code-Splitting代码分割："><a href="#Code-Splitting代码分割：" class="headerlink" title="Code Splitting代码分割："></a>Code Splitting代码分割：</h2><p>手动：将引进的工具库分开打包（将工具库挂载到window方法下。然后entry分开打包）<br>自动：同步，配置splitChunks<br>异步，不需配置，直接打包</p>
+<h2 id="Lazy-Loading-懒加载："><a href="#Lazy-Loading-懒加载：" class="headerlink" title="Lazy Loading 懒加载："></a>Lazy Loading 懒加载：</h2><p>异步加载工具库来实现懒加载<br>在控制台中按下Ctrl+shift+p可以调出输入面板。输入coverage调出面板，点击圆圈之后可以看到main.js一开始加载的时候的利用率。</p>
+<p>异步加载时设置 webpackPrefetch:true 分开打包并且用到时才加载</p>
+<h2 id="CSS-文件的代码分割："><a href="#CSS-文件的代码分割：" class="headerlink" title="CSS 文件的代码分割："></a>CSS 文件的代码分割：</h2><p>若是不做css代码的分割的话webpack会将css代码放在main.js文件里面。extract-text-webpack-plugin。optimize-css-assets-webpack-plugin进行css代码的压缩和合并</p>
 
       
     </div>
@@ -438,8 +449,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -511,6 +531,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack的作用："><span class="nav-number">1.</span> <span class="nav-text">webpack的作用：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack默认配置文件是webpack-config-js"><span class="nav-number">2.</span> <span class="nav-text">webpack默认配置文件是webpack.config.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#loader："><span class="nav-number">3.</span> <span class="nav-text">loader：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plugins："><span class="nav-number">4.</span> <span class="nav-text">plugins：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Source-map"><span class="nav-number">5.</span> <span class="nav-text">Source-map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hot-Module-Replacement"><span class="nav-number">6.</span> <span class="nav-text">Hot Module Replacement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tree-shaking"><span class="nav-number">7.</span> <span class="nav-text">tree-shaking</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Develoment-和-Production-模式的区分"><span class="nav-number">8.</span> <span class="nav-text">Develoment 和 Production 模式的区分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Splitting代码分割："><span class="nav-number">9.</span> <span class="nav-text">Code Splitting代码分割：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lazy-Loading-懒加载："><span class="nav-number">10.</span> <span class="nav-text">Lazy Loading 懒加载：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-文件的代码分割："><span class="nav-number">11.</span> <span class="nav-text">CSS 文件的代码分割：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -555,7 +591,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共52.3k字</span>
+  <span class="post-count">博客全站共52.9k字</span>
 </div>
         
 
